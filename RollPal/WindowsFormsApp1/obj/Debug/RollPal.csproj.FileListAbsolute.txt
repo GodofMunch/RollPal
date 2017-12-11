@@ -1,0 +1,11 @@
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\RollPal.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.welcomeScreen.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Home.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\RollPal.csproj.GenerateResource.Cache
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\RollPal.csproj.CoreCompileInputs.cache

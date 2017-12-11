@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.userNameBText = new System.Windows.Forms.TextBox();
             this.passWordBox = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.userNameBText.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.userNameBText.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userNameBText.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.userNameBText.Location = new System.Drawing.Point(241, 367);
+            this.userNameBText.Location = new System.Drawing.Point(201, 327);
             this.userNameBText.Name = "userNameBText";
             this.userNameBText.Size = new System.Drawing.Size(330, 23);
             this.userNameBText.TabIndex = 1;
@@ -53,7 +54,7 @@
             this.passWordBox.AcceptsTab = true;
             this.passWordBox.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passWordBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.passWordBox.Location = new System.Drawing.Point(241, 413);
+            this.passWordBox.Location = new System.Drawing.Point(201, 371);
             this.passWordBox.Name = "passWordBox";
             this.passWordBox.PasswordChar = '*';
             this.passWordBox.Size = new System.Drawing.Size(330, 22);
@@ -68,7 +69,7 @@
             this.loginButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.loginButton.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.loginButton.Location = new System.Drawing.Point(372, 455);
+            this.loginButton.Location = new System.Drawing.Point(330, 425);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(75, 23);
             this.loginButton.TabIndex = 3;
@@ -81,16 +82,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.HomePagePic3;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(801, 516);
+            this.ClientSize = new System.Drawing.Size(707, 460);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passWordBox);
             this.Controls.Add(this.userNameBText);
             this.MaximizeBox = false;
             this.Name = "Home";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RollPal Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

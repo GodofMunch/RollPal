@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class welcomeScreen : Form
+    public partial class deRegisterStaff : Form
     {
-        public welcomeScreen()
+        public deRegisterStaff()
         {
             InitializeComponent();
         }

@@ -34,6 +34,15 @@ namespace WindowsFormsApp1
             
             else*/
 
+            welcomeScreen myWelcome = new welcomeScreen();
+            myWelcome.Show();
+            this.Hide();
+
+        }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

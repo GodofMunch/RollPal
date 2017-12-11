@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class welcomeScreen
+    partial class regStaff
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "welcomeScreen";
+            this.Text = "regStaff";
         }
 
         #endregion

@@ -63,39 +63,9 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap HomePagePic {
+        internal static System.Drawing.Bitmap HomePagePic4 {
             get {
-                object obj = ResourceManager.GetObject("HomePagePic", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap HomePagePic1 {
-            get {
-                object obj = ResourceManager.GetObject("HomePagePic1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap HomePagePic2 {
-            get {
-                object obj = ResourceManager.GetObject("HomePagePic2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap HomePagePic3 {
-            get {
-                object obj = ResourceManager.GetObject("HomePagePic3", resourceCulture);
+                object obj = ResourceManager.GetObject("HomePagePic4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
