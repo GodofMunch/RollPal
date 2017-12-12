@@ -63,6 +63,7 @@
             this.passWordBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.passWordBox.UseSystemPasswordChar = true;
             this.passWordBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.passWordText_Click);
+            this.passWordBox.TextChanged += new System.EventHandler(this.passWordBox_TextChanged);
             // 
             // loginButton
             // 

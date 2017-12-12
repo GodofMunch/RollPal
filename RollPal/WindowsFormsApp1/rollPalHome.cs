@@ -44,5 +44,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void passWordBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

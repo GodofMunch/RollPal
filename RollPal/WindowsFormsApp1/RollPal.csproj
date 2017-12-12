@@ -45,16 +45,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="deRegisterStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deRegisterStaff.Designer.cs">
+      <DependentUpon>deRegisterStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="searchStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchStaff.Designer.cs">
+      <DependentUpon>searchStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="welcomeScreen.cs">
+    <Compile Include="registerStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="welcomeScreen.Designer.cs">
-      <DependentUpon>welcomeScreen.cs</DependentUpon>
+    <Compile Include="registerStaff.Designer.cs">
+      <DependentUpon>registerStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="rollPalHome.cs">
       <SubType>Form</SubType>
@@ -64,8 +76,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="welcomeScreen.resx">
+    <Compile Include="updateStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updateStaff.Designer.cs">
+      <DependentUpon>updateStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="welcomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="welcomeScreen.Designer.cs">
       <DependentUpon>welcomeScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="registerStaff.resx">
+      <DependentUpon>registerStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rollPalHome.resx">
       <DependentUpon>rollPalHome.cs</DependentUpon>
@@ -74,6 +98,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchStaff.resx">
+      <DependentUpon>searchStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="welcomeScreen.resx">
+      <DependentUpon>welcomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
