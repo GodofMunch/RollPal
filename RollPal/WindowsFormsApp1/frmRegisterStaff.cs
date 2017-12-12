@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class registerStaff : Form
+    public partial class frmRegisterStaff : Form
     {
 
         string forename = "";
@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
         string eirCode = "";
         string dob = "";
 
-        public registerStaff()
+        public frmRegisterStaff()
         {
             InitializeComponent();
         }
@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
             //to see the c# equivalent of java's JOP.showConfirmDialog()
             {
                 var ok = MessageBox.Show("Thank you! Returning Home.","Thank you", MessageBoxButtons.OK);
-                welcomeScreen home = new welcomeScreen();
+                frmWelcomeScreen home = new frmWelcomeScreen();
 
                 if (ok == DialogResult.OK)
                 {
@@ -83,14 +83,14 @@ namespace WindowsFormsApp1
 
                 if(tryAgain==DialogResult.Yes)
                 {
-                    registerStaff onceMore = new registerStaff();
+                    frmRegisterStaff onceMore = new frmRegisterStaff();
                     onceMore.Show();
                     this.Hide();
                 }
 
                 else
                 {
-                    welcomeScreen backHome = new welcomeScreen();
+                    frmWelcomeScreen backHome = new frmWelcomeScreen();
                     backHome.Show();
                     this.Hide();
                 }

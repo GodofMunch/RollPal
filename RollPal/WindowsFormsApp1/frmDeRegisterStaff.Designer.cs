@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class searchStaff
+    partial class frmDeRegisterStaff
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
-            this.lblSearchStaff = new System.Windows.Forms.Label();
+            this.lblDeRegStaff = new System.Windows.Forms.Label();
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
             this.textChildren = new System.Windows.Forms.TextBox();
+            this.btnRegisterStaff = new System.Windows.Forms.Button();
             this.lblChildren = new System.Windows.Forms.Label();
             this.grpMarStatus = new System.Windows.Forms.GroupBox();
             this.optMarried = new System.Windows.Forms.RadioButton();
@@ -67,28 +68,29 @@
             this.cboSelectStaff.Items.AddRange(new object[] {
             "<null>",
             "001"});
-            this.cboSelectStaff.Location = new System.Drawing.Point(202, 41);
+            this.cboSelectStaff.Location = new System.Drawing.Point(362, 41);
             this.cboSelectStaff.MaxDropDownItems = 2;
             this.cboSelectStaff.Name = "cboSelectStaff";
             this.cboSelectStaff.Size = new System.Drawing.Size(58, 21);
-            this.cboSelectStaff.TabIndex = 7;
+            this.cboSelectStaff.TabIndex = 4;
             this.cboSelectStaff.Text = "<null>";
             this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
             // 
-            // lblSearchStaff
+            // lblDeRegStaff
             // 
-            this.lblSearchStaff.AutoSize = true;
-            this.lblSearchStaff.Location = new System.Drawing.Point(49, 44);
-            this.lblSearchStaff.Name = "lblSearchStaff";
-            this.lblSearchStaff.Size = new System.Drawing.Size(134, 13);
-            this.lblSearchStaff.TabIndex = 9;
-            this.lblSearchStaff.Text = "Please select an Employee";
+            this.lblDeRegStaff.AutoSize = true;
+            this.lblDeRegStaff.Location = new System.Drawing.Point(57, 44);
+            this.lblDeRegStaff.Name = "lblDeRegStaff";
+            this.lblDeRegStaff.Size = new System.Drawing.Size(272, 13);
+            this.lblDeRegStaff.TabIndex = 6;
+            this.lblDeRegStaff.Text = "Please select the Emplyee you would like to De-Register";
             // 
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.grpStaffDetails.Controls.Add(this.btnHome);
             this.grpStaffDetails.Controls.Add(this.textChildren);
+            this.grpStaffDetails.Controls.Add(this.btnRegisterStaff);
             this.grpStaffDetails.Controls.Add(this.lblChildren);
             this.grpStaffDetails.Controls.Add(this.grpMarStatus);
             this.grpStaffDetails.Controls.Add(this.txtDOB);
@@ -112,10 +114,10 @@
             this.grpStaffDetails.Controls.Add(this.lblStaffId);
             this.grpStaffDetails.Controls.Add(this.textBox1);
             this.grpStaffDetails.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.grpStaffDetails.Location = new System.Drawing.Point(52, 109);
+            this.grpStaffDetails.Location = new System.Drawing.Point(60, 109);
             this.grpStaffDetails.Name = "grpStaffDetails";
             this.grpStaffDetails.Size = new System.Drawing.Size(606, 311);
-            this.grpStaffDetails.TabIndex = 8;
+            this.grpStaffDetails.TabIndex = 5;
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Visible = false;
@@ -129,6 +131,18 @@
             this.textChildren.TabIndex = 20;
             this.textChildren.Text = "0";
             this.textChildren.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnRegisterStaff
+            // 
+            this.btnRegisterStaff.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRegisterStaff.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnRegisterStaff.Location = new System.Drawing.Point(431, 274);
+            this.btnRegisterStaff.Name = "btnRegisterStaff";
+            this.btnRegisterStaff.Size = new System.Drawing.Size(75, 23);
+            this.btnRegisterStaff.TabIndex = 12;
+            this.btnRegisterStaff.Text = "De-Register";
+            this.btnRegisterStaff.UseVisualStyleBackColor = false;
+            this.btnRegisterStaff.Click += new System.EventHandler(this.btnRegisterStaff_Click);
             // 
             // lblChildren
             // 
@@ -364,25 +378,25 @@
             // 
             this.btnHome.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnHome.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnHome.Location = new System.Drawing.Point(507, 278);
+            this.btnHome.Location = new System.Drawing.Point(512, 274);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 21;
+            this.btnHome.TabIndex = 22;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // searchStaff
+            // deRegisterStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 460);
+            this.ClientSize = new System.Drawing.Size(723, 460);
             this.Controls.Add(this.cboSelectStaff);
-            this.Controls.Add(this.lblSearchStaff);
+            this.Controls.Add(this.lblDeRegStaff);
             this.Controls.Add(this.grpStaffDetails);
-            this.Name = "searchStaff";
+            this.Name = "deRegisterStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Search Staff";
+            this.Text = "De-RegisterStaff";
             this.grpStaffDetails.ResumeLayout(false);
             this.grpStaffDetails.PerformLayout();
             this.grpMarStatus.ResumeLayout(false);
@@ -395,9 +409,9 @@
         #endregion
 
         private System.Windows.Forms.ComboBox cboSelectStaff;
-        private System.Windows.Forms.Label lblSearchStaff;
+        private System.Windows.Forms.Label lblDeRegStaff;
         private System.Windows.Forms.GroupBox grpStaffDetails;
-        private System.Windows.Forms.TextBox textChildren;
+        private System.Windows.Forms.Button btnRegisterStaff;
         private System.Windows.Forms.Label lblChildren;
         private System.Windows.Forms.GroupBox grpMarStatus;
         private System.Windows.Forms.RadioButton optMarried;
@@ -422,6 +436,7 @@
         private System.Windows.Forms.Label lblForename;
         private System.Windows.Forms.Label lblStaffId;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textChildren;
         private System.Windows.Forms.Button btnHome;
     }
 }

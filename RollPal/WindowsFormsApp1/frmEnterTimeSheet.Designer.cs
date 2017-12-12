@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class enterTimeSheet
+    partial class frmEnterTimeSheet
     {
         /// <summary>
         /// Required designer variable.

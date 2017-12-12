@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class registerStaff
+    partial class frmRegisterStaff
     {
         /// <summary>
         /// Required designer variable.

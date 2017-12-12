@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             
             else*/
 
-            welcomeScreen myWelcome = new welcomeScreen();
+            frmWelcomeScreen myWelcome = new frmWelcomeScreen();
             myWelcome.Show();
             this.Hide();
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class updateStaff : Form
+    public partial class frmSearchStaff : Form
     {
-        public updateStaff()
+        public frmSearchStaff()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace WindowsFormsApp1
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            welcomeScreen home = new welcomeScreen();
+            frmWelcomeScreen home = new frmWelcomeScreen();
             home.Show();
             this.Hide();
         }

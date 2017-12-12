@@ -45,89 +45,116 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="deRegisterStaff.cs">
+    <Compile Include="frmCreateTaxClause.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="deRegisterStaff.Designer.cs">
-      <DependentUpon>deRegisterStaff.cs</DependentUpon>
+    <Compile Include="frmCreateTaxClause.Designer.cs">
+      <DependentUpon>frmCreateTaxClause.cs</DependentUpon>
     </Compile>
-    <Compile Include="enterTimeSheet.cs">
+    <Compile Include="frmDeRegisterStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="enterTimeSheet.Designer.cs">
-      <DependentUpon>enterTimeSheet.cs</DependentUpon>
+    <Compile Include="frmDeRegisterStaff.Designer.cs">
+      <DependentUpon>frmDeRegisterStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="generatePayRoll.cs">
+    <Compile Include="frmEnterTimeSheet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="generatePayRoll.Designer.cs">
-      <DependentUpon>generatePayRoll.cs</DependentUpon>
+    <Compile Include="frmEnterTimeSheet.Designer.cs">
+      <DependentUpon>frmEnterTimeSheet.cs</DependentUpon>
     </Compile>
-    <Compile Include="searchStaff.cs">
+    <Compile Include="frmGeneratePayRoll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="searchStaff.Designer.cs">
-      <DependentUpon>searchStaff.cs</DependentUpon>
+    <Compile Include="frmGeneratePayRoll.Designer.cs">
+      <DependentUpon>frmGeneratePayRoll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPayStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayStaff.Designer.cs">
+      <DependentUpon>frmPayStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQueryPayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQueryPayroll.Designer.cs">
+      <DependentUpon>frmQueryPayroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchStaff.Designer.cs">
+      <DependentUpon>frmSearchStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="registerStaff.cs">
+    <Compile Include="frmRegisterStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registerStaff.Designer.cs">
-      <DependentUpon>registerStaff.cs</DependentUpon>
+    <Compile Include="frmRegisterStaff.Designer.cs">
+      <DependentUpon>frmRegisterStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="rollPalHome.cs">
+    <Compile Include="frmRollPalHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="rollPalHome.Designer.cs">
-      <DependentUpon>rollPalHome.cs</DependentUpon>
+    <Compile Include="frmRollPalHome.Designer.cs">
+      <DependentUpon>frmRollPalHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="updateStaff.cs">
+    <Compile Include="frmUpdateStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="updateStaff.Designer.cs">
-      <DependentUpon>updateStaff.cs</DependentUpon>
+    <Compile Include="frmUpdateStaff.Designer.cs">
+      <DependentUpon>frmUpdateStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="welcomeScreen.cs">
+    <Compile Include="frmWelcomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="welcomeScreen.Designer.cs">
-      <DependentUpon>welcomeScreen.cs</DependentUpon>
+    <Compile Include="frmWelcomeScreen.Designer.cs">
+      <DependentUpon>frmWelcomeScreen.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="deRegisterStaff.resx">
-      <DependentUpon>deRegisterStaff.cs</DependentUpon>
+    <EmbeddedResource Include="frmCreateTaxClause.resx">
+      <DependentUpon>frmCreateTaxClause.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="enterTimeSheet.resx">
-      <DependentUpon>enterTimeSheet.cs</DependentUpon>
+    <EmbeddedResource Include="frmDeRegisterStaff.resx">
+      <DependentUpon>frmDeRegisterStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="generatePayRoll.resx">
-      <DependentUpon>generatePayRoll.cs</DependentUpon>
+    <EmbeddedResource Include="frmEnterTimeSheet.resx">
+      <DependentUpon>frmEnterTimeSheet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="registerStaff.resx">
-      <DependentUpon>registerStaff.cs</DependentUpon>
+    <EmbeddedResource Include="frmGeneratePayRoll.resx">
+      <DependentUpon>frmGeneratePayRoll.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="rollPalHome.resx">
-      <DependentUpon>rollPalHome.cs</DependentUpon>
+    <EmbeddedResource Include="frmPayStaff.resx">
+      <DependentUpon>frmPayStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQueryPayroll.resx">
+      <DependentUpon>frmQueryPayroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterStaff.resx">
+      <DependentUpon>frmRegisterStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRollPalHome.resx">
+      <DependentUpon>frmRollPalHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="searchStaff.resx">
-      <DependentUpon>searchStaff.cs</DependentUpon>
+    <EmbeddedResource Include="frmSearchStaff.resx">
+      <DependentUpon>frmSearchStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="updateStaff.resx">
-      <DependentUpon>updateStaff.cs</DependentUpon>
+    <EmbeddedResource Include="frmUpdateStaff.resx">
+      <DependentUpon>frmUpdateStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="welcomeScreen.resx">
-      <DependentUpon>welcomeScreen.cs</DependentUpon>
+    <EmbeddedResource Include="frmWelcomeScreen.resx">
+      <DependentUpon>frmWelcomeScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class deRegisterStaff : Form
+    public partial class frmDeRegisterStaff : Form
     {
-        public deRegisterStaff()
+        public frmDeRegisterStaff()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
                 if (home == DialogResult.OK)
                 {
-                    welcomeScreen returnHome = new welcomeScreen();
+                    frmWelcomeScreen returnHome = new frmWelcomeScreen();
                     returnHome.Show();
                     this.Hide();
                 }
@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
 
             else
             {
-                deRegisterStaff back = new deRegisterStaff();
+                frmDeRegisterStaff back = new frmDeRegisterStaff();
                 back.Show();
                 this.Hide();
             }
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            welcomeScreen home = new welcomeScreen();
+            frmWelcomeScreen home = new frmWelcomeScreen();
             home.Show();
             this.Hide();
         }

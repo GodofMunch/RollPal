@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class enterTimeSheet : Form
+    public partial class frmEnterTimeSheet : Form
     {
-        public enterTimeSheet()
+        public frmEnterTimeSheet()
         {
             InitializeComponent();
             rtxt.Text = "001\n002";
@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
 
             else
             {
-                enterTimeSheet enterTimes = new enterTimeSheet();
+                frmEnterTimeSheet enterTimes = new frmEnterTimeSheet();
                 enterTimes.Show();
                 this.Hide();
             }
@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            welcomeScreen home = new welcomeScreen();
+            frmWelcomeScreen home = new frmWelcomeScreen();
             home.Show();
             this.Hide();
         }

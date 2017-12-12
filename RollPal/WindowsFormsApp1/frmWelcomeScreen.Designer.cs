@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class welcomeScreen
+    partial class frmWelcomeScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -36,13 +36,13 @@
             this.searchStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.payRollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.enterTimesheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generatePayrollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.payStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.queryPayRollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taxationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.welcomeInstructionLbl = new System.Windows.Forms.Label();
-            this.generatePayrollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.payStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.queryPayRollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,9 +112,30 @@
             // enterTimesheetToolStripMenuItem
             // 
             this.enterTimesheetToolStripMenuItem.Name = "enterTimesheetToolStripMenuItem";
-            this.enterTimesheetToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.enterTimesheetToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.enterTimesheetToolStripMenuItem.Text = "Enter Timesheet";
             this.enterTimesheetToolStripMenuItem.Click += new System.EventHandler(this.enterTimesheetToolStripMenuItem_Click);
+            // 
+            // generatePayrollToolStripMenuItem
+            // 
+            this.generatePayrollToolStripMenuItem.Name = "generatePayrollToolStripMenuItem";
+            this.generatePayrollToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.generatePayrollToolStripMenuItem.Text = "Generate Payroll";
+            this.generatePayrollToolStripMenuItem.Click += new System.EventHandler(this.generatePayrollToolStripMenuItem_Click);
+            // 
+            // payStaffToolStripMenuItem
+            // 
+            this.payStaffToolStripMenuItem.Name = "payStaffToolStripMenuItem";
+            this.payStaffToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.payStaffToolStripMenuItem.Text = "PayStaff";
+            this.payStaffToolStripMenuItem.Click += new System.EventHandler(this.payStaffToolStripMenuItem_Click);
+            // 
+            // queryPayRollToolStripMenuItem
+            // 
+            this.queryPayRollToolStripMenuItem.Name = "queryPayRollToolStripMenuItem";
+            this.queryPayRollToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.queryPayRollToolStripMenuItem.Text = "Query Pay Roll";
+            this.queryPayRollToolStripMenuItem.Click += new System.EventHandler(this.queryPayRollToolStripMenuItem_Click);
             // 
             // taxationToolStripMenuItem
             // 
@@ -146,26 +167,7 @@
             this.welcomeInstructionLbl.TabIndex = 2;
             this.welcomeInstructionLbl.Text = "To Begin Please select an option from the menu above";
             // 
-            // generatePayrollToolStripMenuItem
-            // 
-            this.generatePayrollToolStripMenuItem.Name = "generatePayrollToolStripMenuItem";
-            this.generatePayrollToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.generatePayrollToolStripMenuItem.Text = "Generate Payroll";
-            this.generatePayrollToolStripMenuItem.Click += new System.EventHandler(this.generatePayrollToolStripMenuItem_Click);
-            // 
-            // payStaffToolStripMenuItem
-            // 
-            this.payStaffToolStripMenuItem.Name = "payStaffToolStripMenuItem";
-            this.payStaffToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.payStaffToolStripMenuItem.Text = "PayStaff";
-            // 
-            // queryPayRollToolStripMenuItem
-            // 
-            this.queryPayRollToolStripMenuItem.Name = "queryPayRollToolStripMenuItem";
-            this.queryPayRollToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.queryPayRollToolStripMenuItem.Text = "Query Pay Roll";
-            // 
-            // welcomeScreen
+            // frmWelcomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,7 +176,7 @@
             this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "welcomeScreen";
+            this.Name = "frmWelcomeScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";
             this.menuStrip1.ResumeLayout(false);

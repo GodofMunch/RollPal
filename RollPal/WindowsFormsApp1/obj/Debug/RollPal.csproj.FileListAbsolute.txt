@@ -1,5 +1,4 @@
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\RollPal.csprojResolveAssemblyReference.cache
-C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.welcomeScreen.resources
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Home.resources
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\RollPal.csproj.GenerateResource.Cache
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
@@ -9,9 +8,12 @@ C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\WindowsF
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\RollPal.csproj.CoreCompileInputs.cache
-C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.registerStaff.resources
-C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.searchStaff.resources
-C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.updateStaff.resources
-C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.deRegisterStaff.resources
-C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.enterTimeSheet.resources
-C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.generatePayRoll.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmDeRegisterStaff.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmEnterTimeSheet.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmGeneratePayRoll.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmPayStaff.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmRegisterStaff.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmSearchStaff.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmUpdateStaff.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmWelcomeScreen.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmQueryPayroll.resources

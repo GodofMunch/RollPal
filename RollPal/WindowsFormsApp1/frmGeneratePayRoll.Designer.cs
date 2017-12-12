@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class generatePayRoll
+    partial class frmGeneratePayRoll
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.lblPeriodNo = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnGenWages = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rtxtWageDetails
@@ -74,11 +75,22 @@
             this.btnGenWages.UseVisualStyleBackColor = true;
             this.btnGenWages.Click += new System.EventHandler(this.btnGenWages_Click);
             // 
+            // btnHome
+            // 
+            this.btnHome.Location = new System.Drawing.Point(553, 371);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(110, 23);
+            this.btnHome.TabIndex = 4;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // generatePayRoll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 460);
+            this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnGenWages);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblPeriodNo);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Label lblPeriodNo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnGenWages;
+        private System.Windows.Forms.Button btnHome;
     }
 }

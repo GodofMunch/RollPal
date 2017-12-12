@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class deRegisterStaff
+    partial class frmUpdateStaff
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboSelectStaff = new System.Windows.Forms.ComboBox();
-            this.lblDeRegStaff = new System.Windows.Forms.Label();
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
-            this.textChildren = new System.Windows.Forms.TextBox();
             this.btnRegisterStaff = new System.Windows.Forms.Button();
             this.lblChildren = new System.Windows.Forms.Label();
+            this.cboChildren = new System.Windows.Forms.ComboBox();
             this.grpMarStatus = new System.Windows.Forms.GroupBox();
             this.optMarried = new System.Windows.Forms.RadioButton();
             this.optSingle = new System.Windows.Forms.RadioButton();
@@ -57,41 +55,20 @@
             this.lblForename = new System.Windows.Forms.Label();
             this.lblStaffId = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboSelectStaff = new System.Windows.Forms.ComboBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.grpStaffDetails.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cboSelectStaff
-            // 
-            this.cboSelectStaff.FormattingEnabled = true;
-            this.cboSelectStaff.Items.AddRange(new object[] {
-            "<null>",
-            "001"});
-            this.cboSelectStaff.Location = new System.Drawing.Point(362, 41);
-            this.cboSelectStaff.MaxDropDownItems = 2;
-            this.cboSelectStaff.Name = "cboSelectStaff";
-            this.cboSelectStaff.Size = new System.Drawing.Size(58, 21);
-            this.cboSelectStaff.TabIndex = 4;
-            this.cboSelectStaff.Text = "<null>";
-            this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
-            // 
-            // lblDeRegStaff
-            // 
-            this.lblDeRegStaff.AutoSize = true;
-            this.lblDeRegStaff.Location = new System.Drawing.Point(57, 44);
-            this.lblDeRegStaff.Name = "lblDeRegStaff";
-            this.lblDeRegStaff.Size = new System.Drawing.Size(272, 13);
-            this.lblDeRegStaff.TabIndex = 6;
-            this.lblDeRegStaff.Text = "Please select the Emplyee you would like to De-Register";
-            // 
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.grpStaffDetails.Controls.Add(this.btnHome);
-            this.grpStaffDetails.Controls.Add(this.textChildren);
             this.grpStaffDetails.Controls.Add(this.btnRegisterStaff);
             this.grpStaffDetails.Controls.Add(this.lblChildren);
+            this.grpStaffDetails.Controls.Add(this.cboChildren);
             this.grpStaffDetails.Controls.Add(this.grpMarStatus);
             this.grpStaffDetails.Controls.Add(this.txtDOB);
             this.grpStaffDetails.Controls.Add(this.lblDOB);
@@ -114,23 +91,13 @@
             this.grpStaffDetails.Controls.Add(this.lblStaffId);
             this.grpStaffDetails.Controls.Add(this.textBox1);
             this.grpStaffDetails.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.grpStaffDetails.Location = new System.Drawing.Point(60, 109);
+            this.grpStaffDetails.Location = new System.Drawing.Point(56, 104);
             this.grpStaffDetails.Name = "grpStaffDetails";
             this.grpStaffDetails.Size = new System.Drawing.Size(606, 311);
-            this.grpStaffDetails.TabIndex = 5;
+            this.grpStaffDetails.TabIndex = 2;
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Visible = false;
-            // 
-            // textChildren
-            // 
-            this.textChildren.Location = new System.Drawing.Point(419, 146);
-            this.textChildren.Name = "textChildren";
-            this.textChildren.ReadOnly = true;
-            this.textChildren.Size = new System.Drawing.Size(30, 20);
-            this.textChildren.TabIndex = 20;
-            this.textChildren.Text = "0";
-            this.textChildren.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnRegisterStaff
             // 
@@ -140,9 +107,8 @@
             this.btnRegisterStaff.Name = "btnRegisterStaff";
             this.btnRegisterStaff.Size = new System.Drawing.Size(75, 23);
             this.btnRegisterStaff.TabIndex = 12;
-            this.btnRegisterStaff.Text = "De-Register";
+            this.btnRegisterStaff.Text = "Update";
             this.btnRegisterStaff.UseVisualStyleBackColor = false;
-            this.btnRegisterStaff.Click += new System.EventHandler(this.btnRegisterStaff_Click);
             // 
             // lblChildren
             // 
@@ -152,6 +118,24 @@
             this.lblChildren.Size = new System.Drawing.Size(51, 13);
             this.lblChildren.TabIndex = 19;
             this.lblChildren.Text = "Children :";
+            // 
+            // cboChildren
+            // 
+            this.cboChildren.FormattingEnabled = true;
+            this.cboChildren.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.cboChildren.Location = new System.Drawing.Point(452, 146);
+            this.cboChildren.Name = "cboChildren";
+            this.cboChildren.Size = new System.Drawing.Size(38, 21);
+            this.cboChildren.TabIndex = 11;
+            this.cboChildren.Text = "0";
             // 
             // grpMarStatus
             // 
@@ -174,7 +158,6 @@
             this.optMarried.TabIndex = 9;
             this.optMarried.Text = "Married";
             this.optMarried.UseVisualStyleBackColor = true;
-            this.optMarried.Visible = false;
             // 
             // optSingle
             // 
@@ -193,7 +176,6 @@
             this.txtDOB.ForeColor = System.Drawing.SystemColors.MenuText;
             this.txtDOB.Location = new System.Drawing.Point(141, 281);
             this.txtDOB.Name = "txtDOB";
-            this.txtDOB.ReadOnly = true;
             this.txtDOB.ShortcutsEnabled = false;
             this.txtDOB.Size = new System.Drawing.Size(100, 20);
             this.txtDOB.TabIndex = 8;
@@ -213,7 +195,6 @@
             // 
             this.txtEircode.Location = new System.Drawing.Point(141, 255);
             this.txtEircode.Name = "txtEircode";
-            this.txtEircode.ReadOnly = true;
             this.txtEircode.Size = new System.Drawing.Size(100, 20);
             this.txtEircode.TabIndex = 7;
             this.txtEircode.Text = "v92kh92";
@@ -222,7 +203,6 @@
             // 
             this.txtCounty.Location = new System.Drawing.Point(141, 229);
             this.txtCounty.Name = "txtCounty";
-            this.txtCounty.ReadOnly = true;
             this.txtCounty.Size = new System.Drawing.Size(100, 20);
             this.txtCounty.TabIndex = 6;
             this.txtCounty.Text = "Kerry";
@@ -231,7 +211,6 @@
             // 
             this.txtTown.Location = new System.Drawing.Point(141, 203);
             this.txtTown.Name = "txtTown";
-            this.txtTown.ReadOnly = true;
             this.txtTown.Size = new System.Drawing.Size(100, 20);
             this.txtTown.TabIndex = 5;
             this.txtTown.Text = "Tralee";
@@ -240,7 +219,6 @@
             // 
             this.txtStreet.Location = new System.Drawing.Point(141, 177);
             this.txtStreet.Name = "txtStreet";
-            this.txtStreet.ReadOnly = true;
             this.txtStreet.Size = new System.Drawing.Size(100, 20);
             this.txtStreet.TabIndex = 4;
             this.txtStreet.Text = "35 Chapel Street";
@@ -285,7 +263,6 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(141, 151);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 3;
             this.txtEmail.Text = "dave@fakemail.com";
@@ -294,7 +271,6 @@
             // 
             this.txtPhone.Location = new System.Drawing.Point(141, 125);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(100, 20);
             this.txtPhone.TabIndex = 2;
             this.txtPhone.Text = "0871234567";
@@ -303,7 +279,6 @@
             // 
             this.txtSurname.Location = new System.Drawing.Point(141, 99);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.ReadOnly = true;
             this.txtSurname.Size = new System.Drawing.Size(100, 20);
             this.txtSurname.TabIndex = 1;
             this.txtSurname.Text = "O\'Sullivan";
@@ -312,7 +287,6 @@
             // 
             this.txtForename.Location = new System.Drawing.Point(141, 73);
             this.txtForename.Name = "txtForename";
-            this.txtForename.ReadOnly = true;
             this.txtForename.Size = new System.Drawing.Size(100, 20);
             this.txtForename.TabIndex = 0;
             this.txtForename.Text = "Dave";
@@ -374,6 +348,29 @@
             this.textBox1.Text = "001";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(53, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(278, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Please select the employee\'s details you would like to edit";
+            // 
+            // cboSelectStaff
+            // 
+            this.cboSelectStaff.FormattingEnabled = true;
+            this.cboSelectStaff.Items.AddRange(new object[] {
+            "<null>",
+            "001"});
+            this.cboSelectStaff.Location = new System.Drawing.Point(358, 36);
+            this.cboSelectStaff.MaxDropDownItems = 2;
+            this.cboSelectStaff.Name = "cboSelectStaff";
+            this.cboSelectStaff.Size = new System.Drawing.Size(58, 21);
+            this.cboSelectStaff.TabIndex = 0;
+            this.cboSelectStaff.Text = "<null>";
+            this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
+            // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -381,22 +378,22 @@
             this.btnHome.Location = new System.Drawing.Point(512, 274);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 22;
+            this.btnHome.TabIndex = 20;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // deRegisterStaff
+            // updateStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 460);
+            this.ClientSize = new System.Drawing.Size(707, 460);
             this.Controls.Add(this.cboSelectStaff);
-            this.Controls.Add(this.lblDeRegStaff);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.grpStaffDetails);
-            this.Name = "deRegisterStaff";
+            this.Name = "updateStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "De-RegisterStaff";
+            this.Text = "Update Staff";
             this.grpStaffDetails.ResumeLayout(false);
             this.grpStaffDetails.PerformLayout();
             this.grpMarStatus.ResumeLayout(false);
@@ -408,11 +405,10 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cboSelectStaff;
-        private System.Windows.Forms.Label lblDeRegStaff;
         private System.Windows.Forms.GroupBox grpStaffDetails;
         private System.Windows.Forms.Button btnRegisterStaff;
         private System.Windows.Forms.Label lblChildren;
+        private System.Windows.Forms.ComboBox cboChildren;
         private System.Windows.Forms.GroupBox grpMarStatus;
         private System.Windows.Forms.RadioButton optMarried;
         private System.Windows.Forms.RadioButton optSingle;
@@ -436,7 +432,8 @@
         private System.Windows.Forms.Label lblForename;
         private System.Windows.Forms.Label lblStaffId;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textChildren;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboSelectStaff;
         private System.Windows.Forms.Button btnHome;
     }
 }

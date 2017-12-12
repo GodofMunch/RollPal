@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class generatePayRoll : Form
+    public partial class frmGeneratePayRoll : Form
     {
-        public generatePayRoll()
+        public frmGeneratePayRoll()
         {
             InitializeComponent();
             rtxtWageDetails.Text = "Staff ID\t\tName\t\tHours Worked\t\tWages Owed\n\n" +
@@ -52,7 +52,35 @@ namespace WindowsFormsApp1
 
         private void btnGenWages_Click(object sender, EventArgs e)
         {
+            var genWages = MessageBox.Show("Would you like to approve wage bill for Period 49" +
+                " with wages totalling 6249.98 euro?", "Generate Wage Bill", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation);
 
+            if(genWages == DialogResult.Yes)
+            {
+                var approved = MessageBox.Show("Wages have sent for Approval", "Sent", MessageBoxButtons.OK);
+
+                if(approved == DialogResult.OK)
+                {
+                    frmWelcomeScreen home = new frmWelcomeScreen();
+                    home.Show();
+                    this.Hide();
+                }
+
+                else
+                {
+                    frmGeneratePayRoll payRollGen = new frmGeneratePayRoll();
+                    payRollGen.Show();
+                    this.Hide();
+                }
+            }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            frmGeneratePayRoll payRollGen = new frmGeneratePayRoll();
+            payRollGen.Show();
+            this.Hide();
         }
     }
 }
