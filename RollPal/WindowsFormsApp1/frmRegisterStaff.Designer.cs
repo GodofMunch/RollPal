@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.staffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deRegisterStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.payRollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.taxationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.documentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.btnRegisterStaff = new System.Windows.Forms.Button();
+            this.lblChildren = new System.Windows.Forms.Label();
+            this.cboChildren = new System.Windows.Forms.ComboBox();
+            this.grpMarStatus = new System.Windows.Forms.GroupBox();
+            this.optMarried = new System.Windows.Forms.RadioButton();
+            this.optSingle = new System.Windows.Forms.RadioButton();
             this.txtDOB = new System.Windows.Forms.TextBox();
             this.lblDOB = new System.Windows.Forms.Label();
             this.txtEircode = new System.Windows.Forms.TextBox();
@@ -59,86 +56,17 @@
             this.lblStaffId = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.optMarried = new System.Windows.Forms.RadioButton();
-            this.optSingle = new System.Windows.Forms.RadioButton();
-            this.grpMarStatus = new System.Windows.Forms.GroupBox();
-            this.cboChildren = new System.Windows.Forms.ComboBox();
-            this.lblChildren = new System.Windows.Forms.Label();
-            this.btnRegisterStaff = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.txtIban = new System.Windows.Forms.TextBox();
+            this.lblban = new System.Windows.Forms.Label();
             this.grpStaffDetails.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.staffToolStripMenuItem,
-            this.payRollToolStripMenuItem,
-            this.taxationToolStripMenuItem,
-            this.documentsToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(707, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // staffToolStripMenuItem
-            // 
-            this.staffToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registerStaffToolStripMenuItem,
-            this.updateStaffToolStripMenuItem,
-            this.deRegisterStaffToolStripMenuItem,
-            this.searchStaffToolStripMenuItem});
-            this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            this.staffToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.staffToolStripMenuItem.Text = "Staff";
-            // 
-            // registerStaffToolStripMenuItem
-            // 
-            this.registerStaffToolStripMenuItem.Name = "registerStaffToolStripMenuItem";
-            this.registerStaffToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.registerStaffToolStripMenuItem.Text = "Register Staff";
-            // 
-            // updateStaffToolStripMenuItem
-            // 
-            this.updateStaffToolStripMenuItem.Name = "updateStaffToolStripMenuItem";
-            this.updateStaffToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.updateStaffToolStripMenuItem.Text = "Update Staff";
-            // 
-            // deRegisterStaffToolStripMenuItem
-            // 
-            this.deRegisterStaffToolStripMenuItem.Name = "deRegisterStaffToolStripMenuItem";
-            this.deRegisterStaffToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.deRegisterStaffToolStripMenuItem.Text = "De-Register Staff";
-            // 
-            // searchStaffToolStripMenuItem
-            // 
-            this.searchStaffToolStripMenuItem.Name = "searchStaffToolStripMenuItem";
-            this.searchStaffToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.searchStaffToolStripMenuItem.Text = "Search Staff";
-            // 
-            // payRollToolStripMenuItem
-            // 
-            this.payRollToolStripMenuItem.Name = "payRollToolStripMenuItem";
-            this.payRollToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.payRollToolStripMenuItem.Text = "Pay Roll";
-            // 
-            // taxationToolStripMenuItem
-            // 
-            this.taxationToolStripMenuItem.Name = "taxationToolStripMenuItem";
-            this.taxationToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.taxationToolStripMenuItem.Text = "Taxation";
-            // 
-            // documentsToolStripMenuItem
-            // 
-            this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
-            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.documentsToolStripMenuItem.Text = "Documents";
-            // 
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpStaffDetails.Controls.Add(this.lblban);
+            this.grpStaffDetails.Controls.Add(this.txtIban);
             this.grpStaffDetails.Controls.Add(this.btnRegisterStaff);
             this.grpStaffDetails.Controls.Add(this.lblChildren);
             this.grpStaffDetails.Controls.Add(this.cboChildren);
@@ -171,6 +99,80 @@
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnRegisterStaff
+            // 
+            this.btnRegisterStaff.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRegisterStaff.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnRegisterStaff.Location = new System.Drawing.Point(431, 274);
+            this.btnRegisterStaff.Name = "btnRegisterStaff";
+            this.btnRegisterStaff.Size = new System.Drawing.Size(75, 23);
+            this.btnRegisterStaff.TabIndex = 12;
+            this.btnRegisterStaff.Text = "Register";
+            this.btnRegisterStaff.UseVisualStyleBackColor = false;
+            this.btnRegisterStaff.Click += new System.EventHandler(this.btnRegisterStaff_Click);
+            // 
+            // lblChildren
+            // 
+            this.lblChildren.AutoSize = true;
+            this.lblChildren.Location = new System.Drawing.Point(362, 149);
+            this.lblChildren.Name = "lblChildren";
+            this.lblChildren.Size = new System.Drawing.Size(51, 13);
+            this.lblChildren.TabIndex = 19;
+            this.lblChildren.Text = "Children :";
+            // 
+            // cboChildren
+            // 
+            this.cboChildren.FormattingEnabled = true;
+            this.cboChildren.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.cboChildren.Location = new System.Drawing.Point(452, 146);
+            this.cboChildren.Name = "cboChildren";
+            this.cboChildren.Size = new System.Drawing.Size(38, 21);
+            this.cboChildren.TabIndex = 11;
+            this.cboChildren.Text = "0";
+            this.cboChildren.SelectedIndexChanged += new System.EventHandler(this.cboChildren_SelectedIndexChanged);
+            // 
+            // grpMarStatus
+            // 
+            this.grpMarStatus.Controls.Add(this.optMarried);
+            this.grpMarStatus.Controls.Add(this.optSingle);
+            this.grpMarStatus.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.grpMarStatus.Location = new System.Drawing.Point(338, 47);
+            this.grpMarStatus.Name = "grpMarStatus";
+            this.grpMarStatus.Size = new System.Drawing.Size(200, 57);
+            this.grpMarStatus.TabIndex = 17;
+            this.grpMarStatus.TabStop = false;
+            this.grpMarStatus.Text = "Marital Status";
+            // 
+            // optMarried
+            // 
+            this.optMarried.AutoSize = true;
+            this.optMarried.Location = new System.Drawing.Point(27, 32);
+            this.optMarried.Name = "optMarried";
+            this.optMarried.Size = new System.Drawing.Size(60, 17);
+            this.optMarried.TabIndex = 9;
+            this.optMarried.Text = "Married";
+            this.optMarried.UseVisualStyleBackColor = true;
+            // 
+            // optSingle
+            // 
+            this.optSingle.AutoSize = true;
+            this.optSingle.Checked = true;
+            this.optSingle.Location = new System.Drawing.Point(114, 33);
+            this.optSingle.Name = "optSingle";
+            this.optSingle.Size = new System.Drawing.Size(54, 17);
+            this.optSingle.TabIndex = 10;
+            this.optSingle.TabStop = true;
+            this.optSingle.Text = "Single";
+            this.optSingle.UseVisualStyleBackColor = true;
             // 
             // txtDOB
             // 
@@ -363,94 +365,34 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Please enter the new Employee\'s details.";
             // 
-            // optMarried
+            // txtIban
             // 
-            this.optMarried.AutoSize = true;
-            this.optMarried.Location = new System.Drawing.Point(27, 32);
-            this.optMarried.Name = "optMarried";
-            this.optMarried.Size = new System.Drawing.Size(60, 17);
-            this.optMarried.TabIndex = 9;
-            this.optMarried.Text = "Married";
-            this.optMarried.UseVisualStyleBackColor = true;
+            this.txtIban.Location = new System.Drawing.Point(338, 203);
+            this.txtIban.Name = "txtIban";
+            this.txtIban.Size = new System.Drawing.Size(168, 20);
+            this.txtIban.TabIndex = 20;
+            this.txtIban.TextChanged += new System.EventHandler(this.txtIban_TextChanged);
             // 
-            // optSingle
+            // lblban
             // 
-            this.optSingle.AutoSize = true;
-            this.optSingle.Checked = true;
-            this.optSingle.Location = new System.Drawing.Point(114, 33);
-            this.optSingle.Name = "optSingle";
-            this.optSingle.Size = new System.Drawing.Size(54, 17);
-            this.optSingle.TabIndex = 10;
-            this.optSingle.Text = "Single";
-            this.optSingle.UseVisualStyleBackColor = true;
+            this.lblban.AutoSize = true;
+            this.lblban.Location = new System.Drawing.Point(277, 206);
+            this.lblban.Name = "lblban";
+            this.lblban.Size = new System.Drawing.Size(38, 13);
+            this.lblban.TabIndex = 21;
+            this.lblban.Text = "IBAN :";
             // 
-            // grpMarStatus
-            // 
-            this.grpMarStatus.Controls.Add(this.optMarried);
-            this.grpMarStatus.Controls.Add(this.optSingle);
-            this.grpMarStatus.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.grpMarStatus.Location = new System.Drawing.Point(338, 47);
-            this.grpMarStatus.Name = "grpMarStatus";
-            this.grpMarStatus.Size = new System.Drawing.Size(200, 57);
-            this.grpMarStatus.TabIndex = 17;
-            this.grpMarStatus.TabStop = false;
-            this.grpMarStatus.Text = "Marital Status";
-            // 
-            // cboChildren
-            // 
-            this.cboChildren.FormattingEnabled = true;
-            this.cboChildren.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.cboChildren.Location = new System.Drawing.Point(452, 146);
-            this.cboChildren.Name = "cboChildren";
-            this.cboChildren.Size = new System.Drawing.Size(38, 21);
-            this.cboChildren.TabIndex = 11;
-            this.cboChildren.Text = "0";
-            this.cboChildren.SelectedIndexChanged += new System.EventHandler(this.cboChildren_SelectedIndexChanged);
-            // 
-            // lblChildren
-            // 
-            this.lblChildren.AutoSize = true;
-            this.lblChildren.Location = new System.Drawing.Point(362, 149);
-            this.lblChildren.Name = "lblChildren";
-            this.lblChildren.Size = new System.Drawing.Size(51, 13);
-            this.lblChildren.TabIndex = 19;
-            this.lblChildren.Text = "Children :";
-            // 
-            // btnRegisterStaff
-            // 
-            this.btnRegisterStaff.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRegisterStaff.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnRegisterStaff.Location = new System.Drawing.Point(431, 274);
-            this.btnRegisterStaff.Name = "btnRegisterStaff";
-            this.btnRegisterStaff.Size = new System.Drawing.Size(75, 23);
-            this.btnRegisterStaff.TabIndex = 12;
-            this.btnRegisterStaff.Text = "Register";
-            this.btnRegisterStaff.UseVisualStyleBackColor = false;
-            this.btnRegisterStaff.Click += new System.EventHandler(this.btnRegisterStaff_Click);
-            // 
-            // registerStaff
+            // frmRegisterStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 460);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.grpStaffDetails);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "registerStaff";
+            this.Name = "frmRegisterStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Staff";
             this.Load += new System.EventHandler(this.registerStaff_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.grpStaffDetails.ResumeLayout(false);
             this.grpStaffDetails.PerformLayout();
             this.grpMarStatus.ResumeLayout(false);
@@ -461,16 +403,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem staffToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registerStaffToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateStaffToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deRegisterStaffToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchStaffToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem payRollToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem taxationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem documentsToolStripMenuItem;
         private System.Windows.Forms.GroupBox grpStaffDetails;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPhone;
@@ -499,5 +431,7 @@
         private System.Windows.Forms.Label lblChildren;
         private System.Windows.Forms.ComboBox cboChildren;
         private System.Windows.Forms.Button btnRegisterStaff;
+        private System.Windows.Forms.Label lblban;
+        private System.Windows.Forms.TextBox txtIban;
     }
 }

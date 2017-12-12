@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBankingDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBankingDetails.Designer.cs">
+      <DependentUpon>frmBankingDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCreateTaxClause.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,17 +81,35 @@
     <Compile Include="frmPayStaff.Designer.cs">
       <DependentUpon>frmPayStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrintP60.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintP60.Designer.cs">
+      <DependentUpon>frmPrintP60.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQueryPayroll.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQueryPayroll.Designer.cs">
       <DependentUpon>frmQueryPayroll.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRemoveTaxationClause.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRemoveTaxationClause.Designer.cs">
+      <DependentUpon>frmRemoveTaxationClause.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSearchStaff.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSearchStaff.Designer.cs">
       <DependentUpon>frmSearchStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateTaxClause.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateTaxClause.Designer.cs">
+      <DependentUpon>frmUpdateTaxClause.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -118,6 +142,9 @@
     <Compile Include="frmWelcomeScreen.Designer.cs">
       <DependentUpon>frmWelcomeScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmBankingDetails.resx">
+      <DependentUpon>frmBankingDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCreateTaxClause.resx">
       <DependentUpon>frmCreateTaxClause.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,14 +160,23 @@
     <EmbeddedResource Include="frmPayStaff.resx">
       <DependentUpon>frmPayStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintP60.resx">
+      <DependentUpon>frmPrintP60.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQueryPayroll.resx">
       <DependentUpon>frmQueryPayroll.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterStaff.resx">
       <DependentUpon>frmRegisterStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRemoveTaxationClause.resx">
+      <DependentUpon>frmRemoveTaxationClause.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRollPalHome.resx">
       <DependentUpon>frmRollPalHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateTaxClause.resx">
+      <DependentUpon>frmUpdateTaxClause.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

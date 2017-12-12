@@ -17,3 +17,8 @@ C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsF
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmUpdateStaff.resources
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmWelcomeScreen.resources
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmQueryPayroll.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmCreateTaxClause.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmUpdateTaxClause.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmRemoveTaxationClause.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmPrintP60.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.frmBankingDetails.resources

@@ -29,14 +29,24 @@ namespace WindowsFormsApp1
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            /*if(userNameBText.Text.Equals("CWoods") && passWordBox.Text.Equals("2017"))
+            if(userNameBText.Text.Equals("CatherineWoods") && passWordBox.Text.Equals("2017"))
+            {
+                frmWelcomeScreen myWelcome = new frmWelcomeScreen();
+                myWelcome.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Sorry, your details are incorrect, Please try again!", "Error");
+
+                Home login = new Home();
+                login.Show();
+                this.Hide();
+            }
+            
+            
 
             
-            else*/
-
-            frmWelcomeScreen myWelcome = new frmWelcomeScreen();
-            myWelcome.Show();
-            this.Hide();
 
         }
 

@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
         string county = "";
         string eirCode = "";
         string dob = "";
+        string iban = "";
 
         public frmRegisterStaff()
         {
@@ -62,7 +63,7 @@ namespace WindowsFormsApp1
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
             if(validForename() && validSurname() && validPhone() && validStreet() && validTown() 
-                && validCounty() && validEircode() && validEmail() && validDOB())
+                && validCounty() && validEircode() && validEmail() && validDOB() && validIban())
 
             //https://stackoverflow.com/questions/3845695/is-there-a-builtin-confirmation-dialog-in-windows-forms
             //to see the c# equivalent of java's JOP.showConfirmDialog()
@@ -276,6 +277,21 @@ namespace WindowsFormsApp1
             else
                 txtDOB.ForeColor = (Color.Black);
                 
+        }
+
+        private void txtIban_TextChanged(object sender, EventArgs e)
+        {
+            iban = txtIban.Text;
+        }
+
+        private bool validIban()
+        {
+            bool valid = false;
+
+            if (iban[0] == 'I' && iban[1] == 'E' && iban.Length == 22)
+                valid = true;
+
+            return valid;
         }
     }
 }

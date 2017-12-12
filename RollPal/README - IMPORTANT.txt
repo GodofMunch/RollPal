@@ -13,3 +13,5 @@ iii) Phone requires 10 digits
 iv) Email requires '@' and '.'
 
 v) D.O.B requires 8 digits and 2 slashes(backwards or forewards)
+
+vi) the first two characters must be IE and iban must be 22 characters long

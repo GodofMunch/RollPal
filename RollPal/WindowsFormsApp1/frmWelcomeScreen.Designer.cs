@@ -40,9 +40,14 @@
             this.payStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.queryPayRollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taxationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createTaxationClauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateTaxationClauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.welcomeLabel = new System.Windows.Forms.Label();
             this.welcomeInstructionLbl = new System.Windows.Forms.Label();
+            this.removeTaxationClauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printP60ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bankingDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,12 +144,33 @@
             // 
             // taxationToolStripMenuItem
             // 
+            this.taxationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createTaxationClauseToolStripMenuItem,
+            this.updateTaxationClauseToolStripMenuItem,
+            this.removeTaxationClauseToolStripMenuItem});
             this.taxationToolStripMenuItem.Name = "taxationToolStripMenuItem";
             this.taxationToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.taxationToolStripMenuItem.Text = "Taxation";
             // 
+            // createTaxationClauseToolStripMenuItem
+            // 
+            this.createTaxationClauseToolStripMenuItem.Name = "createTaxationClauseToolStripMenuItem";
+            this.createTaxationClauseToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.createTaxationClauseToolStripMenuItem.Text = "Create Taxation Clause";
+            this.createTaxationClauseToolStripMenuItem.Click += new System.EventHandler(this.createTaxationClauseToolStripMenuItem_Click);
+            // 
+            // updateTaxationClauseToolStripMenuItem
+            // 
+            this.updateTaxationClauseToolStripMenuItem.Name = "updateTaxationClauseToolStripMenuItem";
+            this.updateTaxationClauseToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.updateTaxationClauseToolStripMenuItem.Text = "Update Taxation Clause";
+            this.updateTaxationClauseToolStripMenuItem.Click += new System.EventHandler(this.updateTaxationClauseToolStripMenuItem_Click);
+            // 
             // documentsToolStripMenuItem
             // 
+            this.documentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.printP60ToolStripMenuItem,
+            this.bankingDetailsToolStripMenuItem});
             this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
             this.documentsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.documentsToolStripMenuItem.Text = "Documents";
@@ -166,6 +192,27 @@
             this.welcomeInstructionLbl.Size = new System.Drawing.Size(266, 13);
             this.welcomeInstructionLbl.TabIndex = 2;
             this.welcomeInstructionLbl.Text = "To Begin Please select an option from the menu above";
+            // 
+            // removeTaxationClauseToolStripMenuItem
+            // 
+            this.removeTaxationClauseToolStripMenuItem.Name = "removeTaxationClauseToolStripMenuItem";
+            this.removeTaxationClauseToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.removeTaxationClauseToolStripMenuItem.Text = "Remove Taxation Clause";
+            this.removeTaxationClauseToolStripMenuItem.Click += new System.EventHandler(this.removeTaxationClauseToolStripMenuItem_Click);
+            // 
+            // printP60ToolStripMenuItem
+            // 
+            this.printP60ToolStripMenuItem.Name = "printP60ToolStripMenuItem";
+            this.printP60ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.printP60ToolStripMenuItem.Text = "Print p60";
+            this.printP60ToolStripMenuItem.Click += new System.EventHandler(this.printP60ToolStripMenuItem_Click);
+            // 
+            // bankingDetailsToolStripMenuItem
+            // 
+            this.bankingDetailsToolStripMenuItem.Name = "bankingDetailsToolStripMenuItem";
+            this.bankingDetailsToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.bankingDetailsToolStripMenuItem.Text = "Banking Details";
+            this.bankingDetailsToolStripMenuItem.Click += new System.EventHandler(this.bankingDetailsToolStripMenuItem_Click);
             // 
             // frmWelcomeScreen
             // 
@@ -203,5 +250,10 @@
         private System.Windows.Forms.ToolStripMenuItem generatePayrollToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem payStaffToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem queryPayRollToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createTaxationClauseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateTaxationClauseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeTaxationClauseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printP60ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bankingDetailsToolStripMenuItem;
     }
 }

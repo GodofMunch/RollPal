@@ -72,5 +72,40 @@ namespace WindowsFormsApp1
             query.Show();
             this.Hide();
         }
+
+        private void createTaxationClauseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCreateTaxClause newTax = new frmCreateTaxClause();
+            newTax.Show();
+            this.Hide();
+        }
+
+        private void updateTaxationClauseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateTaxClause upTax = new frmUpdateTaxClause();
+            upTax.Show();
+            this.Hide();
+        }
+
+        private void removeTaxationClauseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRemoveTaxationClause removeTax = new frmRemoveTaxationClause();
+            removeTax.Show();
+            this.Hide();
+        }
+
+        private void printP60ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrintP60 print = new frmPrintP60();
+            print.Show();
+            this.Hide();
+        }
+
+        private void bankingDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBankingDetails banking = new frmBankingDetails();
+            banking.Show();
+            this.Hide();
+        }
     }
 }
