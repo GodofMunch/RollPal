@@ -51,6 +51,18 @@
     <Compile Include="deRegisterStaff.Designer.cs">
       <DependentUpon>deRegisterStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="enterTimeSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="enterTimeSheet.Designer.cs">
+      <DependentUpon>enterTimeSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="generatePayRoll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="generatePayRoll.Designer.cs">
+      <DependentUpon>generatePayRoll.cs</DependentUpon>
+    </Compile>
     <Compile Include="searchStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,15 @@
     <Compile Include="welcomeScreen.Designer.cs">
       <DependentUpon>welcomeScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="deRegisterStaff.resx">
+      <DependentUpon>deRegisterStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="enterTimeSheet.resx">
+      <DependentUpon>enterTimeSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="generatePayRoll.resx">
+      <DependentUpon>generatePayRoll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="registerStaff.resx">
       <DependentUpon>registerStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="searchStaff.resx">
       <DependentUpon>searchStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateStaff.resx">
+      <DependentUpon>updateStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="welcomeScreen.resx">
       <DependentUpon>welcomeScreen.cs</DependentUpon>

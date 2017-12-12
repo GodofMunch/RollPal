@@ -34,11 +34,15 @@
             this.updateStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deRegisterStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.welcomeLabel = new System.Windows.Forms.Label();
-            this.welcomeInstructionLbl = new System.Windows.Forms.Label();
             this.payRollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enterTimesheetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taxationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.welcomeLabel = new System.Windows.Forms.Label();
+            this.welcomeInstructionLbl = new System.Windows.Forms.Label();
+            this.generatePayrollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.payStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.queryPayRollToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +98,36 @@
             this.searchStaffToolStripMenuItem.Text = "Search Staff";
             this.searchStaffToolStripMenuItem.Click += new System.EventHandler(this.searchStaffToolStripMenuItem_Click);
             // 
+            // payRollToolStripMenuItem
+            // 
+            this.payRollToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.enterTimesheetToolStripMenuItem,
+            this.generatePayrollToolStripMenuItem,
+            this.payStaffToolStripMenuItem,
+            this.queryPayRollToolStripMenuItem});
+            this.payRollToolStripMenuItem.Name = "payRollToolStripMenuItem";
+            this.payRollToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.payRollToolStripMenuItem.Text = "Pay Roll";
+            // 
+            // enterTimesheetToolStripMenuItem
+            // 
+            this.enterTimesheetToolStripMenuItem.Name = "enterTimesheetToolStripMenuItem";
+            this.enterTimesheetToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.enterTimesheetToolStripMenuItem.Text = "Enter Timesheet";
+            this.enterTimesheetToolStripMenuItem.Click += new System.EventHandler(this.enterTimesheetToolStripMenuItem_Click);
+            // 
+            // taxationToolStripMenuItem
+            // 
+            this.taxationToolStripMenuItem.Name = "taxationToolStripMenuItem";
+            this.taxationToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.taxationToolStripMenuItem.Text = "Taxation";
+            // 
+            // documentsToolStripMenuItem
+            // 
+            this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
+            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.documentsToolStripMenuItem.Text = "Documents";
+            // 
             // welcomeLabel
             // 
             this.welcomeLabel.AutoSize = true;
@@ -112,23 +146,24 @@
             this.welcomeInstructionLbl.TabIndex = 2;
             this.welcomeInstructionLbl.Text = "To Begin Please select an option from the menu above";
             // 
-            // payRollToolStripMenuItem
+            // generatePayrollToolStripMenuItem
             // 
-            this.payRollToolStripMenuItem.Name = "payRollToolStripMenuItem";
-            this.payRollToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.payRollToolStripMenuItem.Text = "Pay Roll";
+            this.generatePayrollToolStripMenuItem.Name = "generatePayrollToolStripMenuItem";
+            this.generatePayrollToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.generatePayrollToolStripMenuItem.Text = "Generate Payroll";
+            this.generatePayrollToolStripMenuItem.Click += new System.EventHandler(this.generatePayrollToolStripMenuItem_Click);
             // 
-            // taxationToolStripMenuItem
+            // payStaffToolStripMenuItem
             // 
-            this.taxationToolStripMenuItem.Name = "taxationToolStripMenuItem";
-            this.taxationToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.taxationToolStripMenuItem.Text = "Taxation";
+            this.payStaffToolStripMenuItem.Name = "payStaffToolStripMenuItem";
+            this.payStaffToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.payStaffToolStripMenuItem.Text = "PayStaff";
             // 
-            // documentsToolStripMenuItem
+            // queryPayRollToolStripMenuItem
             // 
-            this.documentsToolStripMenuItem.Name = "documentsToolStripMenuItem";
-            this.documentsToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
-            this.documentsToolStripMenuItem.Text = "Documents";
+            this.queryPayRollToolStripMenuItem.Name = "queryPayRollToolStripMenuItem";
+            this.queryPayRollToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.queryPayRollToolStripMenuItem.Text = "Query Pay Roll";
             // 
             // welcomeScreen
             // 
@@ -162,5 +197,9 @@
         private System.Windows.Forms.ToolStripMenuItem payRollToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem taxationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem documentsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enterTimesheetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generatePayrollToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem payStaffToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem queryPayRollToolStripMenuItem;
     }
 }

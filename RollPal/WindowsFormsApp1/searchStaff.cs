@@ -16,5 +16,17 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void cboSelectStaff_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            grpStaffDetails.Visible = true;
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            welcomeScreen home = new welcomeScreen();
+            home.Show();
+            this.Hide();
+        }
     }
 }

@@ -11,3 +11,7 @@ C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsF
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\RollPal.csproj.CoreCompileInputs.cache
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.registerStaff.resources
 C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.searchStaff.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.updateStaff.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.deRegisterStaff.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.enterTimeSheet.resources
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.generatePayRoll.resources

@@ -183,6 +183,8 @@
             this.txtDOB.Text = "dd/mm/yyyy";
             this.txtDOB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDOB.TextChanged += new System.EventHandler(this.txtDOB_TextChanged);
+            this.txtDOB.Enter += new System.EventHandler(this.txtDOB_GotFocus);
+            this.txtDOB.Leave += new System.EventHandler(this.txtDOB_LostFocus);
             // 
             // lblDOB
             // 

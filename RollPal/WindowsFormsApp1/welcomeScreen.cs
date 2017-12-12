@@ -44,5 +44,19 @@ namespace WindowsFormsApp1
             search.Show();
             this.Hide();
         }
+
+        private void enterTimesheetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            enterTimeSheet enterTimes = new enterTimeSheet();
+            enterTimes.Show();
+            this.Hide();
+        }
+
+        private void generatePayrollToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            generatePayRoll payRollGen = new generatePayRoll();
+            payRollGen.Show();
+            this.Hide();
+        }
     }
 }

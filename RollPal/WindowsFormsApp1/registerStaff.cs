@@ -24,7 +24,6 @@ namespace WindowsFormsApp1
         string eirCode = "";
         string dob = "";
 
-
         public registerStaff()
         {
             InitializeComponent();
@@ -145,7 +144,6 @@ namespace WindowsFormsApp1
             dob = txtDOB.Text;
         }
 
-
         private bool validForename()
         {
             bool valid = false;
@@ -264,6 +262,20 @@ namespace WindowsFormsApp1
                 valid = true;
 
             return valid;
+        }
+
+        private void txtDOB_GotFocus(object sender, EventArgs e)
+        {
+            txtDOB.Text = String.Empty;
+        }
+
+        private void txtDOB_LostFocus(object sender, EventArgs e)
+        {
+            if (txtDOB.Text == "")
+                txtDOB.Text = "dd/mm/yyyy";
+            else
+                txtDOB.ForeColor = (Color.Black);
+                
         }
     }
 }
