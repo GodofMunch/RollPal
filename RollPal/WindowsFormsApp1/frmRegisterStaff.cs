@@ -47,6 +47,9 @@ namespace WindowsFormsApp1
 
         private void registerStaff_Load(object sender, EventArgs e)
         {
+            string type = "Staff_Id";
+
+            DataSet ds = new DataSet();
 
         }
 
