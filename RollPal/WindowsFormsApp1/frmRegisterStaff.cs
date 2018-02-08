@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             {
 
 
-                Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, txtSurname.Text, txtPhone.Text, txtStreet.Text, txtTown.Text,
+                Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtTown.Text,
                                             txtCounty.Text, txtEircode.Text, txtDOB.Text, txtIban.Text);
 
                 newStaff.registerStaff();
@@ -80,9 +80,8 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Thank you! Returning Home.", "Thank you", MessageBoxButtons.OK);
                 frmWelcomeScreen home = new frmWelcomeScreen();
 
-            
-                    home.Show();
-                    this.Hide();
+                home.Show();
+                this.Hide();
             }
 
             else
@@ -102,8 +101,6 @@ namespace WindowsFormsApp1
                     backHome.Show();
                     this.Hide();
                 }
-                    
-
             }
         }
 

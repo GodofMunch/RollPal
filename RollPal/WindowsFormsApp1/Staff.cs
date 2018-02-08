@@ -188,7 +188,7 @@ namespace WindowsFormsApp1
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            string strsql = "SELECT MAX(staffId) FROM STAFF";
+            string strsql = "SELECT MAX(StaffId) FROM STAFF";
 
             OracleCommand cmd = new OracleCommand(strsql, conn);
 
@@ -208,7 +208,17 @@ namespace WindowsFormsApp1
 
         public void registerStaff()
         {
-            
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            conn.Open();
+
+            string strsql = "INSERT INTO STAFF VALUES (" + this.staffId.ToString("000") + 
+                "," + this.forename + "," + this.surname + "," + this.phone + "," + this.email +
+                "," + this.street + "," + this.town + "," + this.county + "," + this.eircode + 
+                this.dob + "," + this.iban + ")";
+
+            OracleCommand cmd = new OracleCommand(strsql, conn);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }
