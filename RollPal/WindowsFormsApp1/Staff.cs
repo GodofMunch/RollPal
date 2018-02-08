@@ -22,6 +22,36 @@ namespace WindowsFormsApp1
         private string dob;
         private string iban;
 
+        public Staff()
+        {
+            staffId = 000;
+            forename = "";
+            surname = "";
+            phone = "";
+            email = "";
+            street = "";
+            town = "";
+            county = "";
+            eircode = "";
+            dob = "";
+            iban = "";
+        }
+
+        public Staff(int staffId, string forename, string surname, string phone, string email, string street, string town, string county, string eircode, string dob, string iban)
+        {
+            setStaffId(staffId);
+            setForeName(forename);
+            setSurname(surname);
+            setPhone(phone);
+            setEmail(email);
+            setStreet(street);
+            setTown(town);
+            setCounty(county);
+            setEirCode(eircode);
+            setDOB(dob);
+            setIban(iban);
+        }
+
         public int getStaffId()
         {
             return staffId;
@@ -132,35 +162,7 @@ namespace WindowsFormsApp1
             this.iban = iban;
         }
 
-        public Staff()
-        {
-            staffId = 000;
-            forename = "";
-            surname = "";
-            phone = "";
-            email = "";
-            street = "";
-            town = "";
-            county = "";
-            eircode = "";
-            dob = "";
-            iban = "";
-        }
-            
-        public Staff(int staffId, string forename, string surname, string phone, string email, string street, string town, string county, string eircode, string dob, string iban)
-        {
-            setStaffId(staffId);
-            setForeName(forename);
-            setSurname(surname);
-            setPhone(phone);
-            setEmail(email);
-            setStreet(street);
-            setTown(town);
-            setCounty(county);
-            setEirCode(eircode);
-            setDOB(dob);
-            setIban(iban);
-        }
+        
 
         public static DataSet getStaff(DataSet ds, string type)
         {
@@ -206,7 +208,7 @@ namespace WindowsFormsApp1
 
         public void registerStaff()
         {
-
+            
         }
     }
 }

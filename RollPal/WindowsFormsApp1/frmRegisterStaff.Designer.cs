@@ -56,7 +56,7 @@
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblForename = new System.Windows.Forms.Label();
             this.lblStaffId = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtStaffID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.grpStaffDetails.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
@@ -90,7 +90,7 @@
             this.grpStaffDetails.Controls.Add(this.lblSurname);
             this.grpStaffDetails.Controls.Add(this.lblForename);
             this.grpStaffDetails.Controls.Add(this.lblStaffId);
-            this.grpStaffDetails.Controls.Add(this.textBox1);
+            this.grpStaffDetails.Controls.Add(this.txtStaffID);
             this.grpStaffDetails.ForeColor = System.Drawing.SystemColors.Highlight;
             this.grpStaffDetails.Location = new System.Drawing.Point(48, 77);
             this.grpStaffDetails.Name = "grpStaffDetails";
@@ -172,7 +172,7 @@
             // optMarried
             // 
             this.optMarried.AutoSize = true;
-            this.optMarried.Location = new System.Drawing.Point(27, 32);
+            this.optMarried.Location = new System.Drawing.Point(92, 25);
             this.optMarried.Name = "optMarried";
             this.optMarried.Size = new System.Drawing.Size(60, 17);
             this.optMarried.TabIndex = 9;
@@ -183,7 +183,7 @@
             // 
             this.optSingle.AutoSize = true;
             this.optSingle.Checked = true;
-            this.optSingle.Location = new System.Drawing.Point(114, 33);
+            this.optSingle.Location = new System.Drawing.Point(21, 26);
             this.optSingle.Name = "optSingle";
             this.optSingle.Size = new System.Drawing.Size(54, 17);
             this.optSingle.TabIndex = 10;
@@ -361,18 +361,18 @@
             this.lblStaffId.TabIndex = 1;
             this.lblStaffId.Text = "Staff ID :";
             // 
-            // textBox1
+            // txtStaffID
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(141, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TabStop = false;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtStaffID.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtStaffID.Enabled = false;
+            this.txtStaffID.Location = new System.Drawing.Point(141, 47);
+            this.txtStaffID.Name = "txtStaffID";
+            this.txtStaffID.ReadOnly = true;
+            this.txtStaffID.Size = new System.Drawing.Size(100, 20);
+            this.txtStaffID.TabIndex = 1;
+            this.txtStaffID.TabStop = false;
+            this.txtStaffID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtStaffID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label10
             // 
@@ -410,7 +410,7 @@
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblForename;
         private System.Windows.Forms.Label lblStaffId;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtStaffID;
         private System.Windows.Forms.Label lblEircode;
         private System.Windows.Forms.Label lblCounty;
         private System.Windows.Forms.Label lblTown;

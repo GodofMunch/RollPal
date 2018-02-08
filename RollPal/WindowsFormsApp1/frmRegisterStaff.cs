@@ -47,11 +47,8 @@ namespace WindowsFormsApp1
 
         private void registerStaff_Load(object sender, EventArgs e)
         {
-            string type = "Staff_Id";
-            int staffIdAsString = Staff.nextStaffId();
-            textBox1.Text = staffIdAsString.ToString();
-
-            DataSet ds = new DataSet();
+         
+            txtStaffID.Text = Staff.nextStaffId().ToString("000");
 
         }
 
@@ -73,14 +70,19 @@ namespace WindowsFormsApp1
             //https://stackoverflow.com/questions/3845695/is-there-a-builtin-confirmation-dialog-in-windows-forms
             //to see the c# equivalent of java's JOP.showConfirmDialog()
             {
-                var ok = MessageBox.Show("Thank you! Returning Home.","Thank you", MessageBoxButtons.OK);
+
+
+                Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, txtSurname.Text, txtPhone.Text, txtStreet.Text, txtTown.Text,
+                                            txtCounty.Text, txtEircode.Text, txtDOB.Text, txtIban.Text);
+
+                newStaff.registerStaff();
+
+                MessageBox.Show("Thank you! Returning Home.", "Thank you", MessageBoxButtons.OK);
                 frmWelcomeScreen home = new frmWelcomeScreen();
 
-                if (ok == DialogResult.OK)
-                {
+            
                     home.Show();
                     this.Hide();
-                }
             }
 
             else
