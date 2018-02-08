@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.lblban = new System.Windows.Forms.Label();
+            this.txtIban = new System.Windows.Forms.TextBox();
             this.btnRegisterStaff = new System.Windows.Forms.Button();
             this.lblChildren = new System.Windows.Forms.Label();
             this.cboChildren = new System.Windows.Forms.ComboBox();
@@ -56,8 +58,6 @@
             this.lblStaffId = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtIban = new System.Windows.Forms.TextBox();
-            this.lblban = new System.Windows.Forms.Label();
             this.grpStaffDetails.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,23 @@
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lblban
+            // 
+            this.lblban.AutoSize = true;
+            this.lblban.Location = new System.Drawing.Point(277, 206);
+            this.lblban.Name = "lblban";
+            this.lblban.Size = new System.Drawing.Size(38, 13);
+            this.lblban.TabIndex = 21;
+            this.lblban.Text = "IBAN :";
+            // 
+            // txtIban
+            // 
+            this.txtIban.Location = new System.Drawing.Point(338, 203);
+            this.txtIban.Name = "txtIban";
+            this.txtIban.Size = new System.Drawing.Size(168, 20);
+            this.txtIban.TabIndex = 20;
+            this.txtIban.TextChanged += new System.EventHandler(this.txtIban_TextChanged);
             // 
             // btnRegisterStaff
             // 
@@ -347,14 +364,15 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(141, 47);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = "001";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label10
             // 
@@ -364,23 +382,6 @@
             this.label10.Size = new System.Drawing.Size(199, 13);
             this.label10.TabIndex = 2;
             this.label10.Text = "Please enter the new Employee\'s details.";
-            // 
-            // txtIban
-            // 
-            this.txtIban.Location = new System.Drawing.Point(338, 203);
-            this.txtIban.Name = "txtIban";
-            this.txtIban.Size = new System.Drawing.Size(168, 20);
-            this.txtIban.TabIndex = 20;
-            this.txtIban.TextChanged += new System.EventHandler(this.txtIban_TextChanged);
-            // 
-            // lblban
-            // 
-            this.lblban.AutoSize = true;
-            this.lblban.Location = new System.Drawing.Point(277, 206);
-            this.lblban.Name = "lblban";
-            this.lblban.Size = new System.Drawing.Size(38, 13);
-            this.lblban.TabIndex = 21;
-            this.lblban.Text = "IBAN :";
             // 
             // frmRegisterStaff
             // 

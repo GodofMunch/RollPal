@@ -48,6 +48,8 @@ namespace WindowsFormsApp1
         private void registerStaff_Load(object sender, EventArgs e)
         {
             string type = "Staff_Id";
+            int staffIdAsString = Staff.nextStaffId();
+            textBox1.Text = staffIdAsString.ToString();
 
             DataSet ds = new DataSet();
 
@@ -295,6 +297,11 @@ namespace WindowsFormsApp1
                 valid = true;
 
             return valid;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
