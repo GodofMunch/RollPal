@@ -21,6 +21,9 @@ namespace WindowsFormsApp1
         private string eircode;
         private string dob;
         private string iban;
+        private char maritalStatus;
+        private int children;
+        private char gender;
 
         public Staff()
         {
@@ -35,9 +38,16 @@ namespace WindowsFormsApp1
             eircode = "";
             dob = "";
             iban = "";
+            maritalStatus = 'n';
+            children = 0;
+            gender = 'm';
+
         }
 
-        public Staff(int staffId, string forename, string surname, string phone, string email, string street, string town, string county, string eircode, string dob, string iban)
+        public Staff(int staffId, string forename, string surname, string phone, 
+                     string email, string street, string town, string county, 
+                     string eircode, string dob, char gender, string iban, 
+                     char maritalStatus, int children)
         {
             setStaffId(staffId);
             setForeName(forename);
@@ -50,6 +60,8 @@ namespace WindowsFormsApp1
             setEirCode(eircode);
             setDOB(dob);
             setIban(iban);
+            setMaritalStatus(maritalStatus);
+            setChildren(children);
         }
 
         public int getStaffId()
@@ -107,6 +119,16 @@ namespace WindowsFormsApp1
             return iban;
         }
 
+        public char getMaritalStatus()
+        {
+            return maritalStatus;
+        }
+
+        public int getChildren()
+        {
+            return children;
+        }
+
         public void setStaffId(int staffId)
         {
             this.staffId = staffId;
@@ -162,7 +184,15 @@ namespace WindowsFormsApp1
             this.iban = iban;
         }
 
-        
+        public void setMaritalStatus(char maritalStatus)
+        {
+            this.maritalStatus = maritalStatus;
+        }
+
+        public void setChildren(int children)
+        {
+            this.children = children;
+        }
 
         public static DataSet getStaff(DataSet ds, string type)
         {
@@ -212,10 +242,11 @@ namespace WindowsFormsApp1
             conn.Open();
 
             string strsql = "INSERT INTO STAFF VALUES (" + this.staffId.ToString("000") + 
-                "," + this.forename + "," + this.surname + "," + this.phone + "," + this.email +
-                "," + this.street + "," + this.town + "," + this.county + "," + this.eircode + 
-                this.dob + "," + this.iban + ")";
+                "," + this.forename + "," + this.surname + "," + this.dob + "," + this.gender + "," +
+                this.maritalStatus + "," + this .children + ")";
 
+            //  +this.phone + ",", +  + this.email + this.street + "," + this.town + "," + this.county + "," + this.eircode +
+            //+this.iban + ","
             OracleCommand cmd = new OracleCommand(strsql, conn);
             cmd.ExecuteNonQuery();
             conn.Close();

@@ -24,6 +24,8 @@ namespace WindowsFormsApp1
         string eirCode = "";
         string dob = "";
         string iban = "";
+        char maritalStatus = 'n';
+        int children = 0;
 
         public frmRegisterStaff()
         {
@@ -54,7 +56,7 @@ namespace WindowsFormsApp1
 
         private void cboChildren_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            children = cboChildren.Text[0];
         }
 
         private void txtDOB_Click(object sender, MouseEventArgs e)
@@ -73,7 +75,7 @@ namespace WindowsFormsApp1
 
 
                 Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtTown.Text,
-                                            txtCounty.Text, txtEircode.Text, txtDOB.Text, txtIban.Text);
+                                            txtCounty.Text, txtEircode.Text, txtDOB.Text, txtIban.Text, maritalStatus, children);
 
                 newStaff.registerStaff();
 
@@ -301,6 +303,15 @@ namespace WindowsFormsApp1
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void optMarried_CheckedChanged(object sender, EventArgs e)
+        {
+            if (optMarried.Checked)
+                maritalStatus = 'y';
+
+            else
+                maritalStatus = 'n';
         }
     }
 }

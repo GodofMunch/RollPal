@@ -178,6 +178,7 @@
             this.optMarried.TabIndex = 9;
             this.optMarried.Text = "Married";
             this.optMarried.UseVisualStyleBackColor = true;
+            this.optMarried.CheckedChanged += new System.EventHandler(this.optMarried_CheckedChanged);
             // 
             // optSingle
             // 
