@@ -252,14 +252,25 @@ namespace WindowsFormsApp1
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            string strsql = "INSERT INTO STAFF VALUES (" + this.staffId + 
+            string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId + 
                 ",'" + this.forename + "','" + this.surname + "','" + this.dob + "','" + this.gender + "','" +
                 this.maritalStatus + "'," + this .children + ")";
 
-            //  +this.phone + ",", +  + this.email + this.street + "," + this.town + "," + this.county + "," + this.eircode +
-            //+this.iban + ","
-            OracleCommand cmd = new OracleCommand(strsql, conn);
-            cmd.ExecuteNonQuery();
+
+            string strSqlContact = "INSERT INTO CONTACT VALUES (" + this.staffId + ",'" + this.email + "'," +
+                this.phone + ",'" + this.street + "','" + this.town + "','" + this.county + "','" + this.eircode
+                + "')";
+
+            string strSqlBanking = "INSERT INTO BANKING VALUES (" + this.staffId + ",'" + this.iban + "')";
+            
+            OracleCommand cmdStaff = new OracleCommand(strSqlStaff, conn);
+            OracleCommand cmdContact = new OracleCommand(strSqlContact, conn);
+            OracleCommand cmdBanking = new OracleCommand(strSqlBanking, conn);
+
+            cmdStaff.ExecuteNonQuery();
+            cmdContact.ExecuteNonQuery();
+            cmdBanking.ExecuteNonQuery();
+
             conn.Close();
         }
     }

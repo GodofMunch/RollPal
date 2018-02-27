@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
         string iban = "";
         char maritalStatus = 'n';
         int children = 0;
-        char gender;
+        char gender = 'm';
 
         public frmRegisterStaff()
         {
@@ -52,6 +52,7 @@ namespace WindowsFormsApp1
         {
          
             txtStaffID.Text = Staff.nextStaffId().ToString("000");
+            dob = "";
 
         }
 
@@ -62,13 +63,13 @@ namespace WindowsFormsApp1
 
         private void txtDOB_Click(object sender, MouseEventArgs e)
         {
-            txtDOB.Text = String.Empty;
+            //txtDOB.Text = String.Empty;
         }
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
         {
             if(validForename() && validSurname() && validPhone() && validStreet() && validTown() 
-                && validCounty() && validEircode() && validEmail() && validDOB() && validIban())
+                && validCounty() && validEircode() && validEmail() && validIban())
 
             //https://stackoverflow.com/questions/3845695/is-there-a-builtin-confirmation-dialog-in-windows-forms
             //to see the c# equivalent of java's JOP.showConfirmDialog()
@@ -76,7 +77,7 @@ namespace WindowsFormsApp1
 
 
                 Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtTown.Text,
-                                            txtCounty.Text, txtEircode.Text, txtDOB.Text,gender, txtIban.Text, maritalStatus, children);
+                                            txtCounty.Text, txtEircode.Text, dob ,gender, txtIban.Text, maritalStatus, children);
 
                 newStaff.registerStaff();
 
@@ -149,7 +150,7 @@ namespace WindowsFormsApp1
 
         private void txtDOB_TextChanged(object sender, EventArgs e)
         {
-            dob = txtDOB.Text;
+            //dob = txtDOB.Text;
         }
 
         private bool validForename()
@@ -274,15 +275,15 @@ namespace WindowsFormsApp1
 
         private void txtDOB_GotFocus(object sender, EventArgs e)
         {
-            txtDOB.Text = String.Empty;
+            //txtDOB.Text = String.Empty;
         }
 
         private void txtDOB_LostFocus(object sender, EventArgs e)
         {
-            if (txtDOB.Text == "")
+           /* if (txtDOB.Text == "")
                 txtDOB.Text = "dd/mm/yyyy";
             else
-                txtDOB.ForeColor = (Color.Black);
+                txtDOB.ForeColor = (Color.Black);*/
                 
         }
 
@@ -323,5 +324,9 @@ namespace WindowsFormsApp1
                 gender = 'f';
         }
 
+        private void dtpDOB_ValueChanged(object sender, EventArgs e)
+        {
+            dob = dtpDOB.Text;
+        }
     }
 }

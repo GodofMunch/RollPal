@@ -9,9 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
-{
+{ 
     public partial class frmUpdateStaff : Form
+
+       
     {
+        public int staffId;
+
         public frmUpdateStaff()
         {
             InitializeComponent();
@@ -27,6 +31,16 @@ namespace WindowsFormsApp1
             frmWelcomeScreen home = new frmWelcomeScreen();
             home.Show();
             this.Hide();
+        }
+
+        private void frmUpdateStaff_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

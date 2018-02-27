@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.grpGender = new System.Windows.Forms.GroupBox();
+            this.optGenderFemale = new System.Windows.Forms.RadioButton();
+            this.optGenderMale = new System.Windows.Forms.RadioButton();
             this.lblban = new System.Windows.Forms.Label();
             this.txtIban = new System.Windows.Forms.TextBox();
             this.btnRegisterStaff = new System.Windows.Forms.Button();
@@ -37,7 +40,6 @@
             this.grpMarStatus = new System.Windows.Forms.GroupBox();
             this.optMarried = new System.Windows.Forms.RadioButton();
             this.optSingle = new System.Windows.Forms.RadioButton();
-            this.txtDOB = new System.Windows.Forms.TextBox();
             this.lblDOB = new System.Windows.Forms.Label();
             this.txtEircode = new System.Windows.Forms.TextBox();
             this.txtCounty = new System.Windows.Forms.TextBox();
@@ -58,17 +60,16 @@
             this.lblStaffId = new System.Windows.Forms.Label();
             this.txtStaffID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.grpGender = new System.Windows.Forms.GroupBox();
-            this.optGenderMale = new System.Windows.Forms.RadioButton();
-            this.optGenderFemale = new System.Windows.Forms.RadioButton();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.grpStaffDetails.SuspendLayout();
-            this.grpMarStatus.SuspendLayout();
             this.grpGender.SuspendLayout();
+            this.grpMarStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpStaffDetails.Controls.Add(this.dtpDOB);
             this.grpStaffDetails.Controls.Add(this.grpGender);
             this.grpStaffDetails.Controls.Add(this.lblban);
             this.grpStaffDetails.Controls.Add(this.txtIban);
@@ -76,7 +77,6 @@
             this.grpStaffDetails.Controls.Add(this.lblChildren);
             this.grpStaffDetails.Controls.Add(this.cboChildren);
             this.grpStaffDetails.Controls.Add(this.grpMarStatus);
-            this.grpStaffDetails.Controls.Add(this.txtDOB);
             this.grpStaffDetails.Controls.Add(this.lblDOB);
             this.grpStaffDetails.Controls.Add(this.txtEircode);
             this.grpStaffDetails.Controls.Add(this.txtCounty);
@@ -105,6 +105,41 @@
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // grpGender
+            // 
+            this.grpGender.Controls.Add(this.optGenderFemale);
+            this.grpGender.Controls.Add(this.optGenderMale);
+            this.grpGender.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.grpGender.Location = new System.Drawing.Point(338, 125);
+            this.grpGender.Name = "grpGender";
+            this.grpGender.Size = new System.Drawing.Size(200, 57);
+            this.grpGender.TabIndex = 10;
+            this.grpGender.TabStop = false;
+            this.grpGender.Text = "Gender";
+            // 
+            // optGenderFemale
+            // 
+            this.optGenderFemale.AutoSize = true;
+            this.optGenderFemale.Location = new System.Drawing.Point(92, 20);
+            this.optGenderFemale.Name = "optGenderFemale";
+            this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
+            this.optGenderFemale.TabIndex = 12;
+            this.optGenderFemale.TabStop = true;
+            this.optGenderFemale.Text = "Female";
+            this.optGenderFemale.UseVisualStyleBackColor = true;
+            // 
+            // optGenderMale
+            // 
+            this.optGenderMale.AutoSize = true;
+            this.optGenderMale.Location = new System.Drawing.Point(21, 20);
+            this.optGenderMale.Name = "optGenderMale";
+            this.optGenderMale.Size = new System.Drawing.Size(48, 17);
+            this.optGenderMale.TabIndex = 11;
+            this.optGenderMale.TabStop = true;
+            this.optGenderMale.Text = "Male";
+            this.optGenderMale.UseVisualStyleBackColor = true;
+            this.optGenderMale.CheckedChanged += new System.EventHandler(this.optGenderMale_CheckedChanged);
+            // 
             // lblban
             // 
             this.lblban.AutoSize = true;
@@ -119,7 +154,7 @@
             this.txtIban.Location = new System.Drawing.Point(338, 232);
             this.txtIban.Name = "txtIban";
             this.txtIban.Size = new System.Drawing.Size(168, 20);
-            this.txtIban.TabIndex = 20;
+            this.txtIban.TabIndex = 12;
             this.txtIban.TextChanged += new System.EventHandler(this.txtIban_TextChanged);
             // 
             // btnRegisterStaff
@@ -129,7 +164,7 @@
             this.btnRegisterStaff.Location = new System.Drawing.Point(431, 274);
             this.btnRegisterStaff.Name = "btnRegisterStaff";
             this.btnRegisterStaff.Size = new System.Drawing.Size(75, 23);
-            this.btnRegisterStaff.TabIndex = 12;
+            this.btnRegisterStaff.TabIndex = 13;
             this.btnRegisterStaff.Text = "Register";
             this.btnRegisterStaff.UseVisualStyleBackColor = false;
             this.btnRegisterStaff.Click += new System.EventHandler(this.btnRegisterStaff_Click);
@@ -170,7 +205,7 @@
             this.grpMarStatus.Location = new System.Drawing.Point(338, 47);
             this.grpMarStatus.Name = "grpMarStatus";
             this.grpMarStatus.Size = new System.Drawing.Size(200, 57);
-            this.grpMarStatus.TabIndex = 17;
+            this.grpMarStatus.TabIndex = 9;
             this.grpMarStatus.TabStop = false;
             this.grpMarStatus.Text = "Marital Status";
             // 
@@ -180,7 +215,8 @@
             this.optMarried.Location = new System.Drawing.Point(92, 25);
             this.optMarried.Name = "optMarried";
             this.optMarried.Size = new System.Drawing.Size(60, 17);
-            this.optMarried.TabIndex = 9;
+            this.optMarried.TabIndex = 10;
+            this.optMarried.TabStop = true;
             this.optMarried.Text = "Married";
             this.optMarried.UseVisualStyleBackColor = true;
             this.optMarried.CheckedChanged += new System.EventHandler(this.optMarried_CheckedChanged);
@@ -192,24 +228,10 @@
             this.optSingle.Location = new System.Drawing.Point(21, 26);
             this.optSingle.Name = "optSingle";
             this.optSingle.Size = new System.Drawing.Size(54, 17);
-            this.optSingle.TabIndex = 10;
+            this.optSingle.TabIndex = 9;
             this.optSingle.TabStop = true;
             this.optSingle.Text = "Single";
             this.optSingle.UseVisualStyleBackColor = true;
-            // 
-            // txtDOB
-            // 
-            this.txtDOB.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.txtDOB.Location = new System.Drawing.Point(141, 281);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.ShortcutsEnabled = false;
-            this.txtDOB.Size = new System.Drawing.Size(100, 20);
-            this.txtDOB.TabIndex = 8;
-            this.txtDOB.Text = "dd/mm/yyyy";
-            this.txtDOB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtDOB.TextChanged += new System.EventHandler(this.txtDOB_TextChanged);
-            this.txtDOB.Enter += new System.EventHandler(this.txtDOB_GotFocus);
-            this.txtDOB.Leave += new System.EventHandler(this.txtDOB_LostFocus);
             // 
             // lblDOB
             // 
@@ -389,40 +411,17 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Please enter the new Employee\'s details.";
             // 
-            // grpGender
+            // dtpDOB
             // 
-            this.grpGender.Controls.Add(this.optGenderFemale);
-            this.grpGender.Controls.Add(this.optGenderMale);
-            this.grpGender.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.grpGender.Location = new System.Drawing.Point(338, 125);
-            this.grpGender.Name = "grpGender";
-            this.grpGender.Size = new System.Drawing.Size(200, 57);
-            this.grpGender.TabIndex = 22;
-            this.grpGender.TabStop = false;
-            this.grpGender.Text = "Gender";
-            // 
-            // optGenderMale
-            // 
-            this.optGenderMale.AutoSize = true;
-            this.optGenderMale.Location = new System.Drawing.Point(21, 20);
-            this.optGenderMale.Name = "optGenderMale";
-            this.optGenderMale.Size = new System.Drawing.Size(48, 17);
-            this.optGenderMale.TabIndex = 0;
-            this.optGenderMale.TabStop = true;
-            this.optGenderMale.Text = "Male";
-            this.optGenderMale.UseVisualStyleBackColor = true;
-            this.optGenderMale.CheckedChanged += new System.EventHandler(this.optGenderMale_CheckedChanged);
-            // 
-            // optGenderFemale
-            // 
-            this.optGenderFemale.AutoSize = true;
-            this.optGenderFemale.Location = new System.Drawing.Point(92, 20);
-            this.optGenderFemale.Name = "optGenderFemale";
-            this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
-            this.optGenderFemale.TabIndex = 1;
-            this.optGenderFemale.TabStop = true;
-            this.optGenderFemale.Text = "Female";
-            this.optGenderFemale.UseVisualStyleBackColor = true;
+            this.dtpDOB.CustomFormat = "dd-MMM-yy";
+            this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDOB.Location = new System.Drawing.Point(141, 281);
+            this.dtpDOB.MaxDate = new System.DateTime(2018, 2, 27, 0, 0, 0, 0);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(100, 20);
+            this.dtpDOB.TabIndex = 8;
+            this.dtpDOB.Value = new System.DateTime(2018, 2, 27, 0, 0, 0, 0);
+            this.dtpDOB.ValueChanged += new System.EventHandler(this.dtpDOB_ValueChanged);
             // 
             // frmRegisterStaff
             // 
@@ -437,10 +436,10 @@
             this.Load += new System.EventHandler(this.registerStaff_Load);
             this.grpStaffDetails.ResumeLayout(false);
             this.grpStaffDetails.PerformLayout();
-            this.grpMarStatus.ResumeLayout(false);
-            this.grpMarStatus.PerformLayout();
             this.grpGender.ResumeLayout(false);
             this.grpGender.PerformLayout();
+            this.grpMarStatus.ResumeLayout(false);
+            this.grpMarStatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,7 +465,6 @@
         private System.Windows.Forms.TextBox txtCounty;
         private System.Windows.Forms.TextBox txtTown;
         private System.Windows.Forms.TextBox txtStreet;
-        private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox grpMarStatus;
@@ -480,5 +478,6 @@
         private System.Windows.Forms.GroupBox grpGender;
         private System.Windows.Forms.RadioButton optGenderFemale;
         private System.Windows.Forms.RadioButton optGenderMale;
+        private System.Windows.Forms.DateTimePicker dtpDOB;
     }
 }

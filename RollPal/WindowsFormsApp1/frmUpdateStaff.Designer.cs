@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.btnHome = new System.Windows.Forms.Button();
             this.btnRegisterStaff = new System.Windows.Forms.Button();
             this.lblChildren = new System.Windows.Forms.Label();
             this.cboChildren = new System.Windows.Forms.ComboBox();
@@ -57,7 +58,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
-            this.btnHome = new System.Windows.Forms.Button();
             this.grpStaffDetails.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
             this.SuspendLayout();
@@ -98,6 +98,18 @@
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Visible = false;
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnHome.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnHome.Location = new System.Drawing.Point(512, 274);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 23);
+            this.btnHome.TabIndex = 20;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnRegisterStaff
             // 
@@ -347,6 +359,7 @@
             this.textBox1.TabStop = false;
             this.textBox1.Text = "001";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -371,19 +384,7 @@
             this.cboSelectStaff.Text = "<null>";
             this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
             // 
-            // btnHome
-            // 
-            this.btnHome.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnHome.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnHome.Location = new System.Drawing.Point(512, 274);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 20;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // updateStaff
+            // frmUpdateStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -391,9 +392,10 @@
             this.Controls.Add(this.cboSelectStaff);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grpStaffDetails);
-            this.Name = "updateStaff";
+            this.Name = "frmUpdateStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Staff";
+            this.Load += new System.EventHandler(this.frmUpdateStaff_Load);
             this.grpStaffDetails.ResumeLayout(false);
             this.grpStaffDetails.PerformLayout();
             this.grpMarStatus.ResumeLayout(false);
