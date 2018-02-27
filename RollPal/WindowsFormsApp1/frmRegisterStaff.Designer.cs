@@ -58,13 +58,18 @@
             this.lblStaffId = new System.Windows.Forms.Label();
             this.txtStaffID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.grpGender = new System.Windows.Forms.GroupBox();
+            this.optGenderMale = new System.Windows.Forms.RadioButton();
+            this.optGenderFemale = new System.Windows.Forms.RadioButton();
             this.grpStaffDetails.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
+            this.grpGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpStaffDetails.Controls.Add(this.grpGender);
             this.grpStaffDetails.Controls.Add(this.lblban);
             this.grpStaffDetails.Controls.Add(this.txtIban);
             this.grpStaffDetails.Controls.Add(this.btnRegisterStaff);
@@ -103,7 +108,7 @@
             // lblban
             // 
             this.lblban.AutoSize = true;
-            this.lblban.Location = new System.Drawing.Point(277, 206);
+            this.lblban.Location = new System.Drawing.Point(280, 235);
             this.lblban.Name = "lblban";
             this.lblban.Size = new System.Drawing.Size(38, 13);
             this.lblban.TabIndex = 21;
@@ -111,7 +116,7 @@
             // 
             // txtIban
             // 
-            this.txtIban.Location = new System.Drawing.Point(338, 203);
+            this.txtIban.Location = new System.Drawing.Point(338, 232);
             this.txtIban.Name = "txtIban";
             this.txtIban.Size = new System.Drawing.Size(168, 20);
             this.txtIban.TabIndex = 20;
@@ -132,7 +137,7 @@
             // lblChildren
             // 
             this.lblChildren.AutoSize = true;
-            this.lblChildren.Location = new System.Drawing.Point(362, 149);
+            this.lblChildren.Location = new System.Drawing.Point(371, 198);
             this.lblChildren.Name = "lblChildren";
             this.lblChildren.Size = new System.Drawing.Size(51, 13);
             this.lblChildren.TabIndex = 19;
@@ -150,7 +155,7 @@
             "5",
             "6",
             "7"});
-            this.cboChildren.Location = new System.Drawing.Point(452, 146);
+            this.cboChildren.Location = new System.Drawing.Point(452, 195);
             this.cboChildren.Name = "cboChildren";
             this.cboChildren.Size = new System.Drawing.Size(38, 21);
             this.cboChildren.TabIndex = 11;
@@ -384,6 +389,41 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Please enter the new Employee\'s details.";
             // 
+            // grpGender
+            // 
+            this.grpGender.Controls.Add(this.optGenderFemale);
+            this.grpGender.Controls.Add(this.optGenderMale);
+            this.grpGender.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.grpGender.Location = new System.Drawing.Point(338, 125);
+            this.grpGender.Name = "grpGender";
+            this.grpGender.Size = new System.Drawing.Size(200, 57);
+            this.grpGender.TabIndex = 22;
+            this.grpGender.TabStop = false;
+            this.grpGender.Text = "Gender";
+            // 
+            // optGenderMale
+            // 
+            this.optGenderMale.AutoSize = true;
+            this.optGenderMale.Location = new System.Drawing.Point(21, 20);
+            this.optGenderMale.Name = "optGenderMale";
+            this.optGenderMale.Size = new System.Drawing.Size(48, 17);
+            this.optGenderMale.TabIndex = 0;
+            this.optGenderMale.TabStop = true;
+            this.optGenderMale.Text = "Male";
+            this.optGenderMale.UseVisualStyleBackColor = true;
+            this.optGenderMale.CheckedChanged += new System.EventHandler(this.optGenderMale_CheckedChanged);
+            // 
+            // optGenderFemale
+            // 
+            this.optGenderFemale.AutoSize = true;
+            this.optGenderFemale.Location = new System.Drawing.Point(92, 20);
+            this.optGenderFemale.Name = "optGenderFemale";
+            this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
+            this.optGenderFemale.TabIndex = 1;
+            this.optGenderFemale.TabStop = true;
+            this.optGenderFemale.Text = "Female";
+            this.optGenderFemale.UseVisualStyleBackColor = true;
+            // 
             // frmRegisterStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,6 +439,8 @@
             this.grpStaffDetails.PerformLayout();
             this.grpMarStatus.ResumeLayout(false);
             this.grpMarStatus.PerformLayout();
+            this.grpGender.ResumeLayout(false);
+            this.grpGender.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,5 +477,8 @@
         private System.Windows.Forms.Button btnRegisterStaff;
         private System.Windows.Forms.Label lblban;
         private System.Windows.Forms.TextBox txtIban;
+        private System.Windows.Forms.GroupBox grpGender;
+        private System.Windows.Forms.RadioButton optGenderFemale;
+        private System.Windows.Forms.RadioButton optGenderMale;
     }
 }

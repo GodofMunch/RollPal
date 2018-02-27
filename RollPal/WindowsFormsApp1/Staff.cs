@@ -59,6 +59,7 @@ namespace WindowsFormsApp1
             setCounty(county);
             setEirCode(eircode);
             setDOB(dob);
+            setGender(gender);
             setIban(iban);
             setMaritalStatus(maritalStatus);
             setChildren(children);
@@ -129,6 +130,11 @@ namespace WindowsFormsApp1
             return children;
         }
 
+        public char getGender()
+        {
+            return gender;
+        }
+
         public void setStaffId(int staffId)
         {
             this.staffId = staffId;
@@ -194,6 +200,11 @@ namespace WindowsFormsApp1
             this.children = children;
         }
 
+
+        public void setGender(char gender)
+        {
+            this.gender = gender;
+        }
         public static DataSet getStaff(DataSet ds, string type)
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
@@ -241,9 +252,9 @@ namespace WindowsFormsApp1
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            string strsql = "INSERT INTO STAFF VALUES (" + this.staffId.ToString("000") + 
-                "," + this.forename + "," + this.surname + "," + this.dob + "," + this.gender + "," +
-                this.maritalStatus + "," + this .children + ")";
+            string strsql = "INSERT INTO STAFF VALUES (" + this.staffId + 
+                ",'" + this.forename + "','" + this.surname + "','" + this.dob + "','" + this.gender + "','" +
+                this.maritalStatus + "'," + this .children + ")";
 
             //  +this.phone + ",", +  + this.email + this.street + "," + this.town + "," + this.county + "," + this.eircode +
             //+this.iban + ","

@@ -26,6 +26,7 @@ namespace WindowsFormsApp1
         string iban = "";
         char maritalStatus = 'n';
         int children = 0;
+        char gender;
 
         public frmRegisterStaff()
         {
@@ -75,7 +76,7 @@ namespace WindowsFormsApp1
 
 
                 Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtTown.Text,
-                                            txtCounty.Text, txtEircode.Text, txtDOB.Text, txtIban.Text, maritalStatus, children);
+                                            txtCounty.Text, txtEircode.Text, txtDOB.Text,gender, txtIban.Text, maritalStatus, children);
 
                 newStaff.registerStaff();
 
@@ -313,5 +314,14 @@ namespace WindowsFormsApp1
             else
                 maritalStatus = 'n';
         }
+
+        private void optGenderMale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (optGenderMale.Checked)
+                gender = 'm';
+            else
+                gender = 'f';
+        }
+
     }
 }
