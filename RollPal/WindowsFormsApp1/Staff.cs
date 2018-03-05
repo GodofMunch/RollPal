@@ -8,7 +8,7 @@ using Oracle.ManagedDataAccess.Client;
 
 namespace WindowsFormsApp1
 {
-    class Staff
+    public class Staff
     {
         private int staffId;
         private string surname;
@@ -24,6 +24,7 @@ namespace WindowsFormsApp1
         private char maritalStatus;
         private int children;
         private char gender;
+        private char active;
 
         public Staff()
         {
@@ -41,13 +42,14 @@ namespace WindowsFormsApp1
             maritalStatus = 'n';
             children = 0;
             gender = 'm';
+            active = 'n';
 
         }
 
         public Staff(int staffId, string forename, string surname, string phone, 
                      string email, string street, string town, string county, 
                      string eircode, string dob, char gender, string iban, 
-                     char maritalStatus, int children)
+                     char maritalStatus, int children, char active)
         {
             setStaffId(staffId);
             setForeName(forename);
@@ -63,6 +65,7 @@ namespace WindowsFormsApp1
             setIban(iban);
             setMaritalStatus(maritalStatus);
             setChildren(children);
+            setActive('y');
         }
 
         public int getStaffId()
@@ -135,6 +138,11 @@ namespace WindowsFormsApp1
             return gender;
         }
 
+        public char getActive()
+        {
+            return active;
+        }
+
         public void setStaffId(int staffId)
         {
             this.staffId = staffId;
@@ -205,6 +213,14 @@ namespace WindowsFormsApp1
         {
             this.gender = gender;
         }
+
+        public void setActive(char active)
+        {
+            if (active == 'y')
+                this.active = 'n';
+            else if (active == 'n')
+                this.active = 'y';
+        }
         public static DataSet getStaff(DataSet ds, string type)
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
@@ -254,7 +270,7 @@ namespace WindowsFormsApp1
 
             string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId + 
                 ",'" + this.forename + "','" + this.surname + "','" + this.dob + "','" + this.gender + "','" +
-                this.maritalStatus + "'," + this .children + ")";
+                this.maritalStatus + "'," + this .children + "," + this.active + ")";
 
 
             string strSqlContact = "INSERT INTO CONTACT VALUES (" + this.staffId + ",'" + this.email + "'," +

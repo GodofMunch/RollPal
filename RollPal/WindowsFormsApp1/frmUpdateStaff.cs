@@ -15,6 +15,8 @@ namespace WindowsFormsApp1
        
     {
         public int staffId;
+        public bool IsSelected = false;
+        public Staff staffMember = new Staff();
 
         public frmUpdateStaff()
         {
@@ -23,7 +25,12 @@ namespace WindowsFormsApp1
 
         private void cboSelectStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
-            grpStaffDetails.Visible = true;
+            //grpStaffDetails.Visible = true;
+            if (cboSelectStaff.Text != "<null>")
+            {
+                staffId = Convert.ToInt32(cboSelectStaff.Text);
+                IsSelected = true;
+            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -41,6 +48,12 @@ namespace WindowsFormsApp1
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void setTextToBeUpdated(int staffId)
+        {
+
+            //txtForename.Text = 
         }
     }
 }
