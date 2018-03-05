@@ -27,6 +27,7 @@ namespace WindowsFormsApp1
         char maritalStatus = 'n';
         int children = 0;
         char gender = 'm';
+        char active = 'n';
 
         public frmRegisterStaff()
         {
@@ -77,7 +78,7 @@ namespace WindowsFormsApp1
 
 
                 Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtTown.Text,
-                                            txtCounty.Text, txtEircode.Text, dob ,gender, txtIban.Text, maritalStatus, children);
+                                            txtCounty.Text, txtEircode.Text, dob ,gender, txtIban.Text, maritalStatus, children, active);
 
                 newStaff.registerStaff();
 

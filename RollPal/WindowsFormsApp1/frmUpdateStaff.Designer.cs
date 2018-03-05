@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.lblIbanUpdate = new System.Windows.Forms.Label();
+            this.txtIbanUpdate = new System.Windows.Forms.TextBox();
+            this.lblChildrenUpdate = new System.Windows.Forms.Label();
+            this.grpGender = new System.Windows.Forms.GroupBox();
+            this.optGenderFemale = new System.Windows.Forms.RadioButton();
+            this.optGenderMale = new System.Windows.Forms.RadioButton();
+            this.drpChildrenUpdate = new System.Windows.Forms.ComboBox();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnRegisterStaff = new System.Windows.Forms.Button();
             this.lblChildren = new System.Windows.Forms.Label();
@@ -57,16 +64,9 @@
             this.txtStaffId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
-            this.grpGender = new System.Windows.Forms.GroupBox();
-            this.optGenderFemale = new System.Windows.Forms.RadioButton();
-            this.optGenderMale = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblChildrenUpdate = new System.Windows.Forms.Label();
-            this.txtIbanUpdate = new System.Windows.Forms.TextBox();
-            this.lblIbanUpdate = new System.Windows.Forms.Label();
             this.grpStaffDetails.SuspendLayout();
-            this.grpMarStatus.SuspendLayout();
             this.grpGender.SuspendLayout();
+            this.grpMarStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpStaffDetails
@@ -76,7 +76,7 @@
             this.grpStaffDetails.Controls.Add(this.txtIbanUpdate);
             this.grpStaffDetails.Controls.Add(this.lblChildrenUpdate);
             this.grpStaffDetails.Controls.Add(this.grpGender);
-            this.grpStaffDetails.Controls.Add(this.comboBox1);
+            this.grpStaffDetails.Controls.Add(this.drpChildrenUpdate);
             this.grpStaffDetails.Controls.Add(this.btnHome);
             this.grpStaffDetails.Controls.Add(this.btnRegisterStaff);
             this.grpStaffDetails.Controls.Add(this.lblChildren);
@@ -109,6 +109,83 @@
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Visible = false;
+            // 
+            // lblIbanUpdate
+            // 
+            this.lblIbanUpdate.AutoSize = true;
+            this.lblIbanUpdate.Location = new System.Drawing.Point(362, 235);
+            this.lblIbanUpdate.Name = "lblIbanUpdate";
+            this.lblIbanUpdate.Size = new System.Drawing.Size(38, 13);
+            this.lblIbanUpdate.TabIndex = 25;
+            this.lblIbanUpdate.Text = "IBAN :";
+            // 
+            // txtIbanUpdate
+            // 
+            this.txtIbanUpdate.Location = new System.Drawing.Point(426, 232);
+            this.txtIbanUpdate.Name = "txtIbanUpdate";
+            this.txtIbanUpdate.Size = new System.Drawing.Size(161, 20);
+            this.txtIbanUpdate.TabIndex = 24;
+            // 
+            // lblChildrenUpdate
+            // 
+            this.lblChildrenUpdate.AutoSize = true;
+            this.lblChildrenUpdate.Location = new System.Drawing.Point(362, 198);
+            this.lblChildrenUpdate.Name = "lblChildrenUpdate";
+            this.lblChildrenUpdate.Size = new System.Drawing.Size(51, 13);
+            this.lblChildrenUpdate.TabIndex = 23;
+            this.lblChildrenUpdate.Text = "Children :";
+            // 
+            // grpGender
+            // 
+            this.grpGender.Controls.Add(this.optGenderFemale);
+            this.grpGender.Controls.Add(this.optGenderMale);
+            this.grpGender.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.grpGender.Location = new System.Drawing.Point(338, 117);
+            this.grpGender.Name = "grpGender";
+            this.grpGender.Size = new System.Drawing.Size(200, 57);
+            this.grpGender.TabIndex = 21;
+            this.grpGender.TabStop = false;
+            this.grpGender.Text = "Gender";
+            // 
+            // optGenderFemale
+            // 
+            this.optGenderFemale.AutoSize = true;
+            this.optGenderFemale.Location = new System.Drawing.Point(114, 20);
+            this.optGenderFemale.Name = "optGenderFemale";
+            this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
+            this.optGenderFemale.TabIndex = 12;
+            this.optGenderFemale.TabStop = true;
+            this.optGenderFemale.Text = "Female";
+            this.optGenderFemale.UseVisualStyleBackColor = true;
+            // 
+            // optGenderMale
+            // 
+            this.optGenderMale.AutoSize = true;
+            this.optGenderMale.Location = new System.Drawing.Point(27, 20);
+            this.optGenderMale.Name = "optGenderMale";
+            this.optGenderMale.Size = new System.Drawing.Size(48, 17);
+            this.optGenderMale.TabIndex = 11;
+            this.optGenderMale.TabStop = true;
+            this.optGenderMale.Text = "Male";
+            this.optGenderMale.UseVisualStyleBackColor = true;
+            // 
+            // drpChildrenUpdate
+            // 
+            this.drpChildrenUpdate.FormattingEnabled = true;
+            this.drpChildrenUpdate.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"});
+            this.drpChildrenUpdate.Location = new System.Drawing.Point(452, 195);
+            this.drpChildrenUpdate.Name = "drpChildrenUpdate";
+            this.drpChildrenUpdate.Size = new System.Drawing.Size(38, 21);
+            this.drpChildrenUpdate.TabIndex = 22;
+            this.drpChildrenUpdate.Text = "0";
             // 
             // btnHome
             // 
@@ -377,83 +454,6 @@
             this.cboSelectStaff.Text = "<null>";
             this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
             // 
-            // grpGender
-            // 
-            this.grpGender.Controls.Add(this.optGenderFemale);
-            this.grpGender.Controls.Add(this.optGenderMale);
-            this.grpGender.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.grpGender.Location = new System.Drawing.Point(338, 117);
-            this.grpGender.Name = "grpGender";
-            this.grpGender.Size = new System.Drawing.Size(200, 57);
-            this.grpGender.TabIndex = 21;
-            this.grpGender.TabStop = false;
-            this.grpGender.Text = "Gender";
-            // 
-            // optGenderFemale
-            // 
-            this.optGenderFemale.AutoSize = true;
-            this.optGenderFemale.Location = new System.Drawing.Point(114, 20);
-            this.optGenderFemale.Name = "optGenderFemale";
-            this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
-            this.optGenderFemale.TabIndex = 12;
-            this.optGenderFemale.TabStop = true;
-            this.optGenderFemale.Text = "Female";
-            this.optGenderFemale.UseVisualStyleBackColor = true;
-            // 
-            // optGenderMale
-            // 
-            this.optGenderMale.AutoSize = true;
-            this.optGenderMale.Location = new System.Drawing.Point(27, 20);
-            this.optGenderMale.Name = "optGenderMale";
-            this.optGenderMale.Size = new System.Drawing.Size(48, 17);
-            this.optGenderMale.TabIndex = 11;
-            this.optGenderMale.TabStop = true;
-            this.optGenderMale.Text = "Male";
-            this.optGenderMale.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"});
-            this.comboBox1.Location = new System.Drawing.Point(452, 195);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(38, 21);
-            this.comboBox1.TabIndex = 22;
-            this.comboBox1.Text = "0";
-            // 
-            // lblChildrenUpdate
-            // 
-            this.lblChildrenUpdate.AutoSize = true;
-            this.lblChildrenUpdate.Location = new System.Drawing.Point(362, 198);
-            this.lblChildrenUpdate.Name = "lblChildrenUpdate";
-            this.lblChildrenUpdate.Size = new System.Drawing.Size(51, 13);
-            this.lblChildrenUpdate.TabIndex = 23;
-            this.lblChildrenUpdate.Text = "Children :";
-            // 
-            // txtIbanUpdate
-            // 
-            this.txtIbanUpdate.Location = new System.Drawing.Point(426, 232);
-            this.txtIbanUpdate.Name = "txtIbanUpdate";
-            this.txtIbanUpdate.Size = new System.Drawing.Size(161, 20);
-            this.txtIbanUpdate.TabIndex = 24;
-            // 
-            // lblIbanUpdate
-            // 
-            this.lblIbanUpdate.AutoSize = true;
-            this.lblIbanUpdate.Location = new System.Drawing.Point(362, 235);
-            this.lblIbanUpdate.Name = "lblIbanUpdate";
-            this.lblIbanUpdate.Size = new System.Drawing.Size(38, 13);
-            this.lblIbanUpdate.TabIndex = 25;
-            this.lblIbanUpdate.Text = "IBAN :";
-            // 
             // frmUpdateStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,10 +468,10 @@
             this.Load += new System.EventHandler(this.frmUpdateStaff_Load);
             this.grpStaffDetails.ResumeLayout(false);
             this.grpStaffDetails.PerformLayout();
-            this.grpMarStatus.ResumeLayout(false);
-            this.grpMarStatus.PerformLayout();
             this.grpGender.ResumeLayout(false);
             this.grpGender.PerformLayout();
+            this.grpMarStatus.ResumeLayout(false);
+            this.grpMarStatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,6 +514,6 @@
         private System.Windows.Forms.GroupBox grpGender;
         private System.Windows.Forms.RadioButton optGenderFemale;
         private System.Windows.Forms.RadioButton optGenderMale;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox drpChildrenUpdate;
     }
 }

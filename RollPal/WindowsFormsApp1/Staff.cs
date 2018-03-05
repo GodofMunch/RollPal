@@ -270,7 +270,7 @@ namespace WindowsFormsApp1
 
             string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId + 
                 ",'" + this.forename + "','" + this.surname + "','" + this.dob + "','" + this.gender + "','" +
-                this.maritalStatus + "'," + this .children + "," + this.active + ")";
+                this.maritalStatus + "'," + this .children + ",'" + this.active + "')";
 
 
             string strSqlContact = "INSERT INTO CONTACT VALUES (" + this.staffId + ",'" + this.email + "'," +
