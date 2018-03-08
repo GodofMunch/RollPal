@@ -42,7 +42,6 @@
             this.grpMarStatus = new System.Windows.Forms.GroupBox();
             this.optMarried = new System.Windows.Forms.RadioButton();
             this.optSingle = new System.Windows.Forms.RadioButton();
-            this.txtDOB = new System.Windows.Forms.TextBox();
             this.lblDOB = new System.Windows.Forms.Label();
             this.txtEircode = new System.Windows.Forms.TextBox();
             this.txtCounty = new System.Windows.Forms.TextBox();
@@ -64,6 +63,7 @@
             this.txtStaffId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
+            this.dtDob = new System.Windows.Forms.DateTimePicker();
             this.grpStaffDetails.SuspendLayout();
             this.grpGender.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
@@ -72,6 +72,7 @@
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpStaffDetails.Controls.Add(this.dtDob);
             this.grpStaffDetails.Controls.Add(this.lblIbanUpdate);
             this.grpStaffDetails.Controls.Add(this.txtIbanUpdate);
             this.grpStaffDetails.Controls.Add(this.lblChildrenUpdate);
@@ -81,7 +82,6 @@
             this.grpStaffDetails.Controls.Add(this.btnRegisterStaff);
             this.grpStaffDetails.Controls.Add(this.lblChildren);
             this.grpStaffDetails.Controls.Add(this.grpMarStatus);
-            this.grpStaffDetails.Controls.Add(this.txtDOB);
             this.grpStaffDetails.Controls.Add(this.lblDOB);
             this.grpStaffDetails.Controls.Add(this.txtEircode);
             this.grpStaffDetails.Controls.Add(this.txtCounty);
@@ -252,17 +252,6 @@
             this.optSingle.TabStop = true;
             this.optSingle.Text = "Single";
             this.optSingle.UseVisualStyleBackColor = true;
-            // 
-            // txtDOB
-            // 
-            this.txtDOB.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtDOB.Location = new System.Drawing.Point(141, 281);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.ShortcutsEnabled = false;
-            this.txtDOB.Size = new System.Drawing.Size(100, 20);
-            this.txtDOB.TabIndex = 8;
-            this.txtDOB.Text = "03/01/1990";
-            this.txtDOB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblDOB
             // 
@@ -454,6 +443,17 @@
             this.cboSelectStaff.Text = "<null>";
             this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
             // 
+            // dtDob
+            // 
+            this.dtDob.AllowDrop = true;
+            this.dtDob.CustomFormat = "dd-mm-yyyy";
+            this.dtDob.Location = new System.Drawing.Point(141, 284);
+            this.dtDob.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtDob.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtDob.Name = "dtDob";
+            this.dtDob.Size = new System.Drawing.Size(180, 20);
+            this.dtDob.TabIndex = 8;
+            // 
             // frmUpdateStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,7 +485,6 @@
         private System.Windows.Forms.GroupBox grpMarStatus;
         private System.Windows.Forms.RadioButton optMarried;
         private System.Windows.Forms.RadioButton optSingle;
-        private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.TextBox txtEircode;
         private System.Windows.Forms.TextBox txtCounty;
@@ -515,5 +514,6 @@
         private System.Windows.Forms.RadioButton optGenderFemale;
         private System.Windows.Forms.RadioButton optGenderMale;
         private System.Windows.Forms.ComboBox drpChildrenUpdate;
+        private System.Windows.Forms.DateTimePicker dtDob;
     }
 }

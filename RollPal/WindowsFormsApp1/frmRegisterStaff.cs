@@ -22,12 +22,12 @@ namespace WindowsFormsApp1
         string town = "";
         string county = "";
         string eirCode = "";
-        string dob = "";
+        DateTime dob;
         string iban = "";
-        char maritalStatus = 'n';
+        string maritalStatus = "n";
         int children = 0;
-        char gender = 'm';
-        char active = 'n';
+        string gender = "m";
+        string active = "n";
 
         public frmRegisterStaff()
         {
@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
         {
          
             txtStaffID.Text = Staff.nextStaffId().ToString("000");
-            dob = "";
+            dob = DateTime.Now;
 
         }
 
@@ -256,22 +256,10 @@ namespace WindowsFormsApp1
 
         private bool validDOB()
         {
-            bool valid = false;
-            int digits = 0;
-            int slashes = 0;
+            //bool valid = false;
+            //if(dob.Value <= DateTime.()
 
-            for(int i = 0;i<dob.Length;i++)
-            {
-                if(Char.IsDigit(dob[i]))
-                    digits++;
-                if (dob[i] == '/' || dob[i] == '\'')
-                    slashes++;
-            }
-
-            if (digits == 8 && slashes == 2)
-                valid = true;
-
-            return valid;
+            return true;
         }
 
         private void txtDOB_GotFocus(object sender, EventArgs e)
@@ -311,23 +299,23 @@ namespace WindowsFormsApp1
         private void optMarried_CheckedChanged(object sender, EventArgs e)
         {
             if (optMarried.Checked)
-                maritalStatus = 'y';
+                maritalStatus = "y";
 
             else
-                maritalStatus = 'n';
+                maritalStatus = "n";
         }
 
         private void optGenderMale_CheckedChanged(object sender, EventArgs e)
         {
             if (optGenderMale.Checked)
-                gender = 'm';
+                gender = "m";
             else
-                gender = 'f';
+                gender = "f";
         }
 
         private void dtpDOB_ValueChanged(object sender, EventArgs e)
         {
-            dob = dtpDOB.Text;
+            dob = dtpDOB.Value;
         }
     }
 }

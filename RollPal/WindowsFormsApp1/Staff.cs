@@ -19,12 +19,12 @@ namespace WindowsFormsApp1
         private string town;
         private string county;
         private string eircode;
-        private string dob;
+        private DateTime dob;
         private string iban;
-        private char maritalStatus;
+        private string maritalStatus;
         private int children;
-        private char gender;
-        private char active;
+        private string gender;
+        private string active;
 
         public Staff()
         {
@@ -37,19 +37,19 @@ namespace WindowsFormsApp1
             town = "";
             county = "";
             eircode = "";
-            dob = "";
+            dob = DateTime.Now;
             iban = "";
-            maritalStatus = 'n';
+            maritalStatus = "n";
             children = 0;
-            gender = 'm';
-            active = 'n';
+            gender = "m";
+            active = "n";
 
         }
 
         public Staff(int staffId, string forename, string surname, string phone, 
                      string email, string street, string town, string county, 
-                     string eircode, string dob, char gender, string iban, 
-                     char maritalStatus, int children, char active)
+                     string eircode, DateTime dob, string gender, string iban, 
+                     string maritalStatus, int children, string active)
         {
             setStaffId(staffId);
             setForeName(forename);
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             setIban(iban);
             setMaritalStatus(maritalStatus);
             setChildren(children);
-            setActive('y');
+            setActive("y");
         }
 
         public int getStaffId()
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
             return eircode;
         }
 
-        public string getDOB()
+        public DateTime getDOB()
         {
             return dob;
         }
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
             return iban;
         }
 
-        public char getMaritalStatus()
+        public string getMaritalStatus()
         {
             return maritalStatus;
         }
@@ -133,12 +133,12 @@ namespace WindowsFormsApp1
             return children;
         }
 
-        public char getGender()
+        public string getGender()
         {
             return gender;
         }
 
-        public char getActive()
+        public string getActive()
         {
             return active;
         }
@@ -188,7 +188,7 @@ namespace WindowsFormsApp1
             this.eircode = eircode;
         }
 
-        public void setDOB(string dob)
+        public void setDOB(DateTime dob)
         {
             this.dob = dob;
         }
@@ -198,7 +198,7 @@ namespace WindowsFormsApp1
             this.iban = iban;
         }
 
-        public void setMaritalStatus(char maritalStatus)
+        public void setMaritalStatus(string maritalStatus)
         {
             this.maritalStatus = maritalStatus;
         }
@@ -209,17 +209,17 @@ namespace WindowsFormsApp1
         }
 
 
-        public void setGender(char gender)
+        public void setGender(string gender)
         {
             this.gender = gender;
         }
 
-        public void setActive(char active)
+        public void setActive(string active)
         {
-            if (active == 'y')
-                this.active = 'n';
-            else if (active == 'n')
-                this.active = 'y';
+            if (active == "y")
+                this.active = "n";
+            else if (active == "n")
+                this.active = "y";
         }
         public static DataSet getStaff(DataSet ds, string type)
         {
