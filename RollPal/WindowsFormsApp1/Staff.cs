@@ -268,13 +268,15 @@ namespace WindowsFormsApp1
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId + 
-                ",'" + this.forename + "','" + this.surname + "','" + this.dob + "','" + this.gender + "','" +
-                this.maritalStatus + "'," + this .children + ",'" + this.active + "')";
+            //string dobFormatted = dob.ToString("yyyy-MM-dd HH:mm:ss");
+
+            string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId +
+                ",'" + this.forename + "','" + this.surname + "','" + this.dob.ToString("DD/Mon/YYYY HH:mm:ss") + "','" + this.gender + "','" +
+                this.maritalStatus + "'," + this.children + ",'" + this.active + "')";
 
 
-            string strSqlContact = "INSERT INTO CONTACT VALUES (" + this.staffId + ",'" + this.email + "'," +
-                this.phone + ",'" + this.street + "','" + this.town + "','" + this.county + "','" + this.eircode
+            string strSqlContact = "INSERT INTO CONTACT VALUES (" + this.staffId + ",'" + this.email + "','" +
+                this.phone + "','" + this.street + "','" + this.town + "','" + this.county + "','" + this.eircode
                 + "')";
 
             string strSqlBanking = "INSERT INTO BANKING VALUES (" + this.staffId + ",'" + this.iban + "')";
