@@ -43,7 +43,8 @@ namespace WindowsFormsApp1
                 txtTown.Text = staffMember.getTown();
                 txtCounty.Text = staffMember.getCounty();
                 txtEircode.Text = staffMember.getEirCode();
-                dtDob.Value = staffMember.getDOB();
+                //DateTime tempDate = new DateTime(Convert.ToDateTime(staffMember.getDOB());
+                dtDob.Value = Convert.ToDateTime(staffMember.getDOB());
 
                 if (staffMember.getMaritalStatus() == "y")
                     optMarried.Checked = true;
@@ -97,7 +98,7 @@ namespace WindowsFormsApp1
             newStaffMember.setSurname(dataLoadedStaff.GetString(2));
 
             dobHolder = dataLoadedStaff.GetDateTime(3);
-            newStaffMember.setDOB(dobHolder.Date);
+            newStaffMember.setDOB(dobHolder.Date.ToString("yyyy-MM-dd"));
             //newStaffMember.setDOB(dataLoadedStaff.GetString(3));
             newStaffMember.setGender(dataLoadedStaff.GetString(4));
             newStaffMember.setMaritalStatus(dataLoadedStaff.GetString(5));

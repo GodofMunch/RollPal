@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         private string town;
         private string county;
         private string eircode;
-        private DateTime dob;
+        private string dob;
         private string iban;
         private string maritalStatus;
         private int children;
@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
             town = "";
             county = "";
             eircode = "";
-            dob = DateTime.Now;
+            dob = DateTime.Now.ToString("YYYY-MM-DD");
             iban = "";
             maritalStatus = "n";
             children = 0;
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
 
         public Staff(int staffId, string forename, string surname, string phone, 
                      string email, string street, string town, string county, 
-                     string eircode, DateTime dob, string gender, string iban, 
+                     string eircode, string dob, string gender, string iban, 
                      string maritalStatus, int children, string active)
         {
             setStaffId(staffId);
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
             return eircode;
         }
 
-        public DateTime getDOB()
+        public string getDOB()
         {
             return dob;
         }
@@ -188,7 +188,7 @@ namespace WindowsFormsApp1
             this.eircode = eircode;
         }
 
-        public void setDOB(DateTime dob)
+        public void setDOB(string dob)
         {
             this.dob = dob;
         }
@@ -271,7 +271,7 @@ namespace WindowsFormsApp1
             //string dobFormatted = dob.ToString("yyyy-MM-dd HH:mm:ss");
 
             string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId +
-                ",'" + this.forename + "','" + this.surname + "','" + this.dob.ToString("DD/Mon/YYYY HH:mm:ss") + "','" + this.gender + "','" +
+                ",'" + this.forename + "','" + this.surname + "',DATE '" + this.dob + "','" + this.gender + "','" +
                 this.maritalStatus + "'," + this.children + ",'" + this.active + "')";
 
 

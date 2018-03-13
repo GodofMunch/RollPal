@@ -22,7 +22,7 @@ namespace WindowsFormsApp1
         string town = "";
         string county = "";
         string eirCode = "";
-        DateTime dob;
+        string dob = DateTime.Now.ToString("yyyy-MM-dd");
         string iban = "";
         string maritalStatus = "n";
         int children = 0;
@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
         {
          
             txtStaffID.Text = Staff.nextStaffId().ToString("000");
-            dob = DateTime.Now;
+            dob = DateTime.Now.ToString("yyyy-MM-dd");
 
         }
 
@@ -315,7 +315,7 @@ namespace WindowsFormsApp1
 
         private void dtpDOB_ValueChanged(object sender, EventArgs e)
         {
-            dob = dtpDOB.Value;
+            dob = dtpDOB.Value.ToString("yyyy-MM-dd");
         }
     }
 }
