@@ -18,6 +18,8 @@ namespace WindowsFormsApp1
         public int staffId;
         public bool IsSelected = false;
         public Staff staffMember;
+        public string maritalStatus;
+        public string gender;
 
         public frmUpdateStaff()
         {
@@ -34,7 +36,7 @@ namespace WindowsFormsApp1
             if (IsSelected)
             {
                 staffMember = loadStaff(Convert.ToInt32(cboSelectStaff.Text));
-                txtStaffId.Text = staffMember.getStaffId().ToString("000");
+                txtUpdateStaffId.Text = staffMember.getStaffId().ToString("000");
                 txtForename.Text = staffMember.getForename();
                 txtSurname.Text = staffMember.getSurname();
                 txtPhone.Text = staffMember.getPhone();
@@ -56,6 +58,8 @@ namespace WindowsFormsApp1
                 else
                     optGenderFemale.Checked = true;
 
+                txtIbanUpdate.Text = staffMember.getIban();
+
                 grpStaffDetails.Visible = true;
             }
         }
@@ -69,7 +73,11 @@ namespace WindowsFormsApp1
 
         private void frmUpdateStaff_Load(object sender, EventArgs e)
         {
-
+            for(int i = 1; i < Staff.nextStaffId(); i++)
+            {
+                string staffId = "00" + (i);
+                cboSelectStaff.Items.Add(staffId);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -101,7 +109,9 @@ namespace WindowsFormsApp1
             newStaffMember.setDOB(dobHolder.Date.ToString("yyyy-MM-dd"));
             //newStaffMember.setDOB(dataLoadedStaff.GetString(3));
             newStaffMember.setGender(dataLoadedStaff.GetString(4));
+            gender = dataLoadedStaff.GetString(4);
             newStaffMember.setMaritalStatus(dataLoadedStaff.GetString(5));
+            maritalStatus = dataLoadedStaff.GetString(5);
             newStaffMember.setChildren(dataLoadedStaff.GetInt32(6));
             newStaffMember.setActive(dataLoadedStaff.GetString(7));
 
@@ -119,7 +129,7 @@ namespace WindowsFormsApp1
             newStaffMember.setCounty(dataLoadedContact.GetString(5));
             newStaffMember.setEirCode(dataLoadedContact.GetString(6));
 
-            string sqlSelectBanking = "SELECT * FROM BANKING WHERE STAFFID =" + staffId;
+            string sqlSelectBanking = "SELECT * FROM BANKING WHERE STAFFID = " + staffId;
 
             OracleCommand cmdBanking = new OracleCommand(sqlSelectBanking, conn);
             OracleDataReader dataLoadedBanking = cmdBanking.ExecuteReader();
@@ -130,13 +140,51 @@ namespace WindowsFormsApp1
             
             return newStaffMember;
         }
-        public void updateStaff()
-        {
-            
-        }
-        public void setTextToBeUpdated(int staffId)
+
+        private void dtDob_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegisterStaff_Click(object sender, EventArgs e)
+        {
+            staffMember.setForeName(txtForename.Text);
+            staffMember.setSurname(txtSurname.Text);
+            staffMember.setDOB(dtDob.Value.ToString("yyyy-MM-dd"));
+            staffMember.setMaritalStatus(maritalStatus);
+            staffMember.setGender(gender);
+            staffMember.setChildren(Convert.ToInt32(drpChildrenUpdate.Text));
+            staffMember.setPhone(txtPhone.Text);
+            staffMember.setEmail(txtEmail.Text);
+            staffMember.setStreet(txtStreet.Text);
+            staffMember.setTown(txtTown.Text);
+            staffMember.setCounty(txtCounty.Text);
+            staffMember.setEirCode(txtEircode.Text);
+            staffMember.setIban(txtIbanUpdate.Text);
+
+            staffMember.updateStaff();
+
+            MessageBox.Show("Employee Details Updated! Returning Home", "Details Updated", MessageBoxButtons.OK);
+            frmWelcomeScreen home = new frmWelcomeScreen();
+            home.Show();
+            this.Hide();
+            
+        }
+
+        private void optMarried_CheckedChanged(object sender, EventArgs e)
+        {
+            if (optMarried.Checked)
+                maritalStatus = "y";
+            else
+                maritalStatus = "n";
+        }
+
+        private void optGenderMale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (optGenderMale.Checked)
+                gender = "m";
+            else
+                gender = "f";
         }
     }
 }

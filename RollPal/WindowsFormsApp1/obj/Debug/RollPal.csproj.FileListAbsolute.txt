@@ -52,3 +52,9 @@ C:\Users\t00139303\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\R
 C:\Users\t00139303\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\RollPal.csproj.CoreCompileInputs.cache
 C:\Users\t00139303\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\t00139303\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\EntityFramework.dll
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\EntityFramework.xml
+C:\Users\HP\Documents\GitHub\RollPal\RollPal\WindowsFormsApp1\bin\Debug\EntityFramework.SqlServer.xml

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.dtDob = new System.Windows.Forms.DateTimePicker();
             this.lblIbanUpdate = new System.Windows.Forms.Label();
             this.txtIbanUpdate = new System.Windows.Forms.TextBox();
             this.lblChildrenUpdate = new System.Windows.Forms.Label();
@@ -60,10 +61,9 @@
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblForename = new System.Windows.Forms.Label();
             this.lblStaffId = new System.Windows.Forms.Label();
-            this.txtStaffId = new System.Windows.Forms.TextBox();
+            this.txtUpdateStaffId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
-            this.dtDob = new System.Windows.Forms.DateTimePicker();
             this.grpStaffDetails.SuspendLayout();
             this.grpGender.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
@@ -100,7 +100,7 @@
             this.grpStaffDetails.Controls.Add(this.lblSurname);
             this.grpStaffDetails.Controls.Add(this.lblForename);
             this.grpStaffDetails.Controls.Add(this.lblStaffId);
-            this.grpStaffDetails.Controls.Add(this.txtStaffId);
+            this.grpStaffDetails.Controls.Add(this.txtUpdateStaffId);
             this.grpStaffDetails.ForeColor = System.Drawing.SystemColors.Highlight;
             this.grpStaffDetails.Location = new System.Drawing.Point(56, 104);
             this.grpStaffDetails.Name = "grpStaffDetails";
@@ -109,6 +109,19 @@
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Visible = false;
+            // 
+            // dtDob
+            // 
+            this.dtDob.AllowDrop = true;
+            this.dtDob.CustomFormat = "dd-MMM-yy";
+            this.dtDob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDob.Location = new System.Drawing.Point(141, 284);
+            this.dtDob.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtDob.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtDob.Name = "dtDob";
+            this.dtDob.Size = new System.Drawing.Size(100, 20);
+            this.dtDob.TabIndex = 8;
+            this.dtDob.ValueChanged += new System.EventHandler(this.dtDob_ValueChanged);
             // 
             // lblIbanUpdate
             // 
@@ -154,13 +167,13 @@
             this.optGenderFemale.Name = "optGenderFemale";
             this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
             this.optGenderFemale.TabIndex = 12;
-            this.optGenderFemale.TabStop = true;
             this.optGenderFemale.Text = "Female";
             this.optGenderFemale.UseVisualStyleBackColor = true;
             // 
             // optGenderMale
             // 
             this.optGenderMale.AutoSize = true;
+            this.optGenderMale.Checked = true;
             this.optGenderMale.Location = new System.Drawing.Point(27, 20);
             this.optGenderMale.Name = "optGenderMale";
             this.optGenderMale.Size = new System.Drawing.Size(48, 17);
@@ -168,6 +181,7 @@
             this.optGenderMale.TabStop = true;
             this.optGenderMale.Text = "Male";
             this.optGenderMale.UseVisualStyleBackColor = true;
+            this.optGenderMale.CheckedChanged += new System.EventHandler(this.optGenderMale_CheckedChanged);
             // 
             // drpChildrenUpdate
             // 
@@ -209,6 +223,7 @@
             this.btnRegisterStaff.TabIndex = 12;
             this.btnRegisterStaff.Text = "Update";
             this.btnRegisterStaff.UseVisualStyleBackColor = false;
+            this.btnRegisterStaff.Click += new System.EventHandler(this.btnRegisterStaff_Click);
             // 
             // lblChildren
             // 
@@ -240,6 +255,7 @@
             this.optMarried.TabIndex = 9;
             this.optMarried.Text = "Married";
             this.optMarried.UseVisualStyleBackColor = true;
+            this.optMarried.CheckedChanged += new System.EventHandler(this.optMarried_CheckedChanged);
             // 
             // optSingle
             // 
@@ -407,18 +423,18 @@
             this.lblStaffId.TabIndex = 1;
             this.lblStaffId.Text = "Staff ID :";
             // 
-            // txtStaffId
+            // txtUpdateStaffId
             // 
-            this.txtStaffId.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtStaffId.Location = new System.Drawing.Point(141, 47);
-            this.txtStaffId.Name = "txtStaffId";
-            this.txtStaffId.ReadOnly = true;
-            this.txtStaffId.Size = new System.Drawing.Size(100, 20);
-            this.txtStaffId.TabIndex = 1;
-            this.txtStaffId.TabStop = false;
-            this.txtStaffId.Text = "001";
-            this.txtStaffId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtStaffId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtUpdateStaffId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtUpdateStaffId.Location = new System.Drawing.Point(141, 47);
+            this.txtUpdateStaffId.Name = "txtUpdateStaffId";
+            this.txtUpdateStaffId.ReadOnly = true;
+            this.txtUpdateStaffId.Size = new System.Drawing.Size(100, 20);
+            this.txtUpdateStaffId.TabIndex = 1;
+            this.txtUpdateStaffId.TabStop = false;
+            this.txtUpdateStaffId.Text = "001";
+            this.txtUpdateStaffId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtUpdateStaffId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -432,27 +448,13 @@
             // cboSelectStaff
             // 
             this.cboSelectStaff.FormattingEnabled = true;
-            this.cboSelectStaff.Items.AddRange(new object[] {
-            "<null>",
-            "001"});
             this.cboSelectStaff.Location = new System.Drawing.Point(358, 36);
             this.cboSelectStaff.MaxDropDownItems = 2;
             this.cboSelectStaff.Name = "cboSelectStaff";
             this.cboSelectStaff.Size = new System.Drawing.Size(58, 21);
             this.cboSelectStaff.TabIndex = 0;
-            this.cboSelectStaff.Text = "<null>";
+            this.cboSelectStaff.Text = "Select:";
             this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
-            // 
-            // dtDob
-            // 
-            this.dtDob.AllowDrop = true;
-            this.dtDob.CustomFormat = "dd-mm-yyyy";
-            this.dtDob.Location = new System.Drawing.Point(141, 284);
-            this.dtDob.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
-            this.dtDob.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dtDob.Name = "dtDob";
-            this.dtDob.Size = new System.Drawing.Size(180, 20);
-            this.dtDob.TabIndex = 8;
             // 
             // frmUpdateStaff
             // 
@@ -503,7 +505,7 @@
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblForename;
         private System.Windows.Forms.Label lblStaffId;
-        private System.Windows.Forms.TextBox txtStaffId;
+        private System.Windows.Forms.TextBox txtUpdateStaffId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboSelectStaff;
         private System.Windows.Forms.Button btnHome;

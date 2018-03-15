@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.grpGender = new System.Windows.Forms.GroupBox();
             this.optGenderFemale = new System.Windows.Forms.RadioButton();
             this.optGenderMale = new System.Windows.Forms.RadioButton();
@@ -60,7 +61,6 @@
             this.lblStaffId = new System.Windows.Forms.Label();
             this.txtStaffID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.grpStaffDetails.SuspendLayout();
             this.grpGender.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
@@ -105,6 +105,18 @@
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // dtpDOB
+            // 
+            this.dtpDOB.CustomFormat = "dd-MMM-yy";
+            this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDOB.Location = new System.Drawing.Point(141, 281);
+            this.dtpDOB.MaxDate = new System.DateTime(2018, 2, 27, 0, 0, 0, 0);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(100, 20);
+            this.dtpDOB.TabIndex = 8;
+            this.dtpDOB.Value = new System.DateTime(2018, 2, 27, 0, 0, 0, 0);
+            this.dtpDOB.ValueChanged += new System.EventHandler(this.dtpDOB_ValueChanged);
+            // 
             // grpGender
             // 
             this.grpGender.Controls.Add(this.optGenderFemale);
@@ -124,13 +136,13 @@
             this.optGenderFemale.Name = "optGenderFemale";
             this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
             this.optGenderFemale.TabIndex = 12;
-            this.optGenderFemale.TabStop = true;
             this.optGenderFemale.Text = "Female";
             this.optGenderFemale.UseVisualStyleBackColor = true;
             // 
             // optGenderMale
             // 
             this.optGenderMale.AutoSize = true;
+            this.optGenderMale.Checked = true;
             this.optGenderMale.Location = new System.Drawing.Point(21, 20);
             this.optGenderMale.Name = "optGenderMale";
             this.optGenderMale.Size = new System.Drawing.Size(48, 17);
@@ -410,18 +422,6 @@
             this.label10.Size = new System.Drawing.Size(199, 13);
             this.label10.TabIndex = 2;
             this.label10.Text = "Please enter the new Employee\'s details.";
-            // 
-            // dtpDOB
-            // 
-            this.dtpDOB.CustomFormat = "dd-MMM-yy";
-            this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDOB.Location = new System.Drawing.Point(141, 281);
-            this.dtpDOB.MaxDate = new System.DateTime(2018, 2, 27, 0, 0, 0, 0);
-            this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(100, 20);
-            this.dtpDOB.TabIndex = 8;
-            this.dtpDOB.Value = new System.DateTime(2018, 2, 27, 0, 0, 0, 0);
-            this.dtpDOB.ValueChanged += new System.EventHandler(this.dtpDOB_ValueChanged);
             // 
             // frmRegisterStaff
             // 

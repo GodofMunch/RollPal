@@ -216,10 +216,8 @@ namespace WindowsFormsApp1
 
         public void setActive(string active)
         {
-            if (active == "y")
-                this.active = "n";
-            else if (active == "n")
-                this.active = "y";
+            if (active == "y" || active == "n")
+                this.active = active;
         }
         public static DataSet getStaff(DataSet ds, string type)
         {
@@ -270,6 +268,7 @@ namespace WindowsFormsApp1
 
             //string dobFormatted = dob.ToString("yyyy-MM-dd HH:mm:ss");
 
+            setActive("y");
             string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId +
                 ",'" + this.forename + "','" + this.surname + "',DATE '" + this.dob + "','" + this.gender + "','" +
                 this.maritalStatus + "'," + this.children + ",'" + this.active + "')";
@@ -284,6 +283,36 @@ namespace WindowsFormsApp1
             OracleCommand cmdStaff = new OracleCommand(strSqlStaff, conn);
             OracleCommand cmdContact = new OracleCommand(strSqlContact, conn);
             OracleCommand cmdBanking = new OracleCommand(strSqlBanking, conn);
+
+            cmdStaff.ExecuteNonQuery();
+            cmdContact.ExecuteNonQuery();
+            cmdBanking.ExecuteNonQuery();
+
+            conn.Close();
+        }
+
+        public void updateStaff()
+        {
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            conn.Open();
+
+            setActive("y");
+
+            string strSqlUpdateStaff = "UPDATE STAFF SET FORENAME = '" + this.forename + "', " +
+                   "SURNAME = '" + this.surname + "', DATEOFBIRTH = DATE '" + this.dob + "', GENDER = '" +
+                   this.gender + "', MARITALSTATUS = '" + this.maritalStatus + "', CHILDREN = " +
+                   this.children + " WHERE STAFFID = " + this.staffId;
+
+            string strSqlUpdateContact = "UPDATE CONTACT SET EMAIL = '" + this.email + "', PHONE = '" +
+                   this.phone + "', STREET = '" + this.street + "', TOWN = '" + this.town + "', COUNTY = '" +
+                   this.county + "', EIRCODE = '" + this.eircode + "' WHERE STAFFID = " + this.staffId;
+
+            string strSqlUpdateBanking = "UPDATE BANKING SET IBAN = '" + this.iban + "' WHERE STAFFID = " +
+                   this.staffId;
+
+            OracleCommand cmdStaff = new OracleCommand(strSqlUpdateStaff, conn);
+            OracleCommand cmdContact = new OracleCommand(strSqlUpdateContact, conn);
+            OracleCommand cmdBanking = new OracleCommand(strSqlUpdateBanking, conn);
 
             cmdStaff.ExecuteNonQuery();
             cmdContact.ExecuteNonQuery();
