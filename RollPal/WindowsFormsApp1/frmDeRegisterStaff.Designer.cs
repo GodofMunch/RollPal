@@ -31,13 +31,13 @@
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
             this.lblDeRegStaff = new System.Windows.Forms.Label();
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.btnHome = new System.Windows.Forms.Button();
             this.textChildren = new System.Windows.Forms.TextBox();
             this.btnRegisterStaff = new System.Windows.Forms.Button();
             this.lblChildren = new System.Windows.Forms.Label();
             this.grpMarStatus = new System.Windows.Forms.GroupBox();
             this.optMarried = new System.Windows.Forms.RadioButton();
             this.optSingle = new System.Windows.Forms.RadioButton();
-            this.txtDOB = new System.Windows.Forms.TextBox();
             this.lblDOB = new System.Windows.Forms.Label();
             this.txtEircode = new System.Windows.Forms.TextBox();
             this.txtCounty = new System.Windows.Forms.TextBox();
@@ -56,24 +56,30 @@
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblForename = new System.Windows.Forms.Label();
             this.lblStaffId = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.txtStaffId = new System.Windows.Forms.TextBox();
+            this.grpGender = new System.Windows.Forms.GroupBox();
+            this.optGenderFemale = new System.Windows.Forms.RadioButton();
+            this.optGenderMale = new System.Windows.Forms.RadioButton();
+            this.txtDOB = new System.Windows.Forms.TextBox();
+            this.lblIban = new System.Windows.Forms.Label();
+            this.txtIban = new System.Windows.Forms.TextBox();
+            this.lblInactive = new System.Windows.Forms.Label();
             this.grpStaffDetails.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
+            this.grpGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // cboSelectStaff
             // 
             this.cboSelectStaff.FormattingEnabled = true;
             this.cboSelectStaff.Items.AddRange(new object[] {
-            "<null>",
-            "001"});
+            "Select:"});
             this.cboSelectStaff.Location = new System.Drawing.Point(362, 41);
             this.cboSelectStaff.MaxDropDownItems = 2;
             this.cboSelectStaff.Name = "cboSelectStaff";
             this.cboSelectStaff.Size = new System.Drawing.Size(58, 21);
-            this.cboSelectStaff.TabIndex = 4;
-            this.cboSelectStaff.Text = "<null>";
+            this.cboSelectStaff.TabIndex = 0;
+            this.cboSelectStaff.Text = "Select:";
             this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
             // 
             // lblDeRegStaff
@@ -88,12 +94,15 @@
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpStaffDetails.Controls.Add(this.txtIban);
+            this.grpStaffDetails.Controls.Add(this.lblIban);
+            this.grpStaffDetails.Controls.Add(this.txtDOB);
+            this.grpStaffDetails.Controls.Add(this.grpGender);
             this.grpStaffDetails.Controls.Add(this.btnHome);
             this.grpStaffDetails.Controls.Add(this.textChildren);
             this.grpStaffDetails.Controls.Add(this.btnRegisterStaff);
             this.grpStaffDetails.Controls.Add(this.lblChildren);
             this.grpStaffDetails.Controls.Add(this.grpMarStatus);
-            this.grpStaffDetails.Controls.Add(this.txtDOB);
             this.grpStaffDetails.Controls.Add(this.lblDOB);
             this.grpStaffDetails.Controls.Add(this.txtEircode);
             this.grpStaffDetails.Controls.Add(this.txtCounty);
@@ -112,7 +121,7 @@
             this.grpStaffDetails.Controls.Add(this.lblSurname);
             this.grpStaffDetails.Controls.Add(this.lblForename);
             this.grpStaffDetails.Controls.Add(this.lblStaffId);
-            this.grpStaffDetails.Controls.Add(this.textBox1);
+            this.grpStaffDetails.Controls.Add(this.txtStaffId);
             this.grpStaffDetails.ForeColor = System.Drawing.SystemColors.Highlight;
             this.grpStaffDetails.Location = new System.Drawing.Point(60, 109);
             this.grpStaffDetails.Name = "grpStaffDetails";
@@ -122,13 +131,26 @@
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Visible = false;
             // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnHome.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnHome.Location = new System.Drawing.Point(512, 274);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 23);
+            this.btnHome.TabIndex = 22;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // textChildren
             // 
-            this.textChildren.Location = new System.Drawing.Point(419, 146);
+            this.textChildren.Location = new System.Drawing.Point(452, 200);
             this.textChildren.Name = "textChildren";
             this.textChildren.ReadOnly = true;
             this.textChildren.Size = new System.Drawing.Size(30, 20);
-            this.textChildren.TabIndex = 20;
+            this.textChildren.TabIndex = 11;
+            this.textChildren.TabStop = false;
             this.textChildren.Text = "0";
             this.textChildren.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -147,7 +169,7 @@
             // lblChildren
             // 
             this.lblChildren.AutoSize = true;
-            this.lblChildren.Location = new System.Drawing.Point(362, 149);
+            this.lblChildren.Location = new System.Drawing.Point(356, 203);
             this.lblChildren.Name = "lblChildren";
             this.lblChildren.Size = new System.Drawing.Size(51, 13);
             this.lblChildren.TabIndex = 19;
@@ -161,7 +183,7 @@
             this.grpMarStatus.Location = new System.Drawing.Point(338, 47);
             this.grpMarStatus.Name = "grpMarStatus";
             this.grpMarStatus.Size = new System.Drawing.Size(200, 57);
-            this.grpMarStatus.TabIndex = 17;
+            this.grpMarStatus.TabIndex = 9;
             this.grpMarStatus.TabStop = false;
             this.grpMarStatus.Text = "Marital Status";
             // 
@@ -184,21 +206,8 @@
             this.optSingle.Name = "optSingle";
             this.optSingle.Size = new System.Drawing.Size(54, 17);
             this.optSingle.TabIndex = 10;
-            this.optSingle.TabStop = true;
             this.optSingle.Text = "Single";
             this.optSingle.UseVisualStyleBackColor = true;
-            // 
-            // txtDOB
-            // 
-            this.txtDOB.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.txtDOB.Location = new System.Drawing.Point(141, 281);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.ReadOnly = true;
-            this.txtDOB.ShortcutsEnabled = false;
-            this.txtDOB.Size = new System.Drawing.Size(100, 20);
-            this.txtDOB.TabIndex = 8;
-            this.txtDOB.Text = "03/01/1990";
-            this.txtDOB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblDOB
             // 
@@ -216,6 +225,7 @@
             this.txtEircode.ReadOnly = true;
             this.txtEircode.Size = new System.Drawing.Size(100, 20);
             this.txtEircode.TabIndex = 7;
+            this.txtEircode.TabStop = false;
             this.txtEircode.Text = "v92kh92";
             // 
             // txtCounty
@@ -225,6 +235,7 @@
             this.txtCounty.ReadOnly = true;
             this.txtCounty.Size = new System.Drawing.Size(100, 20);
             this.txtCounty.TabIndex = 6;
+            this.txtCounty.TabStop = false;
             this.txtCounty.Text = "Kerry";
             // 
             // txtTown
@@ -234,6 +245,7 @@
             this.txtTown.ReadOnly = true;
             this.txtTown.Size = new System.Drawing.Size(100, 20);
             this.txtTown.TabIndex = 5;
+            this.txtTown.TabStop = false;
             this.txtTown.Text = "Tralee";
             // 
             // txtStreet
@@ -243,6 +255,7 @@
             this.txtStreet.ReadOnly = true;
             this.txtStreet.Size = new System.Drawing.Size(100, 20);
             this.txtStreet.TabIndex = 4;
+            this.txtStreet.TabStop = false;
             this.txtStreet.Text = "35 Chapel Street";
             // 
             // lblEircode
@@ -288,6 +301,7 @@
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 3;
+            this.txtEmail.TabStop = false;
             this.txtEmail.Text = "dave@fakemail.com";
             // 
             // txtPhone
@@ -297,6 +311,7 @@
             this.txtPhone.ReadOnly = true;
             this.txtPhone.Size = new System.Drawing.Size(100, 20);
             this.txtPhone.TabIndex = 2;
+            this.txtPhone.TabStop = false;
             this.txtPhone.Text = "0871234567";
             // 
             // txtSurname
@@ -306,6 +321,7 @@
             this.txtSurname.ReadOnly = true;
             this.txtSurname.Size = new System.Drawing.Size(100, 20);
             this.txtSurname.TabIndex = 1;
+            this.txtSurname.TabStop = false;
             this.txtSurname.Text = "O\'Sullivan";
             // 
             // txtForename
@@ -315,6 +331,7 @@
             this.txtForename.ReadOnly = true;
             this.txtForename.Size = new System.Drawing.Size(100, 20);
             this.txtForename.TabIndex = 0;
+            this.txtForename.TabStop = false;
             this.txtForename.Text = "Dave";
             // 
             // lblEmail
@@ -362,45 +379,110 @@
             this.lblStaffId.TabIndex = 1;
             this.lblStaffId.Text = "Staff ID :";
             // 
-            // textBox1
+            // txtStaffId
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(141, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "001";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtStaffId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtStaffId.Location = new System.Drawing.Point(141, 47);
+            this.txtStaffId.Name = "txtStaffId";
+            this.txtStaffId.ReadOnly = true;
+            this.txtStaffId.Size = new System.Drawing.Size(100, 20);
+            this.txtStaffId.TabIndex = 1;
+            this.txtStaffId.TabStop = false;
+            this.txtStaffId.Text = "001";
+            this.txtStaffId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnHome
+            // grpGender
             // 
-            this.btnHome.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnHome.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnHome.Location = new System.Drawing.Point(512, 274);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 22;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.grpGender.Controls.Add(this.optGenderFemale);
+            this.grpGender.Controls.Add(this.optGenderMale);
+            this.grpGender.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.grpGender.Location = new System.Drawing.Point(338, 128);
+            this.grpGender.Name = "grpGender";
+            this.grpGender.Size = new System.Drawing.Size(200, 57);
+            this.grpGender.TabIndex = 10;
+            this.grpGender.TabStop = false;
+            this.grpGender.Text = "Gender";
             // 
-            // deRegisterStaff
+            // optGenderFemale
+            // 
+            this.optGenderFemale.AutoSize = true;
+            this.optGenderFemale.Location = new System.Drawing.Point(114, 20);
+            this.optGenderFemale.Name = "optGenderFemale";
+            this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
+            this.optGenderFemale.TabIndex = 12;
+            this.optGenderFemale.Text = "Female";
+            this.optGenderFemale.UseVisualStyleBackColor = true;
+            // 
+            // optGenderMale
+            // 
+            this.optGenderMale.AutoSize = true;
+            this.optGenderMale.Checked = true;
+            this.optGenderMale.Location = new System.Drawing.Point(27, 19);
+            this.optGenderMale.Name = "optGenderMale";
+            this.optGenderMale.Size = new System.Drawing.Size(48, 17);
+            this.optGenderMale.TabIndex = 11;
+            this.optGenderMale.Text = "Male";
+            this.optGenderMale.UseVisualStyleBackColor = true;
+            // 
+            // txtDOB
+            // 
+            this.txtDOB.BackColor = System.Drawing.SystemColors.Menu;
+            this.txtDOB.Location = new System.Drawing.Point(141, 284);
+            this.txtDOB.Name = "txtDOB";
+            this.txtDOB.ReadOnly = true;
+            this.txtDOB.Size = new System.Drawing.Size(100, 20);
+            this.txtDOB.TabIndex = 9;
+            this.txtDOB.TabStop = false;
+            // 
+            // lblIban
+            // 
+            this.lblIban.AutoSize = true;
+            this.lblIban.Location = new System.Drawing.Point(335, 236);
+            this.lblIban.Name = "lblIban";
+            this.lblIban.Size = new System.Drawing.Size(38, 13);
+            this.lblIban.TabIndex = 23;
+            this.lblIban.Text = "IBAN :";
+            // 
+            // txtIban
+            // 
+            this.txtIban.Location = new System.Drawing.Point(382, 233);
+            this.txtIban.Name = "txtIban";
+            this.txtIban.ReadOnly = true;
+            this.txtIban.Size = new System.Drawing.Size(156, 20);
+            this.txtIban.TabIndex = 24;
+            this.txtIban.TabStop = false;
+            // 
+            // lblInactive
+            // 
+            this.lblInactive.AutoSize = true;
+            this.lblInactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInactive.ForeColor = System.Drawing.Color.Red;
+            this.lblInactive.Location = new System.Drawing.Point(270, 75);
+            this.lblInactive.Name = "lblInactive";
+            this.lblInactive.Size = new System.Drawing.Size(150, 31);
+            this.lblInactive.TabIndex = 7;
+            this.lblInactive.Text = "IN-ACTIVE";
+            this.lblInactive.Visible = false;
+            // 
+            // frmDeRegisterStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 460);
+            this.Controls.Add(this.lblInactive);
             this.Controls.Add(this.cboSelectStaff);
             this.Controls.Add(this.lblDeRegStaff);
             this.Controls.Add(this.grpStaffDetails);
-            this.Name = "deRegisterStaff";
+            this.Name = "frmDeRegisterStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "De-RegisterStaff";
+            this.Load += new System.EventHandler(this.frmDeRegisterStaff_Load);
             this.grpStaffDetails.ResumeLayout(false);
             this.grpStaffDetails.PerformLayout();
             this.grpMarStatus.ResumeLayout(false);
             this.grpMarStatus.PerformLayout();
+            this.grpGender.ResumeLayout(false);
+            this.grpGender.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,7 +498,6 @@
         private System.Windows.Forms.GroupBox grpMarStatus;
         private System.Windows.Forms.RadioButton optMarried;
         private System.Windows.Forms.RadioButton optSingle;
-        private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.Label lblDOB;
         private System.Windows.Forms.TextBox txtEircode;
         private System.Windows.Forms.TextBox txtCounty;
@@ -435,8 +516,15 @@
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblForename;
         private System.Windows.Forms.Label lblStaffId;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtStaffId;
         private System.Windows.Forms.TextBox textChildren;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.TextBox txtDOB;
+        private System.Windows.Forms.GroupBox grpGender;
+        private System.Windows.Forms.RadioButton optGenderFemale;
+        private System.Windows.Forms.RadioButton optGenderMale;
+        private System.Windows.Forms.TextBox txtIban;
+        private System.Windows.Forms.Label lblIban;
+        private System.Windows.Forms.Label lblInactive;
     }
 }

@@ -18,8 +18,8 @@ namespace WindowsFormsApp1
         public int staffId;
         public bool IsSelected = false;
         public Staff staffMember;
-        public string maritalStatus;
-        public string gender;
+        public static string maritalStatus;
+        public static string gender;
 
         public frmUpdateStaff()
         {
@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
         }
 
 
-        public Staff loadStaff(int staffId)
+        public static Staff loadStaff(int staffId)
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
