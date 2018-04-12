@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         private int staffId;
         string[] staffToDo;
         string[] staffDone;
+
         public frmEnterTimeSheet()
         {
             InitializeComponent();
@@ -31,11 +32,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void rtxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnApprove_Click(object sender, EventArgs e)
         {
             
@@ -45,7 +41,7 @@ namespace WindowsFormsApp1
 
             if(proceed == DialogResult.Yes)
             {
-                rtxt.Text = "002";
+                rtxtToDo.Text = "002";
             }
 
             else
@@ -63,25 +59,33 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmEnterTimeSheet_Load(object sender, EventArgs e)
         {
+            ComboBox[] dayStartHours = {dayStartHourMon,  dayStartHourTue, dayStartHourWed, dayStartHourThu, dayStartHourFri, dayStartHourSat, dayStartHourSun};
+            ComboBox[] dayFinHours = { dayFinHourMon, dayFinHourTue, dayFinHourWed, dayFinHourThur, dayFinHourFri, dayFinHourSat, dayFinHourSun };
+            ComboBox[] dayStartMins = { dayStartMinMon, dayStartMinTue, dayStartMinWed, dayStartMinThu, dayStartMinFri, dayStartMinSat, dayStartMinSun };
+            ComboBox[] dayFinMins = { dayFinMinMon, dayFinMinTue, dayFinMinWed, dayFinMinThu, dayFinMinFri, dayFinMinSat, dayFinMinSun };
+            int[] mins = { 00, 15, 30, 45 };
+
+            for(int i = 0; i < 7; i ++)
+            {
+                for(int j = 0; j < 24; j++)
+                {
+                    dayStartHours[i].Items.Add(j);
+                    dayFinHours[i].Items.Add(j);
+
+                    if (j < 4)
+                    {
+                        dayStartMins[i].Items.Add(mins[j]);
+                        dayFinMins[i].Items.Add(mins[j]);
+                    }
+                }
+            }
+
             for (int i = 1; i < Staff.nextStaffId(); i++)
             {
                 cboTimesheetSelect.Items.Add("00" + i);
-                
             }
-            staffToDo[1] = "1";
-            rtxt.AppendText(staffToDo[1] + "\n");
         }
     }
 }
