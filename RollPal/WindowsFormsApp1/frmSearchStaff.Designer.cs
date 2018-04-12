@@ -31,7 +31,8 @@
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
             this.lblSearchStaff = new System.Windows.Forms.Label();
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
-            this.textChildren = new System.Windows.Forms.TextBox();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.txtChildren = new System.Windows.Forms.TextBox();
             this.lblChildren = new System.Windows.Forms.Label();
             this.grpMarStatus = new System.Windows.Forms.GroupBox();
             this.optMarried = new System.Windows.Forms.RadioButton();
@@ -55,24 +56,25 @@
             this.lblSurname = new System.Windows.Forms.Label();
             this.lblForename = new System.Windows.Forms.Label();
             this.lblStaffId = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.txtStaffId = new System.Windows.Forms.TextBox();
+            this.grpGender = new System.Windows.Forms.GroupBox();
+            this.optGenderFemale = new System.Windows.Forms.RadioButton();
+            this.optGenderMale = new System.Windows.Forms.RadioButton();
+            this.lblInactive = new System.Windows.Forms.Label();
             this.grpStaffDetails.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
+            this.grpGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // cboSelectStaff
             // 
             this.cboSelectStaff.FormattingEnabled = true;
-            this.cboSelectStaff.Items.AddRange(new object[] {
-            "<null>",
-            "001"});
             this.cboSelectStaff.Location = new System.Drawing.Point(202, 41);
             this.cboSelectStaff.MaxDropDownItems = 2;
             this.cboSelectStaff.Name = "cboSelectStaff";
             this.cboSelectStaff.Size = new System.Drawing.Size(58, 21);
             this.cboSelectStaff.TabIndex = 7;
-            this.cboSelectStaff.Text = "<null>";
+            this.cboSelectStaff.Text = "Select:";
             this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
             // 
             // lblSearchStaff
@@ -87,8 +89,9 @@
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpStaffDetails.Controls.Add(this.grpGender);
             this.grpStaffDetails.Controls.Add(this.btnHome);
-            this.grpStaffDetails.Controls.Add(this.textChildren);
+            this.grpStaffDetails.Controls.Add(this.txtChildren);
             this.grpStaffDetails.Controls.Add(this.lblChildren);
             this.grpStaffDetails.Controls.Add(this.grpMarStatus);
             this.grpStaffDetails.Controls.Add(this.txtDOB);
@@ -110,7 +113,7 @@
             this.grpStaffDetails.Controls.Add(this.lblSurname);
             this.grpStaffDetails.Controls.Add(this.lblForename);
             this.grpStaffDetails.Controls.Add(this.lblStaffId);
-            this.grpStaffDetails.Controls.Add(this.textBox1);
+            this.grpStaffDetails.Controls.Add(this.txtStaffId);
             this.grpStaffDetails.ForeColor = System.Drawing.SystemColors.Highlight;
             this.grpStaffDetails.Location = new System.Drawing.Point(52, 109);
             this.grpStaffDetails.Name = "grpStaffDetails";
@@ -120,20 +123,32 @@
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Visible = false;
             // 
-            // textChildren
+            // btnHome
             // 
-            this.textChildren.Location = new System.Drawing.Point(419, 146);
-            this.textChildren.Name = "textChildren";
-            this.textChildren.ReadOnly = true;
-            this.textChildren.Size = new System.Drawing.Size(30, 20);
-            this.textChildren.TabIndex = 20;
-            this.textChildren.Text = "0";
-            this.textChildren.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnHome.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnHome.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnHome.Location = new System.Drawing.Point(507, 278);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 23);
+            this.btnHome.TabIndex = 21;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // txtChildren
+            // 
+            this.txtChildren.Location = new System.Drawing.Point(452, 200);
+            this.txtChildren.Name = "txtChildren";
+            this.txtChildren.ReadOnly = true;
+            this.txtChildren.Size = new System.Drawing.Size(30, 20);
+            this.txtChildren.TabIndex = 20;
+            this.txtChildren.Text = "0";
+            this.txtChildren.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblChildren
             // 
             this.lblChildren.AutoSize = true;
-            this.lblChildren.Location = new System.Drawing.Point(362, 149);
+            this.lblChildren.Location = new System.Drawing.Point(362, 203);
             this.lblChildren.Name = "lblChildren";
             this.lblChildren.Size = new System.Drawing.Size(51, 13);
             this.lblChildren.TabIndex = 19;
@@ -160,7 +175,6 @@
             this.optMarried.TabIndex = 9;
             this.optMarried.Text = "Married";
             this.optMarried.UseVisualStyleBackColor = true;
-            this.optMarried.Visible = false;
             // 
             // optSingle
             // 
@@ -348,45 +362,82 @@
             this.lblStaffId.TabIndex = 1;
             this.lblStaffId.Text = "Staff ID :";
             // 
-            // textBox1
+            // txtStaffId
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(141, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TabStop = false;
-            this.textBox1.Text = "001";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtStaffId.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtStaffId.Location = new System.Drawing.Point(141, 47);
+            this.txtStaffId.Name = "txtStaffId";
+            this.txtStaffId.ReadOnly = true;
+            this.txtStaffId.Size = new System.Drawing.Size(100, 20);
+            this.txtStaffId.TabIndex = 1;
+            this.txtStaffId.TabStop = false;
+            this.txtStaffId.Text = "001";
+            this.txtStaffId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnHome
+            // grpGender
             // 
-            this.btnHome.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnHome.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnHome.Location = new System.Drawing.Point(507, 278);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(75, 23);
-            this.btnHome.TabIndex = 21;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.grpGender.Controls.Add(this.optGenderFemale);
+            this.grpGender.Controls.Add(this.optGenderMale);
+            this.grpGender.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.grpGender.Location = new System.Drawing.Point(338, 117);
+            this.grpGender.Name = "grpGender";
+            this.grpGender.Size = new System.Drawing.Size(200, 57);
+            this.grpGender.TabIndex = 22;
+            this.grpGender.TabStop = false;
+            this.grpGender.Text = "Gender";
             // 
-            // searchStaff
+            // optGenderFemale
+            // 
+            this.optGenderFemale.AutoSize = true;
+            this.optGenderFemale.Location = new System.Drawing.Point(114, 20);
+            this.optGenderFemale.Name = "optGenderFemale";
+            this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
+            this.optGenderFemale.TabIndex = 12;
+            this.optGenderFemale.Text = "Female";
+            this.optGenderFemale.UseVisualStyleBackColor = true;
+            // 
+            // optGenderMale
+            // 
+            this.optGenderMale.AutoSize = true;
+            this.optGenderMale.Checked = true;
+            this.optGenderMale.Location = new System.Drawing.Point(27, 20);
+            this.optGenderMale.Name = "optGenderMale";
+            this.optGenderMale.Size = new System.Drawing.Size(48, 17);
+            this.optGenderMale.TabIndex = 11;
+            this.optGenderMale.TabStop = true;
+            this.optGenderMale.Text = "Male";
+            this.optGenderMale.UseVisualStyleBackColor = true;
+            // 
+            // lblInactive
+            // 
+            this.lblInactive.AutoSize = true;
+            this.lblInactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInactive.ForeColor = System.Drawing.Color.Red;
+            this.lblInactive.Location = new System.Drawing.Point(278, 75);
+            this.lblInactive.Name = "lblInactive";
+            this.lblInactive.Size = new System.Drawing.Size(150, 31);
+            this.lblInactive.TabIndex = 10;
+            this.lblInactive.Text = "IN-ACTIVE";
+            this.lblInactive.Visible = false;
+            // 
+            // frmSearchStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 460);
+            this.Controls.Add(this.lblInactive);
             this.Controls.Add(this.cboSelectStaff);
             this.Controls.Add(this.lblSearchStaff);
             this.Controls.Add(this.grpStaffDetails);
-            this.Name = "searchStaff";
+            this.Name = "frmSearchStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search Staff";
             this.grpStaffDetails.ResumeLayout(false);
             this.grpStaffDetails.PerformLayout();
             this.grpMarStatus.ResumeLayout(false);
             this.grpMarStatus.PerformLayout();
+            this.grpGender.ResumeLayout(false);
+            this.grpGender.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,7 +448,7 @@
         private System.Windows.Forms.ComboBox cboSelectStaff;
         private System.Windows.Forms.Label lblSearchStaff;
         private System.Windows.Forms.GroupBox grpStaffDetails;
-        private System.Windows.Forms.TextBox textChildren;
+        private System.Windows.Forms.TextBox txtChildren;
         private System.Windows.Forms.Label lblChildren;
         private System.Windows.Forms.GroupBox grpMarStatus;
         private System.Windows.Forms.RadioButton optMarried;
@@ -421,7 +472,11 @@
         private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label lblForename;
         private System.Windows.Forms.Label lblStaffId;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtStaffId;
         private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.GroupBox grpGender;
+        private System.Windows.Forms.RadioButton optGenderFemale;
+        private System.Windows.Forms.RadioButton optGenderMale;
+        private System.Windows.Forms.Label lblInactive;
     }
 }

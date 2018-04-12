@@ -58,9 +58,16 @@ namespace WindowsFormsApp1
                 else
                     optGenderFemale.Checked = true;
 
+                drpChildrenUpdate.Text = staffMember.getChildren().ToString();
+
                 txtIbanUpdate.Text = staffMember.getIban();
 
                 grpStaffDetails.Visible = true;
+
+                if (staffMember.getActive() == "n")
+                    lblInactive.Visible = true;
+                else if (staffMember.getActive() == "y")
+                    lblInactive.Visible = false;
             }
         }
 
@@ -185,6 +192,11 @@ namespace WindowsFormsApp1
                 gender = "m";
             else
                 gender = "f";
+        }
+
+        private void grpStaffDetails_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

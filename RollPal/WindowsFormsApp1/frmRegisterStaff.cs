@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
 
         private void cboChildren_SelectedIndexChanged(object sender, EventArgs e)
         {
-            children = cboChildren.Text[0];
+            children = Convert.ToInt32(cboChildren.Text);
         }
 
         private void txtDOB_Click(object sender, MouseEventArgs e)
@@ -95,9 +95,22 @@ namespace WindowsFormsApp1
 
                 if(tryAgain==DialogResult.Yes)
                 {
-                    frmRegisterStaff onceMore = new frmRegisterStaff();
-                    onceMore.Show();
-                    this.Hide();
+                    if (!validForename())
+                        epInvalidEntry.SetError(txtForename, "Cannot be Blank");
+                    if (!validSurname())
+                        epInvalidEntry.SetError(txtSurname, "Cannot be Blank");
+                    if (!validPhone())
+                        epInvalidEntry.SetError(txtPhone, "Must Contain Ten Digits");
+                    if (!validStreet())
+                        epInvalidEntry.SetError(txtStreet, "Cannot be Blank");
+                    if (!validTown())
+                        epInvalidEntry.SetError(txtTown, "Cannot be Blank");
+                    if(!validCounty())
+                        epInvalidEntry.SetError(txtCounty, "Cannot be Blank");
+                    if (!validEmail())
+                        epInvalidEntry.SetError(txtEmail, "Must Contain '@' and '.'");
+                    if (!validIban())
+                        epInvalidEntry.SetError(txtIban, "Must begin with IE and have 22 characters");
                 }
 
                 else

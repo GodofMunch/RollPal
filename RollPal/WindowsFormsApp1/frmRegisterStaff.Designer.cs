@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.grpGender = new System.Windows.Forms.GroupBox();
@@ -61,9 +62,11 @@
             this.lblStaffId = new System.Windows.Forms.Label();
             this.txtStaffID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.epInvalidEntry = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpStaffDetails.SuspendLayout();
             this.grpGender.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epInvalidEntry)).BeginInit();
             this.SuspendLayout();
             // 
             // grpStaffDetails
@@ -423,6 +426,10 @@
             this.label10.TabIndex = 2;
             this.label10.Text = "Please enter the new Employee\'s details.";
             // 
+            // epInvalidEntry
+            // 
+            this.epInvalidEntry.ContainerControl = this;
+            // 
             // frmRegisterStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -440,6 +447,7 @@
             this.grpGender.PerformLayout();
             this.grpMarStatus.ResumeLayout(false);
             this.grpMarStatus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epInvalidEntry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,5 +487,6 @@
         private System.Windows.Forms.RadioButton optGenderFemale;
         private System.Windows.Forms.RadioButton optGenderMale;
         private System.Windows.Forms.DateTimePicker dtpDOB;
+        private System.Windows.Forms.ErrorProvider epInvalidEntry;
     }
 }

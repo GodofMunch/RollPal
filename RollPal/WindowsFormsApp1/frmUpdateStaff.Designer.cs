@@ -64,6 +64,7 @@
             this.txtUpdateStaffId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
+            this.lblInactive = new System.Windows.Forms.Label();
             this.grpStaffDetails.SuspendLayout();
             this.grpGender.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
@@ -109,6 +110,7 @@
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Visible = false;
+            this.grpStaffDetails.Enter += new System.EventHandler(this.grpStaffDetails_Enter);
             // 
             // dtDob
             // 
@@ -456,11 +458,24 @@
             this.cboSelectStaff.Text = "Select:";
             this.cboSelectStaff.SelectedIndexChanged += new System.EventHandler(this.cboSelectStaff_SelectedIndexChanged);
             // 
+            // lblInactive
+            // 
+            this.lblInactive.AutoSize = true;
+            this.lblInactive.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInactive.ForeColor = System.Drawing.Color.Red;
+            this.lblInactive.Location = new System.Drawing.Point(266, 70);
+            this.lblInactive.Name = "lblInactive";
+            this.lblInactive.Size = new System.Drawing.Size(150, 31);
+            this.lblInactive.TabIndex = 8;
+            this.lblInactive.Text = "IN-ACTIVE";
+            this.lblInactive.Visible = false;
+            // 
             // frmUpdateStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 460);
+            this.Controls.Add(this.lblInactive);
             this.Controls.Add(this.cboSelectStaff);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grpStaffDetails);
@@ -517,5 +532,6 @@
         private System.Windows.Forms.RadioButton optGenderMale;
         private System.Windows.Forms.ComboBox drpChildrenUpdate;
         private System.Windows.Forms.DateTimePicker dtDob;
+        private System.Windows.Forms.Label lblInactive;
     }
 }

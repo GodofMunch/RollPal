@@ -271,7 +271,7 @@ namespace WindowsFormsApp1
             setActive("y");
             string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId +
                 ",'" + this.forename + "','" + this.surname + "',DATE '" + this.dob + "','" + this.gender + "','" +
-                this.maritalStatus + "'," + this.children + ",'" + this.active + "')";
+                this.maritalStatus + "','" + this.children + "','" + this.active + "')";
 
 
             string strSqlContact = "INSERT INTO CONTACT VALUES (" + this.staffId + ",'" + this.email + "','" +
@@ -295,8 +295,6 @@ namespace WindowsFormsApp1
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
-
-            setActive("y");
 
             string strSqlUpdateStaff = "UPDATE STAFF SET FORENAME = '" + this.forename + "', " +
                    "SURNAME = '" + this.surname + "', DATEOFBIRTH = DATE '" + this.dob + "', GENDER = '" +

@@ -31,8 +31,12 @@
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
             this.lblDeRegStaff = new System.Windows.Forms.Label();
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.txtIban = new System.Windows.Forms.TextBox();
+            this.lblIban = new System.Windows.Forms.Label();
+            this.grpGender = new System.Windows.Forms.GroupBox();
+            this.optGenderFemale = new System.Windows.Forms.RadioButton();
+            this.optGenderMale = new System.Windows.Forms.RadioButton();
             this.btnHome = new System.Windows.Forms.Button();
-            this.textChildren = new System.Windows.Forms.TextBox();
             this.btnRegisterStaff = new System.Windows.Forms.Button();
             this.lblChildren = new System.Windows.Forms.Label();
             this.grpMarStatus = new System.Windows.Forms.GroupBox();
@@ -57,23 +61,17 @@
             this.lblForename = new System.Windows.Forms.Label();
             this.lblStaffId = new System.Windows.Forms.Label();
             this.txtStaffId = new System.Windows.Forms.TextBox();
-            this.grpGender = new System.Windows.Forms.GroupBox();
-            this.optGenderFemale = new System.Windows.Forms.RadioButton();
-            this.optGenderMale = new System.Windows.Forms.RadioButton();
-            this.txtDOB = new System.Windows.Forms.TextBox();
-            this.lblIban = new System.Windows.Forms.Label();
-            this.txtIban = new System.Windows.Forms.TextBox();
             this.lblInactive = new System.Windows.Forms.Label();
+            this.dtDob = new System.Windows.Forms.DateTimePicker();
+            this.txtChildren = new System.Windows.Forms.TextBox();
             this.grpStaffDetails.SuspendLayout();
-            this.grpMarStatus.SuspendLayout();
             this.grpGender.SuspendLayout();
+            this.grpMarStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // cboSelectStaff
             // 
             this.cboSelectStaff.FormattingEnabled = true;
-            this.cboSelectStaff.Items.AddRange(new object[] {
-            "Select:"});
             this.cboSelectStaff.Location = new System.Drawing.Point(362, 41);
             this.cboSelectStaff.MaxDropDownItems = 2;
             this.cboSelectStaff.Name = "cboSelectStaff";
@@ -87,19 +85,19 @@
             this.lblDeRegStaff.AutoSize = true;
             this.lblDeRegStaff.Location = new System.Drawing.Point(57, 44);
             this.lblDeRegStaff.Name = "lblDeRegStaff";
-            this.lblDeRegStaff.Size = new System.Drawing.Size(272, 13);
+            this.lblDeRegStaff.Size = new System.Drawing.Size(278, 13);
             this.lblDeRegStaff.TabIndex = 6;
-            this.lblDeRegStaff.Text = "Please select the Emplyee you would like to De-Register";
+            this.lblDeRegStaff.Text = "Please select the Employee you would like to De-Register";
             // 
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpStaffDetails.Controls.Add(this.txtChildren);
+            this.grpStaffDetails.Controls.Add(this.dtDob);
             this.grpStaffDetails.Controls.Add(this.txtIban);
             this.grpStaffDetails.Controls.Add(this.lblIban);
-            this.grpStaffDetails.Controls.Add(this.txtDOB);
             this.grpStaffDetails.Controls.Add(this.grpGender);
             this.grpStaffDetails.Controls.Add(this.btnHome);
-            this.grpStaffDetails.Controls.Add(this.textChildren);
             this.grpStaffDetails.Controls.Add(this.btnRegisterStaff);
             this.grpStaffDetails.Controls.Add(this.lblChildren);
             this.grpStaffDetails.Controls.Add(this.grpMarStatus);
@@ -131,6 +129,58 @@
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Visible = false;
             // 
+            // txtIban
+            // 
+            this.txtIban.Location = new System.Drawing.Point(420, 229);
+            this.txtIban.Name = "txtIban";
+            this.txtIban.ReadOnly = true;
+            this.txtIban.Size = new System.Drawing.Size(156, 20);
+            this.txtIban.TabIndex = 24;
+            this.txtIban.TabStop = false;
+            // 
+            // lblIban
+            // 
+            this.lblIban.AutoSize = true;
+            this.lblIban.Location = new System.Drawing.Point(349, 232);
+            this.lblIban.Name = "lblIban";
+            this.lblIban.Size = new System.Drawing.Size(38, 13);
+            this.lblIban.TabIndex = 23;
+            this.lblIban.Text = "IBAN :";
+            // 
+            // grpGender
+            // 
+            this.grpGender.Controls.Add(this.optGenderFemale);
+            this.grpGender.Controls.Add(this.optGenderMale);
+            this.grpGender.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.grpGender.Location = new System.Drawing.Point(338, 128);
+            this.grpGender.Name = "grpGender";
+            this.grpGender.Size = new System.Drawing.Size(200, 57);
+            this.grpGender.TabIndex = 10;
+            this.grpGender.TabStop = false;
+            this.grpGender.Text = "Gender";
+            // 
+            // optGenderFemale
+            // 
+            this.optGenderFemale.AutoSize = true;
+            this.optGenderFemale.Location = new System.Drawing.Point(114, 20);
+            this.optGenderFemale.Name = "optGenderFemale";
+            this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
+            this.optGenderFemale.TabIndex = 12;
+            this.optGenderFemale.Text = "Female";
+            this.optGenderFemale.UseVisualStyleBackColor = true;
+            // 
+            // optGenderMale
+            // 
+            this.optGenderMale.AutoSize = true;
+            this.optGenderMale.Checked = true;
+            this.optGenderMale.Location = new System.Drawing.Point(27, 19);
+            this.optGenderMale.Name = "optGenderMale";
+            this.optGenderMale.Size = new System.Drawing.Size(48, 17);
+            this.optGenderMale.TabIndex = 11;
+            this.optGenderMale.TabStop = true;
+            this.optGenderMale.Text = "Male";
+            this.optGenderMale.UseVisualStyleBackColor = true;
+            // 
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -142,17 +192,6 @@
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // textChildren
-            // 
-            this.textChildren.Location = new System.Drawing.Point(452, 200);
-            this.textChildren.Name = "textChildren";
-            this.textChildren.ReadOnly = true;
-            this.textChildren.Size = new System.Drawing.Size(30, 20);
-            this.textChildren.TabIndex = 11;
-            this.textChildren.TabStop = false;
-            this.textChildren.Text = "0";
-            this.textChildren.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnRegisterStaff
             // 
@@ -169,7 +208,7 @@
             // lblChildren
             // 
             this.lblChildren.AutoSize = true;
-            this.lblChildren.Location = new System.Drawing.Point(356, 203);
+            this.lblChildren.Location = new System.Drawing.Point(349, 200);
             this.lblChildren.Name = "lblChildren";
             this.lblChildren.Size = new System.Drawing.Size(51, 13);
             this.lblChildren.TabIndex = 19;
@@ -196,7 +235,6 @@
             this.optMarried.TabIndex = 9;
             this.optMarried.Text = "Married";
             this.optMarried.UseVisualStyleBackColor = true;
-            this.optMarried.Visible = false;
             // 
             // optSingle
             // 
@@ -206,6 +244,7 @@
             this.optSingle.Name = "optSingle";
             this.optSingle.Size = new System.Drawing.Size(54, 17);
             this.optSingle.TabIndex = 10;
+            this.optSingle.TabStop = true;
             this.optSingle.Text = "Single";
             this.optSingle.UseVisualStyleBackColor = true;
             // 
@@ -391,67 +430,6 @@
             this.txtStaffId.Text = "001";
             this.txtStaffId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // grpGender
-            // 
-            this.grpGender.Controls.Add(this.optGenderFemale);
-            this.grpGender.Controls.Add(this.optGenderMale);
-            this.grpGender.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.grpGender.Location = new System.Drawing.Point(338, 128);
-            this.grpGender.Name = "grpGender";
-            this.grpGender.Size = new System.Drawing.Size(200, 57);
-            this.grpGender.TabIndex = 10;
-            this.grpGender.TabStop = false;
-            this.grpGender.Text = "Gender";
-            // 
-            // optGenderFemale
-            // 
-            this.optGenderFemale.AutoSize = true;
-            this.optGenderFemale.Location = new System.Drawing.Point(114, 20);
-            this.optGenderFemale.Name = "optGenderFemale";
-            this.optGenderFemale.Size = new System.Drawing.Size(59, 17);
-            this.optGenderFemale.TabIndex = 12;
-            this.optGenderFemale.Text = "Female";
-            this.optGenderFemale.UseVisualStyleBackColor = true;
-            // 
-            // optGenderMale
-            // 
-            this.optGenderMale.AutoSize = true;
-            this.optGenderMale.Checked = true;
-            this.optGenderMale.Location = new System.Drawing.Point(27, 19);
-            this.optGenderMale.Name = "optGenderMale";
-            this.optGenderMale.Size = new System.Drawing.Size(48, 17);
-            this.optGenderMale.TabIndex = 11;
-            this.optGenderMale.Text = "Male";
-            this.optGenderMale.UseVisualStyleBackColor = true;
-            // 
-            // txtDOB
-            // 
-            this.txtDOB.BackColor = System.Drawing.SystemColors.Menu;
-            this.txtDOB.Location = new System.Drawing.Point(141, 284);
-            this.txtDOB.Name = "txtDOB";
-            this.txtDOB.ReadOnly = true;
-            this.txtDOB.Size = new System.Drawing.Size(100, 20);
-            this.txtDOB.TabIndex = 9;
-            this.txtDOB.TabStop = false;
-            // 
-            // lblIban
-            // 
-            this.lblIban.AutoSize = true;
-            this.lblIban.Location = new System.Drawing.Point(335, 236);
-            this.lblIban.Name = "lblIban";
-            this.lblIban.Size = new System.Drawing.Size(38, 13);
-            this.lblIban.TabIndex = 23;
-            this.lblIban.Text = "IBAN :";
-            // 
-            // txtIban
-            // 
-            this.txtIban.Location = new System.Drawing.Point(382, 233);
-            this.txtIban.Name = "txtIban";
-            this.txtIban.ReadOnly = true;
-            this.txtIban.Size = new System.Drawing.Size(156, 20);
-            this.txtIban.TabIndex = 24;
-            this.txtIban.TabStop = false;
-            // 
             // lblInactive
             // 
             this.lblInactive.AutoSize = true;
@@ -464,6 +442,27 @@
             this.lblInactive.Text = "IN-ACTIVE";
             this.lblInactive.Visible = false;
             // 
+            // dtDob
+            // 
+            this.dtDob.AllowDrop = true;
+            this.dtDob.CustomFormat = "dd-MMM-yy";
+            this.dtDob.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDob.Location = new System.Drawing.Point(141, 281);
+            this.dtDob.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtDob.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dtDob.Name = "dtDob";
+            this.dtDob.Size = new System.Drawing.Size(100, 20);
+            this.dtDob.TabIndex = 25;
+            // 
+            // txtChildren
+            // 
+            this.txtChildren.Location = new System.Drawing.Point(452, 197);
+            this.txtChildren.Name = "txtChildren";
+            this.txtChildren.ReadOnly = true;
+            this.txtChildren.Size = new System.Drawing.Size(29, 20);
+            this.txtChildren.TabIndex = 26;
+            this.txtChildren.TabStop = false;
+            // 
             // frmDeRegisterStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,14 +474,14 @@
             this.Controls.Add(this.grpStaffDetails);
             this.Name = "frmDeRegisterStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "De-RegisterStaff";
+            this.Text = "De/Re RegisterStaff";
             this.Load += new System.EventHandler(this.frmDeRegisterStaff_Load);
             this.grpStaffDetails.ResumeLayout(false);
             this.grpStaffDetails.PerformLayout();
-            this.grpMarStatus.ResumeLayout(false);
-            this.grpMarStatus.PerformLayout();
             this.grpGender.ResumeLayout(false);
             this.grpGender.PerformLayout();
+            this.grpMarStatus.ResumeLayout(false);
+            this.grpMarStatus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,14 +516,14 @@
         private System.Windows.Forms.Label lblForename;
         private System.Windows.Forms.Label lblStaffId;
         private System.Windows.Forms.TextBox txtStaffId;
-        private System.Windows.Forms.TextBox textChildren;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.TextBox txtDOB;
         private System.Windows.Forms.GroupBox grpGender;
         private System.Windows.Forms.RadioButton optGenderFemale;
         private System.Windows.Forms.RadioButton optGenderMale;
         private System.Windows.Forms.TextBox txtIban;
         private System.Windows.Forms.Label lblIban;
         private System.Windows.Forms.Label lblInactive;
+        private System.Windows.Forms.DateTimePicker dtDob;
+        private System.Windows.Forms.TextBox txtChildren;
     }
 }
