@@ -1,0 +1,4 @@
+Staff Id	Week1 		Week2
+12345		  Y
+
+"SELECT * FROM Staff_Paid WHERE Week" + period + "='N'";	
