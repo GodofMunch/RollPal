@@ -279,14 +279,28 @@ namespace WindowsFormsApp1
                 + "')";
 
             string strSqlBanking = "INSERT INTO BANKING VALUES (" + this.staffId + ",'" + this.iban + "')";
+
+            string strSqlStaffPaid = "INSERT INTO STAFF_PAID VALUES (" + this.staffId + ",";
+
+            for (int i = 1; i <= 52; i++)
+            {
+                strSqlStaffPaid += "'N'";
+
+                if (i != 52)
+                    strSqlStaffPaid += ",";
+            }
+
+            strSqlStaffPaid += ")"; 
             
             OracleCommand cmdStaff = new OracleCommand(strSqlStaff, conn);
             OracleCommand cmdContact = new OracleCommand(strSqlContact, conn);
             OracleCommand cmdBanking = new OracleCommand(strSqlBanking, conn);
+            OracleCommand cmdStaffPaid = new OracleCommand(strSqlStaffPaid, conn);
 
             cmdStaff.ExecuteNonQuery();
             cmdContact.ExecuteNonQuery();
             cmdBanking.ExecuteNonQuery();
+            cmdStaffPaid.ExecuteNonQuery();
 
             conn.Close();
         }

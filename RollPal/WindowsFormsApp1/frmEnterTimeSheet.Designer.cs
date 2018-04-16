@@ -160,7 +160,6 @@
             this.rtxtToDo.TabIndex = 5;
             this.rtxtToDo.TabStop = false;
             this.rtxtToDo.Text = "";
-            this.rtxtToDo.TextChanged += new System.EventHandler(this.rtxtToDo_TextChanged);
             // 
             // btnApprove
             // 

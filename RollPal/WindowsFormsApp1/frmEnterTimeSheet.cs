@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace WindowsFormsApp1
 {
@@ -42,7 +43,9 @@ namespace WindowsFormsApp1
 
             if(proceed == DialogResult.Yes)
             {
-                
+                OracleConnection conn = new OracleConnection(DBConnect.oradb);
+
+                string staffPaidsql = "INSERT INTO STAFF_PAID VALUES(" + this.staffId + " WHERE Column_Name=Week" + period;
             }
 
             else
@@ -86,10 +89,12 @@ namespace WindowsFormsApp1
 
             for (int i = 1; i < Staff.nextStaffId(); i++)
             {
-                cboTimesheetSelect.Items.Add("00" + i);
-                staffToDo[i - 1] = "00" + i;
-                if(!staffPaid(i))
-                rtxtToDo.Text += staffToDo[i - 1] + "\n";
+                if (!staffPaid(i))
+                {
+                    cboTimesheetSelect.Items.Add("00" + i);
+                    staffToDo[i - 1] = "00" + i;
+                    rtxtToDo.Text += staffToDo[i - 1] + "\n";
+                }
             }
 
             
@@ -98,15 +103,10 @@ namespace WindowsFormsApp1
         {
             for(int i = 1; i < Staff.nextStaffId(); i ++)
             {
-               // if()
+                OracleConnection conn = new OracleConnection(DBConnect.oradb);
             }
 
             return true;
-        }
-
-        private void rtxtToDo_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
