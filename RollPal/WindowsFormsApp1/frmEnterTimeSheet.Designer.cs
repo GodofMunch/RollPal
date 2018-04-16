@@ -59,55 +59,55 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblStaffName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dayStartHourMon = new System.Windows.Forms.ComboBox();
-            this.dayStartMinMon = new System.Windows.Forms.ComboBox();
-            this.dayFinHourMon = new System.Windows.Forms.ComboBox();
-            this.dayFinMinMon = new System.Windows.Forms.ComboBox();
-            this.breakHourMon = new System.Windows.Forms.ComboBox();
-            this.breakMinMon = new System.Windows.Forms.ComboBox();
-            this.dayStartHourTue = new System.Windows.Forms.ComboBox();
-            this.dayStartMinTue = new System.Windows.Forms.ComboBox();
-            this.dayFinHourTue = new System.Windows.Forms.ComboBox();
-            this.dayFinMinTue = new System.Windows.Forms.ComboBox();
-            this.breakHourTue = new System.Windows.Forms.ComboBox();
-            this.breakMinTue = new System.Windows.Forms.ComboBox();
-            this.dayStartHourWed = new System.Windows.Forms.ComboBox();
-            this.dayStartMinWed = new System.Windows.Forms.ComboBox();
-            this.dayFinHourWed = new System.Windows.Forms.ComboBox();
-            this.dayFinMinWed = new System.Windows.Forms.ComboBox();
-            this.breakHourWed = new System.Windows.Forms.ComboBox();
-            this.breakMinWed = new System.Windows.Forms.ComboBox();
-            this.dayStartHourThu = new System.Windows.Forms.ComboBox();
-            this.dayStartMinThu = new System.Windows.Forms.ComboBox();
-            this.dayFinHourThur = new System.Windows.Forms.ComboBox();
-            this.dayFinMinThu = new System.Windows.Forms.ComboBox();
-            this.breakHourThur = new System.Windows.Forms.ComboBox();
-            this.breakMinThu = new System.Windows.Forms.ComboBox();
-            this.dayStartHourFri = new System.Windows.Forms.ComboBox();
-            this.dayStartMinFri = new System.Windows.Forms.ComboBox();
-            this.dayFinHourFri = new System.Windows.Forms.ComboBox();
-            this.dayFinMinFri = new System.Windows.Forms.ComboBox();
-            this.breakHourFri = new System.Windows.Forms.ComboBox();
-            this.breakMinFri = new System.Windows.Forms.ComboBox();
-            this.dayStartHourSat = new System.Windows.Forms.ComboBox();
-            this.dayStartMinSat = new System.Windows.Forms.ComboBox();
-            this.dayFinHourSat = new System.Windows.Forms.ComboBox();
-            this.dayFinMinSat = new System.Windows.Forms.ComboBox();
-            this.breakHourSat = new System.Windows.Forms.ComboBox();
-            this.breakMinSat = new System.Windows.Forms.ComboBox();
-            this.dayStartHourSun = new System.Windows.Forms.ComboBox();
-            this.dayStartMinSun = new System.Windows.Forms.ComboBox();
-            this.dayFinHourSun = new System.Windows.Forms.ComboBox();
-            this.dayFinMinSun = new System.Windows.Forms.ComboBox();
-            this.breakHourSun = new System.Windows.Forms.ComboBox();
-            this.breakMinSun = new System.Windows.Forms.ComboBox();
-            this.cbWorkedMon = new System.Windows.Forms.CheckBox();
-            this.cbWorkedTue = new System.Windows.Forms.CheckBox();
-            this.cbWorkedWed = new System.Windows.Forms.CheckBox();
-            this.cbWorkedThu = new System.Windows.Forms.CheckBox();
-            this.cbWorkedFri = new System.Windows.Forms.CheckBox();
-            this.cbWorkedSat = new System.Windows.Forms.CheckBox();
             this.cbWorkedSun = new System.Windows.Forms.CheckBox();
+            this.cbWorkedSat = new System.Windows.Forms.CheckBox();
+            this.cbWorkedFri = new System.Windows.Forms.CheckBox();
+            this.cbWorkedThu = new System.Windows.Forms.CheckBox();
+            this.cbWorkedWed = new System.Windows.Forms.CheckBox();
+            this.cbWorkedTue = new System.Windows.Forms.CheckBox();
+            this.cbWorkedMon = new System.Windows.Forms.CheckBox();
+            this.breakMinSun = new System.Windows.Forms.ComboBox();
+            this.breakHourSun = new System.Windows.Forms.ComboBox();
+            this.dayFinMinSun = new System.Windows.Forms.ComboBox();
+            this.dayFinHourSun = new System.Windows.Forms.ComboBox();
+            this.dayStartMinSun = new System.Windows.Forms.ComboBox();
+            this.dayStartHourSun = new System.Windows.Forms.ComboBox();
+            this.breakMinSat = new System.Windows.Forms.ComboBox();
+            this.breakHourSat = new System.Windows.Forms.ComboBox();
+            this.dayFinMinSat = new System.Windows.Forms.ComboBox();
+            this.dayFinHourSat = new System.Windows.Forms.ComboBox();
+            this.dayStartMinSat = new System.Windows.Forms.ComboBox();
+            this.dayStartHourSat = new System.Windows.Forms.ComboBox();
+            this.breakMinFri = new System.Windows.Forms.ComboBox();
+            this.breakHourFri = new System.Windows.Forms.ComboBox();
+            this.dayFinMinFri = new System.Windows.Forms.ComboBox();
+            this.dayFinHourFri = new System.Windows.Forms.ComboBox();
+            this.dayStartMinFri = new System.Windows.Forms.ComboBox();
+            this.dayStartHourFri = new System.Windows.Forms.ComboBox();
+            this.breakMinThu = new System.Windows.Forms.ComboBox();
+            this.breakHourThur = new System.Windows.Forms.ComboBox();
+            this.dayFinMinThu = new System.Windows.Forms.ComboBox();
+            this.dayFinHourThur = new System.Windows.Forms.ComboBox();
+            this.dayStartMinThu = new System.Windows.Forms.ComboBox();
+            this.dayStartHourThu = new System.Windows.Forms.ComboBox();
+            this.breakMinWed = new System.Windows.Forms.ComboBox();
+            this.breakHourWed = new System.Windows.Forms.ComboBox();
+            this.dayFinMinWed = new System.Windows.Forms.ComboBox();
+            this.dayFinHourWed = new System.Windows.Forms.ComboBox();
+            this.dayStartMinWed = new System.Windows.Forms.ComboBox();
+            this.dayStartHourWed = new System.Windows.Forms.ComboBox();
+            this.breakMinTue = new System.Windows.Forms.ComboBox();
+            this.breakHourTue = new System.Windows.Forms.ComboBox();
+            this.dayFinMinTue = new System.Windows.Forms.ComboBox();
+            this.dayFinHourTue = new System.Windows.Forms.ComboBox();
+            this.dayStartMinTue = new System.Windows.Forms.ComboBox();
+            this.dayStartHourTue = new System.Windows.Forms.ComboBox();
+            this.breakMinMon = new System.Windows.Forms.ComboBox();
+            this.breakHourMon = new System.Windows.Forms.ComboBox();
+            this.dayFinMinMon = new System.Windows.Forms.ComboBox();
+            this.dayFinHourMon = new System.Windows.Forms.ComboBox();
+            this.dayStartMinMon = new System.Windows.Forms.ComboBox();
+            this.dayStartHourMon = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +160,7 @@
             this.rtxtToDo.TabIndex = 5;
             this.rtxtToDo.TabStop = false;
             this.rtxtToDo.Text = "";
+            this.rtxtToDo.TextChanged += new System.EventHandler(this.rtxtToDo_TextChanged);
             // 
             // btnApprove
             // 
@@ -471,386 +472,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Timesheet Details";
             // 
-            // dayStartHourMon
-            // 
-            this.dayStartHourMon.FormattingEnabled = true;
-            this.dayStartHourMon.Location = new System.Drawing.Point(107, 69);
-            this.dayStartHourMon.Name = "dayStartHourMon";
-            this.dayStartHourMon.Size = new System.Drawing.Size(38, 21);
-            this.dayStartHourMon.TabIndex = 1;
-            // 
-            // dayStartMinMon
-            // 
-            this.dayStartMinMon.FormattingEnabled = true;
-            this.dayStartMinMon.Location = new System.Drawing.Point(151, 69);
-            this.dayStartMinMon.Name = "dayStartMinMon";
-            this.dayStartMinMon.Size = new System.Drawing.Size(38, 21);
-            this.dayStartMinMon.TabIndex = 2;
-            // 
-            // dayFinHourMon
-            // 
-            this.dayFinHourMon.FormattingEnabled = true;
-            this.dayFinHourMon.Location = new System.Drawing.Point(228, 69);
-            this.dayFinHourMon.Name = "dayFinHourMon";
-            this.dayFinHourMon.Size = new System.Drawing.Size(42, 21);
-            this.dayFinHourMon.TabIndex = 3;
-            // 
-            // dayFinMinMon
-            // 
-            this.dayFinMinMon.FormattingEnabled = true;
-            this.dayFinMinMon.Location = new System.Drawing.Point(276, 69);
-            this.dayFinMinMon.Name = "dayFinMinMon";
-            this.dayFinMinMon.Size = new System.Drawing.Size(39, 21);
-            this.dayFinMinMon.TabIndex = 4;
-            // 
-            // breakHourMon
-            // 
-            this.breakHourMon.FormattingEnabled = true;
-            this.breakHourMon.Location = new System.Drawing.Point(368, 69);
-            this.breakHourMon.Name = "breakHourMon";
-            this.breakHourMon.Size = new System.Drawing.Size(47, 21);
-            this.breakHourMon.TabIndex = 5;
-            // 
-            // breakMinMon
-            // 
-            this.breakMinMon.FormattingEnabled = true;
-            this.breakMinMon.Location = new System.Drawing.Point(421, 69);
-            this.breakMinMon.Name = "breakMinMon";
-            this.breakMinMon.Size = new System.Drawing.Size(42, 21);
-            this.breakMinMon.TabIndex = 6;
-            // 
-            // dayStartHourTue
-            // 
-            this.dayStartHourTue.FormattingEnabled = true;
-            this.dayStartHourTue.Location = new System.Drawing.Point(107, 98);
-            this.dayStartHourTue.Name = "dayStartHourTue";
-            this.dayStartHourTue.Size = new System.Drawing.Size(38, 21);
-            this.dayStartHourTue.TabIndex = 7;
-            // 
-            // dayStartMinTue
-            // 
-            this.dayStartMinTue.FormattingEnabled = true;
-            this.dayStartMinTue.Location = new System.Drawing.Point(151, 98);
-            this.dayStartMinTue.Name = "dayStartMinTue";
-            this.dayStartMinTue.Size = new System.Drawing.Size(38, 21);
-            this.dayStartMinTue.TabIndex = 8;
-            // 
-            // dayFinHourTue
-            // 
-            this.dayFinHourTue.FormattingEnabled = true;
-            this.dayFinHourTue.Location = new System.Drawing.Point(228, 98);
-            this.dayFinHourTue.Name = "dayFinHourTue";
-            this.dayFinHourTue.Size = new System.Drawing.Size(42, 21);
-            this.dayFinHourTue.TabIndex = 9;
-            // 
-            // dayFinMinTue
-            // 
-            this.dayFinMinTue.FormattingEnabled = true;
-            this.dayFinMinTue.Location = new System.Drawing.Point(276, 98);
-            this.dayFinMinTue.Name = "dayFinMinTue";
-            this.dayFinMinTue.Size = new System.Drawing.Size(39, 21);
-            this.dayFinMinTue.TabIndex = 10;
-            // 
-            // breakHourTue
-            // 
-            this.breakHourTue.FormattingEnabled = true;
-            this.breakHourTue.Location = new System.Drawing.Point(368, 98);
-            this.breakHourTue.Name = "breakHourTue";
-            this.breakHourTue.Size = new System.Drawing.Size(47, 21);
-            this.breakHourTue.TabIndex = 11;
-            // 
-            // breakMinTue
-            // 
-            this.breakMinTue.FormattingEnabled = true;
-            this.breakMinTue.Location = new System.Drawing.Point(421, 98);
-            this.breakMinTue.Name = "breakMinTue";
-            this.breakMinTue.Size = new System.Drawing.Size(42, 21);
-            this.breakMinTue.TabIndex = 12;
-            // 
-            // dayStartHourWed
-            // 
-            this.dayStartHourWed.FormattingEnabled = true;
-            this.dayStartHourWed.Location = new System.Drawing.Point(107, 125);
-            this.dayStartHourWed.Name = "dayStartHourWed";
-            this.dayStartHourWed.Size = new System.Drawing.Size(38, 21);
-            this.dayStartHourWed.TabIndex = 13;
-            // 
-            // dayStartMinWed
-            // 
-            this.dayStartMinWed.FormattingEnabled = true;
-            this.dayStartMinWed.Location = new System.Drawing.Point(151, 125);
-            this.dayStartMinWed.Name = "dayStartMinWed";
-            this.dayStartMinWed.Size = new System.Drawing.Size(38, 21);
-            this.dayStartMinWed.TabIndex = 14;
-            // 
-            // dayFinHourWed
-            // 
-            this.dayFinHourWed.FormattingEnabled = true;
-            this.dayFinHourWed.Location = new System.Drawing.Point(228, 125);
-            this.dayFinHourWed.Name = "dayFinHourWed";
-            this.dayFinHourWed.Size = new System.Drawing.Size(42, 21);
-            this.dayFinHourWed.TabIndex = 15;
-            // 
-            // dayFinMinWed
-            // 
-            this.dayFinMinWed.FormattingEnabled = true;
-            this.dayFinMinWed.Location = new System.Drawing.Point(276, 125);
-            this.dayFinMinWed.Name = "dayFinMinWed";
-            this.dayFinMinWed.Size = new System.Drawing.Size(39, 21);
-            this.dayFinMinWed.TabIndex = 16;
-            // 
-            // breakHourWed
-            // 
-            this.breakHourWed.FormattingEnabled = true;
-            this.breakHourWed.Location = new System.Drawing.Point(368, 125);
-            this.breakHourWed.Name = "breakHourWed";
-            this.breakHourWed.Size = new System.Drawing.Size(47, 21);
-            this.breakHourWed.TabIndex = 17;
-            // 
-            // breakMinWed
-            // 
-            this.breakMinWed.FormattingEnabled = true;
-            this.breakMinWed.Location = new System.Drawing.Point(421, 125);
-            this.breakMinWed.Name = "breakMinWed";
-            this.breakMinWed.Size = new System.Drawing.Size(42, 21);
-            this.breakMinWed.TabIndex = 18;
-            // 
-            // dayStartHourThu
-            // 
-            this.dayStartHourThu.FormattingEnabled = true;
-            this.dayStartHourThu.Location = new System.Drawing.Point(107, 154);
-            this.dayStartHourThu.Name = "dayStartHourThu";
-            this.dayStartHourThu.Size = new System.Drawing.Size(38, 21);
-            this.dayStartHourThu.TabIndex = 19;
-            // 
-            // dayStartMinThu
-            // 
-            this.dayStartMinThu.FormattingEnabled = true;
-            this.dayStartMinThu.Location = new System.Drawing.Point(151, 154);
-            this.dayStartMinThu.Name = "dayStartMinThu";
-            this.dayStartMinThu.Size = new System.Drawing.Size(38, 21);
-            this.dayStartMinThu.TabIndex = 20;
-            // 
-            // dayFinHourThur
-            // 
-            this.dayFinHourThur.FormattingEnabled = true;
-            this.dayFinHourThur.Location = new System.Drawing.Point(228, 154);
-            this.dayFinHourThur.Name = "dayFinHourThur";
-            this.dayFinHourThur.Size = new System.Drawing.Size(42, 21);
-            this.dayFinHourThur.TabIndex = 21;
-            // 
-            // dayFinMinThu
-            // 
-            this.dayFinMinThu.FormattingEnabled = true;
-            this.dayFinMinThu.Location = new System.Drawing.Point(276, 154);
-            this.dayFinMinThu.Name = "dayFinMinThu";
-            this.dayFinMinThu.Size = new System.Drawing.Size(39, 21);
-            this.dayFinMinThu.TabIndex = 22;
-            // 
-            // breakHourThur
-            // 
-            this.breakHourThur.FormattingEnabled = true;
-            this.breakHourThur.Location = new System.Drawing.Point(368, 154);
-            this.breakHourThur.Name = "breakHourThur";
-            this.breakHourThur.Size = new System.Drawing.Size(47, 21);
-            this.breakHourThur.TabIndex = 23;
-            // 
-            // breakMinThu
-            // 
-            this.breakMinThu.FormattingEnabled = true;
-            this.breakMinThu.Location = new System.Drawing.Point(421, 154);
-            this.breakMinThu.Name = "breakMinThu";
-            this.breakMinThu.Size = new System.Drawing.Size(42, 21);
-            this.breakMinThu.TabIndex = 24;
-            // 
-            // dayStartHourFri
-            // 
-            this.dayStartHourFri.FormattingEnabled = true;
-            this.dayStartHourFri.Location = new System.Drawing.Point(107, 181);
-            this.dayStartHourFri.Name = "dayStartHourFri";
-            this.dayStartHourFri.Size = new System.Drawing.Size(38, 21);
-            this.dayStartHourFri.TabIndex = 25;
-            // 
-            // dayStartMinFri
-            // 
-            this.dayStartMinFri.FormattingEnabled = true;
-            this.dayStartMinFri.Location = new System.Drawing.Point(151, 181);
-            this.dayStartMinFri.Name = "dayStartMinFri";
-            this.dayStartMinFri.Size = new System.Drawing.Size(38, 21);
-            this.dayStartMinFri.TabIndex = 26;
-            // 
-            // dayFinHourFri
-            // 
-            this.dayFinHourFri.FormattingEnabled = true;
-            this.dayFinHourFri.Location = new System.Drawing.Point(228, 181);
-            this.dayFinHourFri.Name = "dayFinHourFri";
-            this.dayFinHourFri.Size = new System.Drawing.Size(42, 21);
-            this.dayFinHourFri.TabIndex = 27;
-            // 
-            // dayFinMinFri
-            // 
-            this.dayFinMinFri.FormattingEnabled = true;
-            this.dayFinMinFri.Location = new System.Drawing.Point(276, 181);
-            this.dayFinMinFri.Name = "dayFinMinFri";
-            this.dayFinMinFri.Size = new System.Drawing.Size(39, 21);
-            this.dayFinMinFri.TabIndex = 28;
-            // 
-            // breakHourFri
-            // 
-            this.breakHourFri.FormattingEnabled = true;
-            this.breakHourFri.Location = new System.Drawing.Point(368, 181);
-            this.breakHourFri.Name = "breakHourFri";
-            this.breakHourFri.Size = new System.Drawing.Size(47, 21);
-            this.breakHourFri.TabIndex = 29;
-            // 
-            // breakMinFri
-            // 
-            this.breakMinFri.FormattingEnabled = true;
-            this.breakMinFri.Location = new System.Drawing.Point(421, 181);
-            this.breakMinFri.Name = "breakMinFri";
-            this.breakMinFri.Size = new System.Drawing.Size(42, 21);
-            this.breakMinFri.TabIndex = 30;
-            // 
-            // dayStartHourSat
-            // 
-            this.dayStartHourSat.FormattingEnabled = true;
-            this.dayStartHourSat.Location = new System.Drawing.Point(107, 208);
-            this.dayStartHourSat.Name = "dayStartHourSat";
-            this.dayStartHourSat.Size = new System.Drawing.Size(38, 21);
-            this.dayStartHourSat.TabIndex = 31;
-            // 
-            // dayStartMinSat
-            // 
-            this.dayStartMinSat.FormattingEnabled = true;
-            this.dayStartMinSat.Location = new System.Drawing.Point(151, 208);
-            this.dayStartMinSat.Name = "dayStartMinSat";
-            this.dayStartMinSat.Size = new System.Drawing.Size(38, 21);
-            this.dayStartMinSat.TabIndex = 32;
-            // 
-            // dayFinHourSat
-            // 
-            this.dayFinHourSat.FormattingEnabled = true;
-            this.dayFinHourSat.Location = new System.Drawing.Point(228, 208);
-            this.dayFinHourSat.Name = "dayFinHourSat";
-            this.dayFinHourSat.Size = new System.Drawing.Size(42, 21);
-            this.dayFinHourSat.TabIndex = 33;
-            // 
-            // dayFinMinSat
-            // 
-            this.dayFinMinSat.FormattingEnabled = true;
-            this.dayFinMinSat.Location = new System.Drawing.Point(276, 208);
-            this.dayFinMinSat.Name = "dayFinMinSat";
-            this.dayFinMinSat.Size = new System.Drawing.Size(39, 21);
-            this.dayFinMinSat.TabIndex = 34;
-            // 
-            // breakHourSat
-            // 
-            this.breakHourSat.FormattingEnabled = true;
-            this.breakHourSat.Location = new System.Drawing.Point(368, 208);
-            this.breakHourSat.Name = "breakHourSat";
-            this.breakHourSat.Size = new System.Drawing.Size(47, 21);
-            this.breakHourSat.TabIndex = 35;
-            // 
-            // breakMinSat
-            // 
-            this.breakMinSat.FormattingEnabled = true;
-            this.breakMinSat.Location = new System.Drawing.Point(421, 208);
-            this.breakMinSat.Name = "breakMinSat";
-            this.breakMinSat.Size = new System.Drawing.Size(42, 21);
-            this.breakMinSat.TabIndex = 36;
-            // 
-            // dayStartHourSun
-            // 
-            this.dayStartHourSun.FormattingEnabled = true;
-            this.dayStartHourSun.Location = new System.Drawing.Point(107, 234);
-            this.dayStartHourSun.Name = "dayStartHourSun";
-            this.dayStartHourSun.Size = new System.Drawing.Size(38, 21);
-            this.dayStartHourSun.TabIndex = 37;
-            // 
-            // dayStartMinSun
-            // 
-            this.dayStartMinSun.FormattingEnabled = true;
-            this.dayStartMinSun.Location = new System.Drawing.Point(151, 234);
-            this.dayStartMinSun.Name = "dayStartMinSun";
-            this.dayStartMinSun.Size = new System.Drawing.Size(38, 21);
-            this.dayStartMinSun.TabIndex = 38;
-            // 
-            // dayFinHourSun
-            // 
-            this.dayFinHourSun.FormattingEnabled = true;
-            this.dayFinHourSun.Location = new System.Drawing.Point(228, 234);
-            this.dayFinHourSun.Name = "dayFinHourSun";
-            this.dayFinHourSun.Size = new System.Drawing.Size(42, 21);
-            this.dayFinHourSun.TabIndex = 39;
-            // 
-            // dayFinMinSun
-            // 
-            this.dayFinMinSun.FormattingEnabled = true;
-            this.dayFinMinSun.Location = new System.Drawing.Point(276, 234);
-            this.dayFinMinSun.Name = "dayFinMinSun";
-            this.dayFinMinSun.Size = new System.Drawing.Size(39, 21);
-            this.dayFinMinSun.TabIndex = 40;
-            // 
-            // breakHourSun
-            // 
-            this.breakHourSun.FormattingEnabled = true;
-            this.breakHourSun.Location = new System.Drawing.Point(368, 234);
-            this.breakHourSun.Name = "breakHourSun";
-            this.breakHourSun.Size = new System.Drawing.Size(47, 21);
-            this.breakHourSun.TabIndex = 41;
-            // 
-            // breakMinSun
-            // 
-            this.breakMinSun.FormattingEnabled = true;
-            this.breakMinSun.Location = new System.Drawing.Point(421, 234);
-            this.breakMinSun.Name = "breakMinSun";
-            this.breakMinSun.Size = new System.Drawing.Size(42, 21);
-            this.breakMinSun.TabIndex = 42;
-            // 
-            // cbWorkedMon
-            // 
-            this.cbWorkedMon.AutoSize = true;
-            this.cbWorkedMon.Location = new System.Drawing.Point(6, 71);
-            this.cbWorkedMon.Name = "cbWorkedMon";
-            this.cbWorkedMon.Size = new System.Drawing.Size(15, 14);
-            this.cbWorkedMon.TabIndex = 43;
-            this.cbWorkedMon.UseVisualStyleBackColor = true;
-            // 
-            // cbWorkedTue
-            // 
-            this.cbWorkedTue.AutoSize = true;
-            this.cbWorkedTue.Location = new System.Drawing.Point(6, 101);
-            this.cbWorkedTue.Name = "cbWorkedTue";
-            this.cbWorkedTue.Size = new System.Drawing.Size(15, 14);
-            this.cbWorkedTue.TabIndex = 44;
-            this.cbWorkedTue.UseVisualStyleBackColor = true;
-            // 
-            // cbWorkedWed
-            // 
-            this.cbWorkedWed.AutoSize = true;
-            this.cbWorkedWed.Location = new System.Drawing.Point(6, 128);
-            this.cbWorkedWed.Name = "cbWorkedWed";
-            this.cbWorkedWed.Size = new System.Drawing.Size(15, 14);
-            this.cbWorkedWed.TabIndex = 45;
-            this.cbWorkedWed.UseVisualStyleBackColor = true;
-            // 
-            // cbWorkedThu
-            // 
-            this.cbWorkedThu.AutoSize = true;
-            this.cbWorkedThu.Location = new System.Drawing.Point(6, 157);
-            this.cbWorkedThu.Name = "cbWorkedThu";
-            this.cbWorkedThu.Size = new System.Drawing.Size(15, 14);
-            this.cbWorkedThu.TabIndex = 46;
-            this.cbWorkedThu.UseVisualStyleBackColor = true;
-            // 
-            // cbWorkedFri
-            // 
-            this.cbWorkedFri.AutoSize = true;
-            this.cbWorkedFri.Location = new System.Drawing.Point(6, 184);
-            this.cbWorkedFri.Name = "cbWorkedFri";
-            this.cbWorkedFri.Size = new System.Drawing.Size(15, 14);
-            this.cbWorkedFri.TabIndex = 47;
-            this.cbWorkedFri.UseVisualStyleBackColor = true;
+            // cbWorkedSun
+            // 
+            this.cbWorkedSun.AutoSize = true;
+            this.cbWorkedSun.Location = new System.Drawing.Point(6, 237);
+            this.cbWorkedSun.Name = "cbWorkedSun";
+            this.cbWorkedSun.Size = new System.Drawing.Size(15, 14);
+            this.cbWorkedSun.TabIndex = 49;
+            this.cbWorkedSun.UseVisualStyleBackColor = true;
             // 
             // cbWorkedSat
             // 
@@ -861,14 +490,386 @@
             this.cbWorkedSat.TabIndex = 48;
             this.cbWorkedSat.UseVisualStyleBackColor = true;
             // 
-            // cbWorkedSun
+            // cbWorkedFri
             // 
-            this.cbWorkedSun.AutoSize = true;
-            this.cbWorkedSun.Location = new System.Drawing.Point(6, 237);
-            this.cbWorkedSun.Name = "cbWorkedSun";
-            this.cbWorkedSun.Size = new System.Drawing.Size(15, 14);
-            this.cbWorkedSun.TabIndex = 49;
-            this.cbWorkedSun.UseVisualStyleBackColor = true;
+            this.cbWorkedFri.AutoSize = true;
+            this.cbWorkedFri.Location = new System.Drawing.Point(6, 184);
+            this.cbWorkedFri.Name = "cbWorkedFri";
+            this.cbWorkedFri.Size = new System.Drawing.Size(15, 14);
+            this.cbWorkedFri.TabIndex = 47;
+            this.cbWorkedFri.UseVisualStyleBackColor = true;
+            // 
+            // cbWorkedThu
+            // 
+            this.cbWorkedThu.AutoSize = true;
+            this.cbWorkedThu.Location = new System.Drawing.Point(6, 157);
+            this.cbWorkedThu.Name = "cbWorkedThu";
+            this.cbWorkedThu.Size = new System.Drawing.Size(15, 14);
+            this.cbWorkedThu.TabIndex = 46;
+            this.cbWorkedThu.UseVisualStyleBackColor = true;
+            // 
+            // cbWorkedWed
+            // 
+            this.cbWorkedWed.AutoSize = true;
+            this.cbWorkedWed.Location = new System.Drawing.Point(6, 128);
+            this.cbWorkedWed.Name = "cbWorkedWed";
+            this.cbWorkedWed.Size = new System.Drawing.Size(15, 14);
+            this.cbWorkedWed.TabIndex = 45;
+            this.cbWorkedWed.UseVisualStyleBackColor = true;
+            // 
+            // cbWorkedTue
+            // 
+            this.cbWorkedTue.AutoSize = true;
+            this.cbWorkedTue.Location = new System.Drawing.Point(6, 101);
+            this.cbWorkedTue.Name = "cbWorkedTue";
+            this.cbWorkedTue.Size = new System.Drawing.Size(15, 14);
+            this.cbWorkedTue.TabIndex = 44;
+            this.cbWorkedTue.UseVisualStyleBackColor = true;
+            // 
+            // cbWorkedMon
+            // 
+            this.cbWorkedMon.AutoSize = true;
+            this.cbWorkedMon.Location = new System.Drawing.Point(6, 71);
+            this.cbWorkedMon.Name = "cbWorkedMon";
+            this.cbWorkedMon.Size = new System.Drawing.Size(15, 14);
+            this.cbWorkedMon.TabIndex = 43;
+            this.cbWorkedMon.UseVisualStyleBackColor = true;
+            // 
+            // breakMinSun
+            // 
+            this.breakMinSun.FormattingEnabled = true;
+            this.breakMinSun.Location = new System.Drawing.Point(421, 234);
+            this.breakMinSun.Name = "breakMinSun";
+            this.breakMinSun.Size = new System.Drawing.Size(42, 21);
+            this.breakMinSun.TabIndex = 42;
+            // 
+            // breakHourSun
+            // 
+            this.breakHourSun.FormattingEnabled = true;
+            this.breakHourSun.Location = new System.Drawing.Point(368, 234);
+            this.breakHourSun.Name = "breakHourSun";
+            this.breakHourSun.Size = new System.Drawing.Size(47, 21);
+            this.breakHourSun.TabIndex = 41;
+            // 
+            // dayFinMinSun
+            // 
+            this.dayFinMinSun.FormattingEnabled = true;
+            this.dayFinMinSun.Location = new System.Drawing.Point(276, 234);
+            this.dayFinMinSun.Name = "dayFinMinSun";
+            this.dayFinMinSun.Size = new System.Drawing.Size(39, 21);
+            this.dayFinMinSun.TabIndex = 40;
+            // 
+            // dayFinHourSun
+            // 
+            this.dayFinHourSun.FormattingEnabled = true;
+            this.dayFinHourSun.Location = new System.Drawing.Point(228, 234);
+            this.dayFinHourSun.Name = "dayFinHourSun";
+            this.dayFinHourSun.Size = new System.Drawing.Size(42, 21);
+            this.dayFinHourSun.TabIndex = 39;
+            // 
+            // dayStartMinSun
+            // 
+            this.dayStartMinSun.FormattingEnabled = true;
+            this.dayStartMinSun.Location = new System.Drawing.Point(151, 234);
+            this.dayStartMinSun.Name = "dayStartMinSun";
+            this.dayStartMinSun.Size = new System.Drawing.Size(38, 21);
+            this.dayStartMinSun.TabIndex = 38;
+            // 
+            // dayStartHourSun
+            // 
+            this.dayStartHourSun.FormattingEnabled = true;
+            this.dayStartHourSun.Location = new System.Drawing.Point(107, 234);
+            this.dayStartHourSun.Name = "dayStartHourSun";
+            this.dayStartHourSun.Size = new System.Drawing.Size(38, 21);
+            this.dayStartHourSun.TabIndex = 37;
+            // 
+            // breakMinSat
+            // 
+            this.breakMinSat.FormattingEnabled = true;
+            this.breakMinSat.Location = new System.Drawing.Point(421, 208);
+            this.breakMinSat.Name = "breakMinSat";
+            this.breakMinSat.Size = new System.Drawing.Size(42, 21);
+            this.breakMinSat.TabIndex = 36;
+            // 
+            // breakHourSat
+            // 
+            this.breakHourSat.FormattingEnabled = true;
+            this.breakHourSat.Location = new System.Drawing.Point(368, 208);
+            this.breakHourSat.Name = "breakHourSat";
+            this.breakHourSat.Size = new System.Drawing.Size(47, 21);
+            this.breakHourSat.TabIndex = 35;
+            // 
+            // dayFinMinSat
+            // 
+            this.dayFinMinSat.FormattingEnabled = true;
+            this.dayFinMinSat.Location = new System.Drawing.Point(276, 208);
+            this.dayFinMinSat.Name = "dayFinMinSat";
+            this.dayFinMinSat.Size = new System.Drawing.Size(39, 21);
+            this.dayFinMinSat.TabIndex = 34;
+            // 
+            // dayFinHourSat
+            // 
+            this.dayFinHourSat.FormattingEnabled = true;
+            this.dayFinHourSat.Location = new System.Drawing.Point(228, 208);
+            this.dayFinHourSat.Name = "dayFinHourSat";
+            this.dayFinHourSat.Size = new System.Drawing.Size(42, 21);
+            this.dayFinHourSat.TabIndex = 33;
+            // 
+            // dayStartMinSat
+            // 
+            this.dayStartMinSat.FormattingEnabled = true;
+            this.dayStartMinSat.Location = new System.Drawing.Point(151, 208);
+            this.dayStartMinSat.Name = "dayStartMinSat";
+            this.dayStartMinSat.Size = new System.Drawing.Size(38, 21);
+            this.dayStartMinSat.TabIndex = 32;
+            // 
+            // dayStartHourSat
+            // 
+            this.dayStartHourSat.FormattingEnabled = true;
+            this.dayStartHourSat.Location = new System.Drawing.Point(107, 208);
+            this.dayStartHourSat.Name = "dayStartHourSat";
+            this.dayStartHourSat.Size = new System.Drawing.Size(38, 21);
+            this.dayStartHourSat.TabIndex = 31;
+            // 
+            // breakMinFri
+            // 
+            this.breakMinFri.FormattingEnabled = true;
+            this.breakMinFri.Location = new System.Drawing.Point(421, 181);
+            this.breakMinFri.Name = "breakMinFri";
+            this.breakMinFri.Size = new System.Drawing.Size(42, 21);
+            this.breakMinFri.TabIndex = 30;
+            // 
+            // breakHourFri
+            // 
+            this.breakHourFri.FormattingEnabled = true;
+            this.breakHourFri.Location = new System.Drawing.Point(368, 181);
+            this.breakHourFri.Name = "breakHourFri";
+            this.breakHourFri.Size = new System.Drawing.Size(47, 21);
+            this.breakHourFri.TabIndex = 29;
+            // 
+            // dayFinMinFri
+            // 
+            this.dayFinMinFri.FormattingEnabled = true;
+            this.dayFinMinFri.Location = new System.Drawing.Point(276, 181);
+            this.dayFinMinFri.Name = "dayFinMinFri";
+            this.dayFinMinFri.Size = new System.Drawing.Size(39, 21);
+            this.dayFinMinFri.TabIndex = 28;
+            // 
+            // dayFinHourFri
+            // 
+            this.dayFinHourFri.FormattingEnabled = true;
+            this.dayFinHourFri.Location = new System.Drawing.Point(228, 181);
+            this.dayFinHourFri.Name = "dayFinHourFri";
+            this.dayFinHourFri.Size = new System.Drawing.Size(42, 21);
+            this.dayFinHourFri.TabIndex = 27;
+            // 
+            // dayStartMinFri
+            // 
+            this.dayStartMinFri.FormattingEnabled = true;
+            this.dayStartMinFri.Location = new System.Drawing.Point(151, 181);
+            this.dayStartMinFri.Name = "dayStartMinFri";
+            this.dayStartMinFri.Size = new System.Drawing.Size(38, 21);
+            this.dayStartMinFri.TabIndex = 26;
+            // 
+            // dayStartHourFri
+            // 
+            this.dayStartHourFri.FormattingEnabled = true;
+            this.dayStartHourFri.Location = new System.Drawing.Point(107, 181);
+            this.dayStartHourFri.Name = "dayStartHourFri";
+            this.dayStartHourFri.Size = new System.Drawing.Size(38, 21);
+            this.dayStartHourFri.TabIndex = 25;
+            // 
+            // breakMinThu
+            // 
+            this.breakMinThu.FormattingEnabled = true;
+            this.breakMinThu.Location = new System.Drawing.Point(421, 154);
+            this.breakMinThu.Name = "breakMinThu";
+            this.breakMinThu.Size = new System.Drawing.Size(42, 21);
+            this.breakMinThu.TabIndex = 24;
+            // 
+            // breakHourThur
+            // 
+            this.breakHourThur.FormattingEnabled = true;
+            this.breakHourThur.Location = new System.Drawing.Point(368, 154);
+            this.breakHourThur.Name = "breakHourThur";
+            this.breakHourThur.Size = new System.Drawing.Size(47, 21);
+            this.breakHourThur.TabIndex = 23;
+            // 
+            // dayFinMinThu
+            // 
+            this.dayFinMinThu.FormattingEnabled = true;
+            this.dayFinMinThu.Location = new System.Drawing.Point(276, 154);
+            this.dayFinMinThu.Name = "dayFinMinThu";
+            this.dayFinMinThu.Size = new System.Drawing.Size(39, 21);
+            this.dayFinMinThu.TabIndex = 22;
+            // 
+            // dayFinHourThur
+            // 
+            this.dayFinHourThur.FormattingEnabled = true;
+            this.dayFinHourThur.Location = new System.Drawing.Point(228, 154);
+            this.dayFinHourThur.Name = "dayFinHourThur";
+            this.dayFinHourThur.Size = new System.Drawing.Size(42, 21);
+            this.dayFinHourThur.TabIndex = 21;
+            // 
+            // dayStartMinThu
+            // 
+            this.dayStartMinThu.FormattingEnabled = true;
+            this.dayStartMinThu.Location = new System.Drawing.Point(151, 154);
+            this.dayStartMinThu.Name = "dayStartMinThu";
+            this.dayStartMinThu.Size = new System.Drawing.Size(38, 21);
+            this.dayStartMinThu.TabIndex = 20;
+            // 
+            // dayStartHourThu
+            // 
+            this.dayStartHourThu.FormattingEnabled = true;
+            this.dayStartHourThu.Location = new System.Drawing.Point(107, 154);
+            this.dayStartHourThu.Name = "dayStartHourThu";
+            this.dayStartHourThu.Size = new System.Drawing.Size(38, 21);
+            this.dayStartHourThu.TabIndex = 19;
+            // 
+            // breakMinWed
+            // 
+            this.breakMinWed.FormattingEnabled = true;
+            this.breakMinWed.Location = new System.Drawing.Point(421, 125);
+            this.breakMinWed.Name = "breakMinWed";
+            this.breakMinWed.Size = new System.Drawing.Size(42, 21);
+            this.breakMinWed.TabIndex = 18;
+            // 
+            // breakHourWed
+            // 
+            this.breakHourWed.FormattingEnabled = true;
+            this.breakHourWed.Location = new System.Drawing.Point(368, 125);
+            this.breakHourWed.Name = "breakHourWed";
+            this.breakHourWed.Size = new System.Drawing.Size(47, 21);
+            this.breakHourWed.TabIndex = 17;
+            // 
+            // dayFinMinWed
+            // 
+            this.dayFinMinWed.FormattingEnabled = true;
+            this.dayFinMinWed.Location = new System.Drawing.Point(276, 125);
+            this.dayFinMinWed.Name = "dayFinMinWed";
+            this.dayFinMinWed.Size = new System.Drawing.Size(39, 21);
+            this.dayFinMinWed.TabIndex = 16;
+            // 
+            // dayFinHourWed
+            // 
+            this.dayFinHourWed.FormattingEnabled = true;
+            this.dayFinHourWed.Location = new System.Drawing.Point(228, 125);
+            this.dayFinHourWed.Name = "dayFinHourWed";
+            this.dayFinHourWed.Size = new System.Drawing.Size(42, 21);
+            this.dayFinHourWed.TabIndex = 15;
+            // 
+            // dayStartMinWed
+            // 
+            this.dayStartMinWed.FormattingEnabled = true;
+            this.dayStartMinWed.Location = new System.Drawing.Point(151, 125);
+            this.dayStartMinWed.Name = "dayStartMinWed";
+            this.dayStartMinWed.Size = new System.Drawing.Size(38, 21);
+            this.dayStartMinWed.TabIndex = 14;
+            // 
+            // dayStartHourWed
+            // 
+            this.dayStartHourWed.FormattingEnabled = true;
+            this.dayStartHourWed.Location = new System.Drawing.Point(107, 125);
+            this.dayStartHourWed.Name = "dayStartHourWed";
+            this.dayStartHourWed.Size = new System.Drawing.Size(38, 21);
+            this.dayStartHourWed.TabIndex = 13;
+            // 
+            // breakMinTue
+            // 
+            this.breakMinTue.FormattingEnabled = true;
+            this.breakMinTue.Location = new System.Drawing.Point(421, 98);
+            this.breakMinTue.Name = "breakMinTue";
+            this.breakMinTue.Size = new System.Drawing.Size(42, 21);
+            this.breakMinTue.TabIndex = 12;
+            // 
+            // breakHourTue
+            // 
+            this.breakHourTue.FormattingEnabled = true;
+            this.breakHourTue.Location = new System.Drawing.Point(368, 98);
+            this.breakHourTue.Name = "breakHourTue";
+            this.breakHourTue.Size = new System.Drawing.Size(47, 21);
+            this.breakHourTue.TabIndex = 11;
+            // 
+            // dayFinMinTue
+            // 
+            this.dayFinMinTue.FormattingEnabled = true;
+            this.dayFinMinTue.Location = new System.Drawing.Point(276, 98);
+            this.dayFinMinTue.Name = "dayFinMinTue";
+            this.dayFinMinTue.Size = new System.Drawing.Size(39, 21);
+            this.dayFinMinTue.TabIndex = 10;
+            // 
+            // dayFinHourTue
+            // 
+            this.dayFinHourTue.FormattingEnabled = true;
+            this.dayFinHourTue.Location = new System.Drawing.Point(228, 98);
+            this.dayFinHourTue.Name = "dayFinHourTue";
+            this.dayFinHourTue.Size = new System.Drawing.Size(42, 21);
+            this.dayFinHourTue.TabIndex = 9;
+            // 
+            // dayStartMinTue
+            // 
+            this.dayStartMinTue.FormattingEnabled = true;
+            this.dayStartMinTue.Location = new System.Drawing.Point(151, 98);
+            this.dayStartMinTue.Name = "dayStartMinTue";
+            this.dayStartMinTue.Size = new System.Drawing.Size(38, 21);
+            this.dayStartMinTue.TabIndex = 8;
+            // 
+            // dayStartHourTue
+            // 
+            this.dayStartHourTue.FormattingEnabled = true;
+            this.dayStartHourTue.Location = new System.Drawing.Point(107, 98);
+            this.dayStartHourTue.Name = "dayStartHourTue";
+            this.dayStartHourTue.Size = new System.Drawing.Size(38, 21);
+            this.dayStartHourTue.TabIndex = 7;
+            // 
+            // breakMinMon
+            // 
+            this.breakMinMon.FormattingEnabled = true;
+            this.breakMinMon.Location = new System.Drawing.Point(421, 69);
+            this.breakMinMon.Name = "breakMinMon";
+            this.breakMinMon.Size = new System.Drawing.Size(42, 21);
+            this.breakMinMon.TabIndex = 6;
+            // 
+            // breakHourMon
+            // 
+            this.breakHourMon.FormattingEnabled = true;
+            this.breakHourMon.Location = new System.Drawing.Point(368, 69);
+            this.breakHourMon.Name = "breakHourMon";
+            this.breakHourMon.Size = new System.Drawing.Size(47, 21);
+            this.breakHourMon.TabIndex = 5;
+            // 
+            // dayFinMinMon
+            // 
+            this.dayFinMinMon.FormattingEnabled = true;
+            this.dayFinMinMon.Location = new System.Drawing.Point(276, 69);
+            this.dayFinMinMon.Name = "dayFinMinMon";
+            this.dayFinMinMon.Size = new System.Drawing.Size(39, 21);
+            this.dayFinMinMon.TabIndex = 4;
+            // 
+            // dayFinHourMon
+            // 
+            this.dayFinHourMon.FormattingEnabled = true;
+            this.dayFinHourMon.Location = new System.Drawing.Point(228, 69);
+            this.dayFinHourMon.Name = "dayFinHourMon";
+            this.dayFinHourMon.Size = new System.Drawing.Size(42, 21);
+            this.dayFinHourMon.TabIndex = 3;
+            // 
+            // dayStartMinMon
+            // 
+            this.dayStartMinMon.FormattingEnabled = true;
+            this.dayStartMinMon.Location = new System.Drawing.Point(151, 69);
+            this.dayStartMinMon.Name = "dayStartMinMon";
+            this.dayStartMinMon.Size = new System.Drawing.Size(38, 21);
+            this.dayStartMinMon.TabIndex = 2;
+            // 
+            // dayStartHourMon
+            // 
+            this.dayStartHourMon.FormattingEnabled = true;
+            this.dayStartHourMon.Location = new System.Drawing.Point(107, 69);
+            this.dayStartHourMon.Name = "dayStartHourMon";
+            this.dayStartHourMon.Size = new System.Drawing.Size(38, 21);
+            this.dayStartHourMon.TabIndex = 1;
             // 
             // frmEnterTimeSheet
             // 

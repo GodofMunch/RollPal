@@ -15,8 +15,9 @@ namespace WindowsFormsApp1
 
         Staff member = new Staff();
         private int staffId;
-        string[] staffToDo;
-        string[] staffDone;
+        string[] staffToDo = new string[Staff.nextStaffId()-1];
+        string[] staffDone = new string[Staff.nextStaffId()-1];
+        int period = (DateTime.Now.DayOfYear / 7);
 
         public frmEnterTimeSheet()
         {
@@ -36,12 +37,12 @@ namespace WindowsFormsApp1
         {
             
 
-            var proceed = MessageBox.Show("Approve hours for Staff number 001?",
+            var proceed = MessageBox.Show("Approve hours for Staff number " + staffId.ToString() + "?",
                 "Approve Times", MessageBoxButtons.YesNo);
 
             if(proceed == DialogResult.Yes)
             {
-                rtxtToDo.Text = "002";
+                
             }
 
             else
@@ -61,6 +62,7 @@ namespace WindowsFormsApp1
 
         private void frmEnterTimeSheet_Load(object sender, EventArgs e)
         {
+            txtPeriodNo.Text = period.ToString();
             ComboBox[] dayStartHours = {dayStartHourMon,  dayStartHourTue, dayStartHourWed, dayStartHourThu, dayStartHourFri, dayStartHourSat, dayStartHourSun};
             ComboBox[] dayFinHours = { dayFinHourMon, dayFinHourTue, dayFinHourWed, dayFinHourThur, dayFinHourFri, dayFinHourSat, dayFinHourSun };
             ComboBox[] dayStartMins = { dayStartMinMon, dayStartMinTue, dayStartMinWed, dayStartMinThu, dayStartMinFri, dayStartMinSat, dayStartMinSun };
@@ -85,7 +87,26 @@ namespace WindowsFormsApp1
             for (int i = 1; i < Staff.nextStaffId(); i++)
             {
                 cboTimesheetSelect.Items.Add("00" + i);
+                staffToDo[i - 1] = "00" + i;
+                if(!staffPaid(i))
+                rtxtToDo.Text += staffToDo[i - 1] + "\n";
             }
+
+            
+        }
+        private bool staffPaid(int staffId)
+        {
+            for(int i = 1; i < Staff.nextStaffId(); i ++)
+            {
+               // if()
+            }
+
+            return true;
+        }
+
+        private void rtxtToDo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
