@@ -85,9 +85,9 @@
             this.dayStartMinFri = new System.Windows.Forms.ComboBox();
             this.dayStartHourFri = new System.Windows.Forms.ComboBox();
             this.breakMinThu = new System.Windows.Forms.ComboBox();
-            this.breakHourThur = new System.Windows.Forms.ComboBox();
+            this.breakHourThu = new System.Windows.Forms.ComboBox();
             this.dayFinMinThu = new System.Windows.Forms.ComboBox();
-            this.dayFinHourThur = new System.Windows.Forms.ComboBox();
+            this.dayFinHourThu = new System.Windows.Forms.ComboBox();
             this.dayStartMinThu = new System.Windows.Forms.ComboBox();
             this.dayStartHourThu = new System.Windows.Forms.ComboBox();
             this.breakMinWed = new System.Windows.Forms.ComboBox();
@@ -418,9 +418,9 @@
             this.groupBox1.Controls.Add(this.dayStartMinFri);
             this.groupBox1.Controls.Add(this.dayStartHourFri);
             this.groupBox1.Controls.Add(this.breakMinThu);
-            this.groupBox1.Controls.Add(this.breakHourThur);
+            this.groupBox1.Controls.Add(this.breakHourThu);
             this.groupBox1.Controls.Add(this.dayFinMinThu);
-            this.groupBox1.Controls.Add(this.dayFinHourThur);
+            this.groupBox1.Controls.Add(this.dayFinHourThu);
             this.groupBox1.Controls.Add(this.dayStartMinThu);
             this.groupBox1.Controls.Add(this.dayStartHourThu);
             this.groupBox1.Controls.Add(this.breakMinWed);
@@ -479,6 +479,7 @@
             this.cbWorkedSun.Size = new System.Drawing.Size(15, 14);
             this.cbWorkedSun.TabIndex = 49;
             this.cbWorkedSun.UseVisualStyleBackColor = true;
+            this.cbWorkedSun.CheckedChanged += new System.EventHandler(this.cbWorkedSun_CheckedChanged);
             // 
             // cbWorkedSat
             // 
@@ -488,6 +489,7 @@
             this.cbWorkedSat.Size = new System.Drawing.Size(15, 14);
             this.cbWorkedSat.TabIndex = 48;
             this.cbWorkedSat.UseVisualStyleBackColor = true;
+            this.cbWorkedSat.CheckedChanged += new System.EventHandler(this.cbWorkedSat_CheckedChanged);
             // 
             // cbWorkedFri
             // 
@@ -497,6 +499,7 @@
             this.cbWorkedFri.Size = new System.Drawing.Size(15, 14);
             this.cbWorkedFri.TabIndex = 47;
             this.cbWorkedFri.UseVisualStyleBackColor = true;
+            this.cbWorkedFri.CheckedChanged += new System.EventHandler(this.cbWorkedFri_CheckedChanged);
             // 
             // cbWorkedThu
             // 
@@ -506,6 +509,7 @@
             this.cbWorkedThu.Size = new System.Drawing.Size(15, 14);
             this.cbWorkedThu.TabIndex = 46;
             this.cbWorkedThu.UseVisualStyleBackColor = true;
+            this.cbWorkedThu.CheckedChanged += new System.EventHandler(this.cbWorkedThu_CheckedChanged);
             // 
             // cbWorkedWed
             // 
@@ -515,6 +519,7 @@
             this.cbWorkedWed.Size = new System.Drawing.Size(15, 14);
             this.cbWorkedWed.TabIndex = 45;
             this.cbWorkedWed.UseVisualStyleBackColor = true;
+            this.cbWorkedWed.CheckedChanged += new System.EventHandler(this.cbWorkedWed_CheckedChanged);
             // 
             // cbWorkedTue
             // 
@@ -524,6 +529,7 @@
             this.cbWorkedTue.Size = new System.Drawing.Size(15, 14);
             this.cbWorkedTue.TabIndex = 44;
             this.cbWorkedTue.UseVisualStyleBackColor = true;
+            this.cbWorkedTue.CheckedChanged += new System.EventHandler(this.cbWorkedTue_CheckedChanged);
             // 
             // cbWorkedMon
             // 
@@ -533,6 +539,7 @@
             this.cbWorkedMon.Size = new System.Drawing.Size(15, 14);
             this.cbWorkedMon.TabIndex = 43;
             this.cbWorkedMon.UseVisualStyleBackColor = true;
+            this.cbWorkedMon.CheckedChanged += new System.EventHandler(this.cbWorkedMon_CheckedChanged);
             // 
             // breakMinSun
             // 
@@ -686,13 +693,13 @@
             this.breakMinThu.Size = new System.Drawing.Size(42, 21);
             this.breakMinThu.TabIndex = 24;
             // 
-            // breakHourThur
+            // breakHourThu
             // 
-            this.breakHourThur.FormattingEnabled = true;
-            this.breakHourThur.Location = new System.Drawing.Point(368, 154);
-            this.breakHourThur.Name = "breakHourThur";
-            this.breakHourThur.Size = new System.Drawing.Size(47, 21);
-            this.breakHourThur.TabIndex = 23;
+            this.breakHourThu.FormattingEnabled = true;
+            this.breakHourThu.Location = new System.Drawing.Point(368, 154);
+            this.breakHourThu.Name = "breakHourThu";
+            this.breakHourThu.Size = new System.Drawing.Size(47, 21);
+            this.breakHourThu.TabIndex = 23;
             // 
             // dayFinMinThu
             // 
@@ -702,13 +709,13 @@
             this.dayFinMinThu.Size = new System.Drawing.Size(39, 21);
             this.dayFinMinThu.TabIndex = 22;
             // 
-            // dayFinHourThur
+            // dayFinHourThu
             // 
-            this.dayFinHourThur.FormattingEnabled = true;
-            this.dayFinHourThur.Location = new System.Drawing.Point(228, 154);
-            this.dayFinHourThur.Name = "dayFinHourThur";
-            this.dayFinHourThur.Size = new System.Drawing.Size(42, 21);
-            this.dayFinHourThur.TabIndex = 21;
+            this.dayFinHourThu.FormattingEnabled = true;
+            this.dayFinHourThu.Location = new System.Drawing.Point(228, 154);
+            this.dayFinHourThu.Name = "dayFinHourThu";
+            this.dayFinHourThu.Size = new System.Drawing.Size(42, 21);
+            this.dayFinHourThu.TabIndex = 21;
             // 
             // dayStartMinThu
             // 
@@ -947,9 +954,9 @@
         private System.Windows.Forms.ComboBox dayStartMinFri;
         private System.Windows.Forms.ComboBox dayStartHourFri;
         private System.Windows.Forms.ComboBox breakMinThu;
-        private System.Windows.Forms.ComboBox breakHourThur;
+        private System.Windows.Forms.ComboBox breakHourThu;
         private System.Windows.Forms.ComboBox dayFinMinThu;
-        private System.Windows.Forms.ComboBox dayFinHourThur;
+        private System.Windows.Forms.ComboBox dayFinHourThu;
         private System.Windows.Forms.ComboBox dayStartMinThu;
         private System.Windows.Forms.ComboBox dayStartHourThu;
         private System.Windows.Forms.ComboBox breakMinWed;

@@ -155,7 +155,29 @@ namespace WindowsFormsApp1
 
         public void setSurname(string surname)
         {
-            this.surname = surname;
+            int apostrophePlace = 0;
+            string newSurname = "";
+
+            if (surname.Contains("'"))
+            {
+                for (int i = 0; i < surname.Length; i++)
+                {
+                    if (surname[i].Equals('\''))
+                        apostrophePlace = i;
+                }
+                
+                for(int j = 0; j < surname.Length; j++)
+                {
+                    newSurname += surname[j];
+                    if(apostrophePlace == j)
+                    {
+                        newSurname += "\'";
+                    }
+                }
+                this.surname = newSurname;
+            }
+            else
+                this.surname = surname;
         }
 
         public void setPhone(string phone)
