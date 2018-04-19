@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
         string[] staffToDo = new string[Staff.nextStaffId()-1];
         string[] staffDone = new string[Staff.nextStaffId()-1];
         int period = (DateTime.Now.DayOfYear / 7);
+        
 
         public frmEnterTimeSheet()
         {
@@ -113,6 +114,7 @@ namespace WindowsFormsApp1
                 int saturdayHours = Convert.ToInt32(dayFinHourSat.Text) - Convert.ToInt32(dayStartHourSat.Text) - Convert.ToInt32(breakHourSat.Text);
                 int saturdayMins = Convert.ToInt32(dayFinMinSat.Text) - Convert.ToInt32(dayStartMinSat.Text) - Convert.ToInt32(breakMinSat.Text);
                 saturday = calculateDay(saturdayHours, saturdayMins);
+                weekDayTotalMins += calculateDay(saturdayHours, saturdayMins);
             }
 
             if (cbWorkedSun.Checked)
@@ -132,14 +134,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show(totalHours + " + " + weekDayTotalMins);
             }
 
-            int saturdayHoursTotal = 0;
-
-            while (saturday > 60)
-            {
-                saturdayHoursTotal++;
-                saturday -= 60;
-            }
-
             int sundayHoursTotal = 0;
 
             while(sunday > 60)
@@ -152,8 +146,7 @@ namespace WindowsFormsApp1
 
             float grossPay =  calculateWages(totalHours, weekDayTotalMins);
 
-            if (saturdayHoursTotal > 0)
-                grossPay += calculateSaturday(saturdayHoursTotal, saturday);
+            
             if (sundayHoursTotal > 0)
                 grossPay = calculateSunday(sundayHoursTotal, sunday);
 
@@ -163,10 +156,18 @@ namespace WindowsFormsApp1
         private float calculateWages(int hours, int mins)
         {
             float sum = 0;
-            const float HOURLY_RATE = 
+            const float HOURLY_RATE = 0;
 
-            if(hours > 39)
+            if (hours > 39)
+                hours = hours - 39;
 
+
+            return 0;
+        }
+
+        private float calculateSunday(int hours, int minutes)
+        {
+            return 0;
         }
 
         private int calculateDay(int hours, int mins) 

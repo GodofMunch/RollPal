@@ -25,6 +25,7 @@ namespace WindowsFormsApp1
         private int children;
         private string gender;
         private string active;
+        private string payGrade;
 
         public Staff()
         {
@@ -43,13 +44,14 @@ namespace WindowsFormsApp1
             children = 0;
             gender = "m";
             active = "n";
+            payGrade = "a";
 
         }
 
         public Staff(int staffId, string forename, string surname, string phone, 
                      string email, string street, string town, string county, 
                      string eircode, string dob, string gender, string iban, 
-                     string maritalStatus, int children, string active)
+                     string maritalStatus, int children, string active, string payGrade)
         {
             setStaffId(staffId);
             setForeName(forename);
@@ -66,6 +68,7 @@ namespace WindowsFormsApp1
             setMaritalStatus(maritalStatus);
             setChildren(children);
             setActive("y");
+            setPayGrade(payGrade);
         }
 
         public int getStaffId()
@@ -141,6 +144,11 @@ namespace WindowsFormsApp1
         public string getActive()
         {
             return active;
+        }
+
+        public string getPayGrade()
+        {
+            return payGrade;
         }
 
         public void setStaffId(int staffId)
@@ -241,6 +249,11 @@ namespace WindowsFormsApp1
             if (active == "y" || active == "n")
                 this.active = active;
         }
+
+        public void setPayGrade(string payGrade)
+        {
+            this.payGrade = payGrade;
+        }
         public static DataSet getStaff(DataSet ds, string type)
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
@@ -287,13 +300,11 @@ namespace WindowsFormsApp1
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
-
-            //string dobFormatted = dob.ToString("yyyy-MM-dd HH:mm:ss");
-
+            
             setActive("y");
             string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId +
                 ",'" + this.forename + "','" + this.surname + "',DATE '" + this.dob + "','" + this.gender + "','" +
-                this.maritalStatus + "','" + this.children + "','" + this.active + "')";
+                this.maritalStatus + "','" + this.children + "','" + this.active + "', '" + this.payGrade + ")";
 
 
             string strSqlContact = "INSERT INTO CONTACT VALUES (" + this.staffId + ",'" + this.email + "','" +
@@ -335,7 +346,7 @@ namespace WindowsFormsApp1
             string strSqlUpdateStaff = "UPDATE STAFF SET FORENAME = '" + this.forename + "', " +
                    "SURNAME = '" + this.surname + "', DATEOFBIRTH = DATE '" + this.dob + "', GENDER = '" +
                    this.gender + "', MARITALSTATUS = '" + this.maritalStatus + "', CHILDREN = " +
-                   this.children + " WHERE STAFFID = " + this.staffId;
+                   this.children + ", PAYGRADE = " + this.payGrade + "WHERE STAFFID = " + this.staffId;
 
             string strSqlUpdateContact = "UPDATE CONTACT SET EMAIL = '" + this.email + "', PHONE = '" +
                    this.phone + "', STREET = '" + this.street + "', TOWN = '" + this.town + "', COUNTY = '" +

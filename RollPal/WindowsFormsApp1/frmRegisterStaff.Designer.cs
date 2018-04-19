@@ -30,13 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
+            this.cbPayGrade = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.grpGender = new System.Windows.Forms.GroupBox();
             this.optGenderFemale = new System.Windows.Forms.RadioButton();
             this.optGenderMale = new System.Windows.Forms.RadioButton();
             this.lblban = new System.Windows.Forms.Label();
             this.txtIban = new System.Windows.Forms.TextBox();
-            this.btnRegisterStaff = new System.Windows.Forms.Button();
             this.lblChildren = new System.Windows.Forms.Label();
             this.cboChildren = new System.Windows.Forms.ComboBox();
             this.grpMarStatus = new System.Windows.Forms.GroupBox();
@@ -61,6 +62,7 @@
             this.lblForename = new System.Windows.Forms.Label();
             this.lblStaffId = new System.Windows.Forms.Label();
             this.txtStaffID = new System.Windows.Forms.TextBox();
+            this.btnRegisterStaff = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.epInvalidEntry = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpStaffDetails.SuspendLayout();
@@ -72,11 +74,12 @@
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpStaffDetails.Controls.Add(this.cbPayGrade);
+            this.grpStaffDetails.Controls.Add(this.label1);
             this.grpStaffDetails.Controls.Add(this.dtpDOB);
             this.grpStaffDetails.Controls.Add(this.grpGender);
             this.grpStaffDetails.Controls.Add(this.lblban);
             this.grpStaffDetails.Controls.Add(this.txtIban);
-            this.grpStaffDetails.Controls.Add(this.btnRegisterStaff);
             this.grpStaffDetails.Controls.Add(this.lblChildren);
             this.grpStaffDetails.Controls.Add(this.cboChildren);
             this.grpStaffDetails.Controls.Add(this.grpMarStatus);
@@ -107,6 +110,23 @@
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
             this.grpStaffDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // cbPayGrade
+            // 
+            this.cbPayGrade.FormattingEnabled = true;
+            this.cbPayGrade.Location = new System.Drawing.Point(417, 260);
+            this.cbPayGrade.Name = "cbPayGrade";
+            this.cbPayGrade.Size = new System.Drawing.Size(121, 21);
+            this.cbPayGrade.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(280, 263);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Starting Hourly Wage :";
             // 
             // dtpDOB
             // 
@@ -168,26 +188,14 @@
             // 
             this.txtIban.Location = new System.Drawing.Point(338, 232);
             this.txtIban.Name = "txtIban";
-            this.txtIban.Size = new System.Drawing.Size(168, 20);
+            this.txtIban.Size = new System.Drawing.Size(200, 20);
             this.txtIban.TabIndex = 12;
             this.txtIban.TextChanged += new System.EventHandler(this.txtIban_TextChanged);
-            // 
-            // btnRegisterStaff
-            // 
-            this.btnRegisterStaff.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnRegisterStaff.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnRegisterStaff.Location = new System.Drawing.Point(431, 274);
-            this.btnRegisterStaff.Name = "btnRegisterStaff";
-            this.btnRegisterStaff.Size = new System.Drawing.Size(75, 23);
-            this.btnRegisterStaff.TabIndex = 13;
-            this.btnRegisterStaff.Text = "Register";
-            this.btnRegisterStaff.UseVisualStyleBackColor = false;
-            this.btnRegisterStaff.Click += new System.EventHandler(this.btnRegisterStaff_Click);
             // 
             // lblChildren
             // 
             this.lblChildren.AutoSize = true;
-            this.lblChildren.Location = new System.Drawing.Point(371, 198);
+            this.lblChildren.Location = new System.Drawing.Point(280, 203);
             this.lblChildren.Name = "lblChildren";
             this.lblChildren.Size = new System.Drawing.Size(51, 13);
             this.lblChildren.TabIndex = 19;
@@ -205,7 +213,7 @@
             "5",
             "6",
             "7"});
-            this.cboChildren.Location = new System.Drawing.Point(452, 195);
+            this.cboChildren.Location = new System.Drawing.Point(359, 200);
             this.cboChildren.Name = "cboChildren";
             this.cboChildren.Size = new System.Drawing.Size(38, 21);
             this.cboChildren.TabIndex = 11;
@@ -417,6 +425,18 @@
             this.txtStaffID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStaffID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // btnRegisterStaff
+            // 
+            this.btnRegisterStaff.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnRegisterStaff.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnRegisterStaff.Location = new System.Drawing.Point(478, 404);
+            this.btnRegisterStaff.Name = "btnRegisterStaff";
+            this.btnRegisterStaff.Size = new System.Drawing.Size(75, 23);
+            this.btnRegisterStaff.TabIndex = 13;
+            this.btnRegisterStaff.Text = "Register";
+            this.btnRegisterStaff.UseVisualStyleBackColor = false;
+            this.btnRegisterStaff.Click += new System.EventHandler(this.btnRegisterStaff_Click);
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -437,6 +457,7 @@
             this.ClientSize = new System.Drawing.Size(707, 460);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.grpStaffDetails);
+            this.Controls.Add(this.btnRegisterStaff);
             this.Name = "frmRegisterStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Staff";
@@ -488,5 +509,7 @@
         private System.Windows.Forms.RadioButton optGenderMale;
         private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.ErrorProvider epInvalidEntry;
+        private System.Windows.Forms.ComboBox cbPayGrade;
+        private System.Windows.Forms.Label label1;
     }
 }

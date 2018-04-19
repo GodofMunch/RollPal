@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 
 namespace WindowsFormsApp1
@@ -28,33 +29,29 @@ namespace WindowsFormsApp1
         int children = 0;
         string gender = "m";
         string active = "n";
+        string payGrade = "";
 
         public frmRegisterStaff()
         {
             InitializeComponent();
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void registerStaff_Load(object sender, EventArgs e)
         {
          
             txtStaffID.Text = Staff.nextStaffId().ToString("000");
             dob = DateTime.Now.ToString("yyyy-MM-dd");
 
+            string[] payGrades = new string[3];
+
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            conn.Open();
+
+            string sqlRate = "SELECT PAYGRADE FROM RATE";
+
+            for(int i = 0; i < 3; i++)
+            {
+                cbPayGrade.Items.Add(payGrades[i]);
+            }
         }
 
         private void cboChildren_SelectedIndexChanged(object sender, EventArgs e)
@@ -78,7 +75,7 @@ namespace WindowsFormsApp1
 
 
                 Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtTown.Text,
-                                            txtCounty.Text, txtEircode.Text, dob ,gender, txtIban.Text, maritalStatus, children, active);
+                                            txtCounty.Text, txtEircode.Text, dob ,gender, txtIban.Text, maritalStatus, children, active, payGrade);
 
                 newStaff.registerStaff();
 
@@ -302,11 +299,6 @@ namespace WindowsFormsApp1
                 valid = true;
 
             return valid;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void optMarried_CheckedChanged(object sender, EventArgs e)
