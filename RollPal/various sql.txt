@@ -1,0 +1,79 @@
+Create Table Staff_Paid(
+StaffId numeric(3),
+Week1 char(1),
+Week2 char(1),
+Week3 char(1),
+Week4 char(1),
+Week5 char(1),
+Week6 char(1),
+Week7 char(1),
+Week8 char(1),
+Week9 char(1),
+Week10 char(1),
+Week11 char(1),
+Week12 char(1),
+Week13 char(1),
+Week14 char(1),
+Week15 char(1),
+Week16 char(1),
+Week17 char(1),
+Week18 char(1),
+Week19 char(1),
+Week20 char(1),
+Week21 char(1),
+Week22 char(1),
+Week23 char(1),
+Week24 char(1),
+Week25 char(1),
+Week26 char(1),
+Week27 char(1),
+Week28 char(1),
+Week29 char(1),
+Week30 char(1),
+Week31 char(1),
+Week32 char(1),
+Week33 char(1),
+Week34 char(1),
+Week35 char(1),
+Week36 char(1),
+Week37 char(1),
+Week38 char(1),
+Week39 char(1),
+Week40 char(1),
+Week41 char(1),
+Week42 char(1),
+Week43 char(1),
+Week44 char(1),
+Week45 char(1),
+Week46 char(1),
+Week47 char(1),
+Week48 char(1),
+Week49 char(1),
+Week50 char(1),
+Week51 char(1),
+Week52 char(1),
+CONSTRAINT pk_StaffPaid PRIMARY KEY (StaffId),
+CONSTRAINT fk_StaffPaid_Staff FOREIGN KEY (StaffId) REFERENCES Staff(StaffId));
+
+Delete From Banking;
+Delete From Contact;
+Delete From Staff;
+
+UPDATE STAFF_PAID
+SET Week15 = 'N'
+WHERE StaffId = 1;
+
+UPDATE STAFF_PAID
+SET Week15 = 'N'
+WHERE StaffId = 2;
+
+Create Table Taxation(
+PAYE char(1),
+USC_CODE numeric(1),
+PRSI numeric(3,2),
+SIPTU numeric (4,2),
+PAY_GRADE char(1),
+TRAVEL_PASSENGER numeric(3,2),
+TRAVEL_DRIVER numeric(3,2));
+
+Commit;

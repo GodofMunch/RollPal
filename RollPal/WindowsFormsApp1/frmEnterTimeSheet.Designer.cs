@@ -494,6 +494,8 @@
             // cbWorkedFri
             // 
             this.cbWorkedFri.AutoSize = true;
+            this.cbWorkedFri.Checked = true;
+            this.cbWorkedFri.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbWorkedFri.Location = new System.Drawing.Point(6, 184);
             this.cbWorkedFri.Name = "cbWorkedFri";
             this.cbWorkedFri.Size = new System.Drawing.Size(15, 14);
@@ -504,6 +506,8 @@
             // cbWorkedThu
             // 
             this.cbWorkedThu.AutoSize = true;
+            this.cbWorkedThu.Checked = true;
+            this.cbWorkedThu.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbWorkedThu.Location = new System.Drawing.Point(6, 157);
             this.cbWorkedThu.Name = "cbWorkedThu";
             this.cbWorkedThu.Size = new System.Drawing.Size(15, 14);
@@ -514,6 +518,8 @@
             // cbWorkedWed
             // 
             this.cbWorkedWed.AutoSize = true;
+            this.cbWorkedWed.Checked = true;
+            this.cbWorkedWed.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbWorkedWed.Location = new System.Drawing.Point(6, 128);
             this.cbWorkedWed.Name = "cbWorkedWed";
             this.cbWorkedWed.Size = new System.Drawing.Size(15, 14);
@@ -524,6 +530,8 @@
             // cbWorkedTue
             // 
             this.cbWorkedTue.AutoSize = true;
+            this.cbWorkedTue.Checked = true;
+            this.cbWorkedTue.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbWorkedTue.Location = new System.Drawing.Point(6, 101);
             this.cbWorkedTue.Name = "cbWorkedTue";
             this.cbWorkedTue.Size = new System.Drawing.Size(15, 14);
@@ -534,6 +542,8 @@
             // cbWorkedMon
             // 
             this.cbWorkedMon.AutoSize = true;
+            this.cbWorkedMon.Checked = true;
+            this.cbWorkedMon.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbWorkedMon.Location = new System.Drawing.Point(6, 71);
             this.cbWorkedMon.Name = "cbWorkedMon";
             this.cbWorkedMon.Size = new System.Drawing.Size(15, 14);
@@ -543,6 +553,7 @@
             // 
             // breakMinSun
             // 
+            this.breakMinSun.Enabled = false;
             this.breakMinSun.FormattingEnabled = true;
             this.breakMinSun.Location = new System.Drawing.Point(421, 234);
             this.breakMinSun.Name = "breakMinSun";
@@ -551,6 +562,7 @@
             // 
             // breakHourSun
             // 
+            this.breakHourSun.Enabled = false;
             this.breakHourSun.FormattingEnabled = true;
             this.breakHourSun.Location = new System.Drawing.Point(368, 234);
             this.breakHourSun.Name = "breakHourSun";
@@ -559,6 +571,7 @@
             // 
             // dayFinMinSun
             // 
+            this.dayFinMinSun.Enabled = false;
             this.dayFinMinSun.FormattingEnabled = true;
             this.dayFinMinSun.Location = new System.Drawing.Point(276, 234);
             this.dayFinMinSun.Name = "dayFinMinSun";
@@ -567,6 +580,7 @@
             // 
             // dayFinHourSun
             // 
+            this.dayFinHourSun.Enabled = false;
             this.dayFinHourSun.FormattingEnabled = true;
             this.dayFinHourSun.Location = new System.Drawing.Point(228, 234);
             this.dayFinHourSun.Name = "dayFinHourSun";
@@ -575,6 +589,7 @@
             // 
             // dayStartMinSun
             // 
+            this.dayStartMinSun.Enabled = false;
             this.dayStartMinSun.FormattingEnabled = true;
             this.dayStartMinSun.Location = new System.Drawing.Point(151, 234);
             this.dayStartMinSun.Name = "dayStartMinSun";
@@ -583,6 +598,7 @@
             // 
             // dayStartHourSun
             // 
+            this.dayStartHourSun.Enabled = false;
             this.dayStartHourSun.FormattingEnabled = true;
             this.dayStartHourSun.Location = new System.Drawing.Point(107, 234);
             this.dayStartHourSun.Name = "dayStartHourSun";
@@ -591,6 +607,7 @@
             // 
             // breakMinSat
             // 
+            this.breakMinSat.Enabled = false;
             this.breakMinSat.FormattingEnabled = true;
             this.breakMinSat.Location = new System.Drawing.Point(421, 208);
             this.breakMinSat.Name = "breakMinSat";
@@ -599,6 +616,7 @@
             // 
             // breakHourSat
             // 
+            this.breakHourSat.Enabled = false;
             this.breakHourSat.FormattingEnabled = true;
             this.breakHourSat.Location = new System.Drawing.Point(368, 208);
             this.breakHourSat.Name = "breakHourSat";
@@ -607,6 +625,7 @@
             // 
             // dayFinMinSat
             // 
+            this.dayFinMinSat.Enabled = false;
             this.dayFinMinSat.FormattingEnabled = true;
             this.dayFinMinSat.Location = new System.Drawing.Point(276, 208);
             this.dayFinMinSat.Name = "dayFinMinSat";
@@ -615,6 +634,7 @@
             // 
             // dayFinHourSat
             // 
+            this.dayFinHourSat.Enabled = false;
             this.dayFinHourSat.FormattingEnabled = true;
             this.dayFinHourSat.Location = new System.Drawing.Point(228, 208);
             this.dayFinHourSat.Name = "dayFinHourSat";
@@ -623,6 +643,7 @@
             // 
             // dayStartMinSat
             // 
+            this.dayStartMinSat.Enabled = false;
             this.dayStartMinSat.FormattingEnabled = true;
             this.dayStartMinSat.Location = new System.Drawing.Point(151, 208);
             this.dayStartMinSat.Name = "dayStartMinSat";
@@ -631,6 +652,7 @@
             // 
             // dayStartHourSat
             // 
+            this.dayStartHourSat.Enabled = false;
             this.dayStartHourSat.FormattingEnabled = true;
             this.dayStartHourSat.Location = new System.Drawing.Point(107, 208);
             this.dayStartHourSat.Name = "dayStartHourSat";

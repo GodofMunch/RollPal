@@ -68,54 +68,127 @@ namespace WindowsFormsApp1
 
         private void calculateHours()
         {
-            if (dayFinHourMon.Text == "00")
-                dayFinHourMon.Text = "24";
-            int mondayHours = Convert.ToInt32(dayFinHourMon.Text) - Convert.ToInt32(dayStartHourMon.Text) - Convert.ToInt32(breakHourMon.Text);
-            int mondayMins = Convert.ToInt32(dayFinMinMon.Text) - Convert.ToInt32(dayStartMinMon.Text) - Convert.ToInt32(breakMinMon.Text);
+            
+            int saturday = 0;
+            int sunday = 0;
+            int weekDayTotalMins = 0;
 
-            int tuesdayHours = Convert.ToInt32(dayFinHourTue.Text) - Convert.ToInt32(dayStartHourTue.Text) - Convert.ToInt32(breakHourTue.Text);
-            int tuesdayMins = Convert.ToInt32(dayFinMinTue.Text) - Convert.ToInt32(dayStartMinTue.Text) - Convert.ToInt32(breakMinTue.Text);
-
-            int wednesdayHours = Convert.ToInt32(dayFinHourWed.Text) - Convert.ToInt32(dayStartHourWed.Text) - Convert.ToInt32(breakHourWed.Text);
-            int wednesdayMins = Convert.ToInt32(dayFinMinWed.Text) - Convert.ToInt32(dayStartMinWed.Text) - Convert.ToInt32(breakMinWed.Text);
-
-            int thursdayHours = Convert.ToInt32(dayFinHourThu.Text) - Convert.ToInt32(dayStartHourThu.Text) - Convert.ToInt32(breakHourThu.Text);
-            int thursdayMins = Convert.ToInt32(dayFinMinThu.Text) - Convert.ToInt32(dayStartMinThu.Text) - Convert.ToInt32(breakMinThu.Text);
-
-            int fridayHours = Convert.ToInt32(dayFinHourFri.Text) - Convert.ToInt32(dayStartHourFri.Text) - Convert.ToInt32(breakHourFri.Text);
-            int fridayMins = Convert.ToInt32(dayFinMinFri.Text) - Convert.ToInt32(dayStartMinFri.Text) - Convert.ToInt32(breakMinFri.Text);
-
-            int saturdayHours = Convert.ToInt32(dayFinHourSat.Text) - Convert.ToInt32(dayStartHourSat.Text) - Convert.ToInt32(breakHourSat.Text);
-            int saturdayMins = Convert.ToInt32(dayFinMinSat.Text) - Convert.ToInt32(dayStartMinSat.Text) - Convert.ToInt32(breakMinSat.Text);
-
-            int sundayHours = Convert.ToInt32(dayFinHourSun.Text) - Convert.ToInt32(dayStartHourSun.Text) - Convert.ToInt32(breakHourSun.Text);
-            int sundayMins = Convert.ToInt32(dayFinMinSun.Text) - Convert.ToInt32(dayStartMinSun.Text) - Convert.ToInt32(breakMinSun.Text);
-
-            int[] hours = { mondayHours, tuesdayHours, wednesdayHours, thursdayHours, fridayHours, saturdayHours, sundayHours };
-            int[] mins = { mondayMins, tuesdayMins, wednesdayMins, thursdayMins, fridayMins, saturdayMins, sundayMins };
-
-            int totalHours = 0;
-            int totalMins = 0;
-
-            for(int i = 0; i < 7; i++)
+            if (cbWorkedMon.Checked)
             {
-                totalHours += hours[i];
-                totalMins += mins[i];
+                int mondayHours = Convert.ToInt32(dayFinHourMon.Text) - Convert.ToInt32(dayStartHourMon.Text) - Convert.ToInt32(breakHourMon.Text);
+                int mondayMins = Convert.ToInt32(dayFinMinMon.Text) - Convert.ToInt32(dayStartMinMon.Text) - Convert.ToInt32(breakMinMon.Text);
+                weekDayTotalMins += calculateDay(mondayHours, mondayMins);
+                
             }
 
+            if (cbWorkedTue.Checked) {
+                int tuesdayHours = Convert.ToInt32(dayFinHourTue.Text) - Convert.ToInt32(dayStartHourTue.Text) - Convert.ToInt32(breakHourTue.Text);
+                int tuesdayMins = Convert.ToInt32(dayFinMinTue.Text) - Convert.ToInt32(dayStartMinTue.Text) - Convert.ToInt32(breakMinTue.Text);
+                weekDayTotalMins += calculateDay(tuesdayHours, tuesdayMins);
+            }
 
-            /*if (mondayMins < 0)
+            if (cbWorkedWed.Checked)
             {
-                while (mondayMins < 0)
+                int wednesdayHours = Convert.ToInt32(dayFinHourWed.Text) - Convert.ToInt32(dayStartHourWed.Text) - Convert.ToInt32(breakHourWed.Text);
+                int wednesdayMins = Convert.ToInt32(dayFinMinWed.Text) - Convert.ToInt32(dayStartMinWed.Text) - Convert.ToInt32(breakMinWed.Text);
+                weekDayTotalMins += calculateDay(wednesdayHours, wednesdayMins);
+            }
+
+            if (cbWorkedThu.Checked)
+            {
+                int thursdayHours = Convert.ToInt32(dayFinHourThu.Text) - Convert.ToInt32(dayStartHourThu.Text) - Convert.ToInt32(breakHourThu.Text);
+                int thursdayMins = Convert.ToInt32(dayFinMinThu.Text) - Convert.ToInt32(dayStartMinThu.Text) - Convert.ToInt32(breakMinThu.Text);
+                weekDayTotalMins += calculateDay(thursdayHours, thursdayMins);
+            }
+
+            if (cbWorkedFri.Checked)
+            {
+                int fridayHours = Convert.ToInt32(dayFinHourFri.Text) - Convert.ToInt32(dayStartHourFri.Text) - Convert.ToInt32(breakHourFri.Text);
+                int fridayMins = Convert.ToInt32(dayFinMinFri.Text) - Convert.ToInt32(dayStartMinFri.Text) - Convert.ToInt32(breakMinFri.Text);
+                weekDayTotalMins += calculateDay(fridayHours, fridayMins);
+            }
+
+            if (cbWorkedSat.Checked)
+            {
+                int saturdayHours = Convert.ToInt32(dayFinHourSat.Text) - Convert.ToInt32(dayStartHourSat.Text) - Convert.ToInt32(breakHourSat.Text);
+                int saturdayMins = Convert.ToInt32(dayFinMinSat.Text) - Convert.ToInt32(dayStartMinSat.Text) - Convert.ToInt32(breakMinSat.Text);
+                saturday = calculateDay(saturdayHours, saturdayMins);
+            }
+
+            if (cbWorkedSun.Checked)
+            {
+                int sundayHours = Convert.ToInt32(dayFinHourSun.Text) - Convert.ToInt32(dayStartHourSun.Text) - Convert.ToInt32(breakHourSun.Text);
+                int sundayMins = Convert.ToInt32(dayFinMinSun.Text) - Convert.ToInt32(dayStartMinSun.Text) - Convert.ToInt32(breakMinSun.Text);
+                sunday += calculateDay(sundayHours, sundayMins);
+            }
+            
+            int totalHours = 0;
+
+            while(weekDayTotalMins > 60)
+            {
+                totalHours++;
+                weekDayTotalMins -= 60;
+
+                MessageBox.Show(totalHours + " + " + weekDayTotalMins);
+            }
+
+            int saturdayHoursTotal = 0;
+
+            while (saturday > 60)
+            {
+                saturdayHoursTotal++;
+                saturday -= 60;
+            }
+
+            int sundayHoursTotal = 0;
+
+            while(sunday > 60)
+            {
+                sundayHoursTotal++;
+                sunday -= 60;
+            }
+
+           
+
+            float grossPay =  calculateWages(totalHours, weekDayTotalMins);
+
+            if (saturdayHoursTotal > 0)
+                grossPay += calculateSaturday(saturdayHoursTotal, saturday);
+            if (sundayHoursTotal > 0)
+                grossPay = calculateSunday(sundayHoursTotal, sunday);
+
+            
+        }
+
+        private float calculateWages(int hours, int mins)
+        {
+            float sum = 0;
+            const float HOURLY_RATE = 
+
+            if(hours > 39)
+
+        }
+
+        private int calculateDay(int hours, int mins) 
+        {
+            if (mins < 0 && mins > -60)
+            {
+                mins = -mins;
+                hours--;
+            }
+
+            else if (mins < -60)
+            {
+                while (mins < 0)
                 {
-                    mondayMins = -mondayMins;
-                    mondayHours--;
-
-                    MessageBox.Show(mondayHours.ToString() + " + " + mondayMins.ToString());
+                    mins += 60;
+                    hours--;
                 }
-            }*/
+            }
 
-            MessageBox.Show(mondayHours.ToString() + " + " + mondayMins.ToString());
+            mins = mins + (hours * 60);
+
+            return mins;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -165,7 +238,8 @@ namespace WindowsFormsApp1
                 }
             }
 
-            
+            cbWorkedSun.Checked = false;
+            cbWorkedSat.Checked = false;
         }
 
         private bool staffPaid(int staffId)
@@ -193,7 +267,7 @@ namespace WindowsFormsApp1
 
         private void cbWorkedMon_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbWorkedMon.Checked)
+            if (!cbWorkedMon.Checked)
             {
                 dayStartHourMon.Enabled = false;
                 dayFinHourMon.Enabled = false;
@@ -216,7 +290,7 @@ namespace WindowsFormsApp1
 
         private void cbWorkedTue_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbWorkedTue.Checked)
+            if (!cbWorkedTue.Checked)
             {
                 dayStartHourTue.Enabled = false;
                 dayFinHourTue.Enabled = false;
@@ -239,7 +313,7 @@ namespace WindowsFormsApp1
 
         private void cbWorkedWed_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbWorkedWed.Checked)
+            if (!cbWorkedWed.Checked)
             {
                 dayStartHourWed.Enabled = false;
                 dayFinHourWed.Enabled = false;
@@ -262,7 +336,7 @@ namespace WindowsFormsApp1
 
         private void cbWorkedThu_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbWorkedThu.Checked)
+            if (!cbWorkedThu.Checked)
             {
                 dayStartHourThu.Enabled = false;
                 dayFinHourThu.Enabled = false;
@@ -285,7 +359,7 @@ namespace WindowsFormsApp1
 
         private void cbWorkedFri_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbWorkedFri.Checked)
+            if (!cbWorkedFri.Checked)
             {
                 dayStartHourFri.Enabled = false;
                 dayFinHourFri.Enabled = false;
@@ -308,7 +382,7 @@ namespace WindowsFormsApp1
 
         private void cbWorkedSat_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbWorkedSat.Checked)
+            if (!cbWorkedSat.Checked)
             {
                 dayStartHourSat.Enabled = false;
                 dayFinHourSat.Enabled = false;
@@ -331,7 +405,7 @@ namespace WindowsFormsApp1
 
         private void cbWorkedSun_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbWorkedSun.Checked)
+            if (!cbWorkedSun.Checked)
             {
                 dayStartHourSun.Enabled = false;
                 dayFinHourSun.Enabled = false;
