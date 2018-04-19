@@ -38,18 +38,24 @@ namespace WindowsFormsApp1
         {
             
 
-            var proceed = MessageBox.Show("Approve hours for Staff number " + staffId.ToString() + "?",
+            var proceed = MessageBox.Show("Approve hours for Staff number " + staffId.ToString("000") + "?",
                 "Approve Times", MessageBoxButtons.YesNo);
 
             if(proceed == DialogResult.Yes)
             {
                 OracleConnection conn = new OracleConnection(DBConnect.oradb);
+                conn.Open();
 
-                string staffPaidsql = "INSERT INTO STAFF_PAID(WEEK" + period + " VALUES('Y')";
+                string staffPaidsql = "UPDATE STAFF_PAID SET WEEK" + period + " = 'Y' WHERE STAFFID = " + staffId;
 
                 OracleCommand cmdStaffPaid = new OracleCommand(staffPaidsql, conn);
                 cmdStaffPaid.ExecuteNonQuery();
                 conn.Close();
+                calculateHours();
+
+                frmEnterTimeSheet enterTimes = new frmEnterTimeSheet();
+                enterTimes.Show();
+                this.Hide();
             }
 
             else
@@ -58,6 +64,58 @@ namespace WindowsFormsApp1
                 enterTimes.Show();
                 this.Hide();
             }
+        }
+
+        private void calculateHours()
+        {
+            if (dayFinHourMon.Text == "00")
+                dayFinHourMon.Text = "24";
+            int mondayHours = Convert.ToInt32(dayFinHourMon.Text) - Convert.ToInt32(dayStartHourMon.Text) - Convert.ToInt32(breakHourMon.Text);
+            int mondayMins = Convert.ToInt32(dayFinMinMon.Text) - Convert.ToInt32(dayStartMinMon.Text) - Convert.ToInt32(breakMinMon.Text);
+
+            int tuesdayHours = Convert.ToInt32(dayFinHourTue.Text) - Convert.ToInt32(dayStartHourTue.Text) - Convert.ToInt32(breakHourTue.Text);
+            int tuesdayMins = Convert.ToInt32(dayFinMinTue.Text) - Convert.ToInt32(dayStartMinTue.Text) - Convert.ToInt32(breakMinTue.Text);
+
+            int wednesdayHours = Convert.ToInt32(dayFinHourWed.Text) - Convert.ToInt32(dayStartHourWed.Text) - Convert.ToInt32(breakHourWed.Text);
+            int wednesdayMins = Convert.ToInt32(dayFinMinWed.Text) - Convert.ToInt32(dayStartMinWed.Text) - Convert.ToInt32(breakMinWed.Text);
+
+            int thursdayHours = Convert.ToInt32(dayFinHourThu.Text) - Convert.ToInt32(dayStartHourThu.Text) - Convert.ToInt32(breakHourThu.Text);
+            int thursdayMins = Convert.ToInt32(dayFinMinThu.Text) - Convert.ToInt32(dayStartMinThu.Text) - Convert.ToInt32(breakMinThu.Text);
+
+            int fridayHours = Convert.ToInt32(dayFinHourFri.Text) - Convert.ToInt32(dayStartHourFri.Text) - Convert.ToInt32(breakHourFri.Text);
+            int fridayMins = Convert.ToInt32(dayFinMinFri.Text) - Convert.ToInt32(dayStartMinFri.Text) - Convert.ToInt32(breakMinFri.Text);
+
+            int saturdayHours = Convert.ToInt32(dayFinHourSat.Text) - Convert.ToInt32(dayStartHourSat.Text) - Convert.ToInt32(breakHourSat.Text);
+            int saturdayMins = Convert.ToInt32(dayFinMinSat.Text) - Convert.ToInt32(dayStartMinSat.Text) - Convert.ToInt32(breakMinSat.Text);
+
+            int sundayHours = Convert.ToInt32(dayFinHourSun.Text) - Convert.ToInt32(dayStartHourSun.Text) - Convert.ToInt32(breakHourSun.Text);
+            int sundayMins = Convert.ToInt32(dayFinMinSun.Text) - Convert.ToInt32(dayStartMinSun.Text) - Convert.ToInt32(breakMinSun.Text);
+
+            int[] hours = { mondayHours, tuesdayHours, wednesdayHours, thursdayHours, fridayHours, saturdayHours, sundayHours };
+            int[] mins = { mondayMins, tuesdayMins, wednesdayMins, thursdayMins, fridayMins, saturdayMins, sundayMins };
+
+            int totalHours = 0;
+            int totalMins = 0;
+
+            for(int i = 0; i < 7; i++)
+            {
+                totalHours += hours[i];
+                totalMins += mins[i];
+            }
+
+
+            /*if (mondayMins < 0)
+            {
+                while (mondayMins < 0)
+                {
+                    mondayMins = -mondayMins;
+                    mondayHours--;
+
+                    MessageBox.Show(mondayHours.ToString() + " + " + mondayMins.ToString());
+                }
+            }*/
+
+            MessageBox.Show(mondayHours.ToString() + " + " + mondayMins.ToString());
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -109,6 +167,7 @@ namespace WindowsFormsApp1
 
             
         }
+
         private bool staffPaid(int staffId)
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
