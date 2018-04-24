@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grpStaffDetails = new System.Windows.Forms.GroupBox();
-            this.cbPayGrade = new System.Windows.Forms.ComboBox();
+            this.cboPayGrade = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.grpGender = new System.Windows.Forms.GroupBox();
@@ -74,7 +74,7 @@
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.grpStaffDetails.Controls.Add(this.cbPayGrade);
+            this.grpStaffDetails.Controls.Add(this.cboPayGrade);
             this.grpStaffDetails.Controls.Add(this.label1);
             this.grpStaffDetails.Controls.Add(this.dtpDOB);
             this.grpStaffDetails.Controls.Add(this.grpGender);
@@ -109,15 +109,15 @@
             this.grpStaffDetails.TabIndex = 1;
             this.grpStaffDetails.TabStop = false;
             this.grpStaffDetails.Text = "Staff Details";
-            this.grpStaffDetails.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // cbPayGrade
+            // cboPayGrade
             // 
-            this.cbPayGrade.FormattingEnabled = true;
-            this.cbPayGrade.Location = new System.Drawing.Point(417, 260);
-            this.cbPayGrade.Name = "cbPayGrade";
-            this.cbPayGrade.Size = new System.Drawing.Size(121, 21);
-            this.cbPayGrade.TabIndex = 23;
+            this.cboPayGrade.FormattingEnabled = true;
+            this.cboPayGrade.Location = new System.Drawing.Point(417, 260);
+            this.cboPayGrade.Name = "cboPayGrade";
+            this.cboPayGrade.Size = new System.Drawing.Size(121, 21);
+            this.cboPayGrade.TabIndex = 23;
+            this.cboPayGrade.SelectedIndexChanged += new System.EventHandler(this.cboPayGrade_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -323,7 +323,6 @@
             this.lblTown.Size = new System.Drawing.Size(40, 13);
             this.lblTown.TabIndex = 11;
             this.lblTown.Text = "Town :";
-            this.lblTown.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblStreet
             // 
@@ -392,7 +391,6 @@
             this.lblSurname.Size = new System.Drawing.Size(55, 13);
             this.lblSurname.TabIndex = 3;
             this.lblSurname.Text = "Surname :";
-            this.lblSurname.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblForename
             // 
@@ -423,7 +421,6 @@
             this.txtStaffID.TabIndex = 1;
             this.txtStaffID.TabStop = false;
             this.txtStaffID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtStaffID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnRegisterStaff
             // 
@@ -509,7 +506,7 @@
         private System.Windows.Forms.RadioButton optGenderMale;
         private System.Windows.Forms.DateTimePicker dtpDOB;
         private System.Windows.Forms.ErrorProvider epInvalidEntry;
-        private System.Windows.Forms.ComboBox cbPayGrade;
+        private System.Windows.Forms.ComboBox cboPayGrade;
         private System.Windows.Forms.Label label1;
     }
 }

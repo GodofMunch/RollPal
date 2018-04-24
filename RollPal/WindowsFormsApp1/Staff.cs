@@ -26,6 +26,10 @@ namespace WindowsFormsApp1
         private string gender;
         private string active;
         private string payGrade;
+        private string payeGrade;
+        private string siptuGrade;
+        private string prsiGrade;
+        private string uscGrade;
 
         public Staff()
         {
@@ -45,13 +49,18 @@ namespace WindowsFormsApp1
             gender = "m";
             active = "n";
             payGrade = "a";
+            payeGrade = "a";
+            siptuGrade = "a";
+            prsiGrade = "a";
+            uscGrade = "a";
 
         }
 
-        public Staff(int staffId, string forename, string surname, string phone, 
-                     string email, string street, string town, string county, 
-                     string eircode, string dob, string gender, string iban, 
-                     string maritalStatus, int children, string active, string payGrade)
+        public Staff(int staffId, string forename, string surname, string phone,
+                     string email, string street, string town, string county,
+                     string eircode, string dob, string gender, string iban,
+                     string maritalStatus, int children, string active, string payGrade,
+                     string payeGrade, string prsiGrade, string uscGrade, string siptuGrade)
         {
             setStaffId(staffId);
             setForeName(forename);
@@ -69,6 +78,10 @@ namespace WindowsFormsApp1
             setChildren(children);
             setActive("y");
             setPayGrade(payGrade);
+            setPayeGrade(payeGrade);
+            setSiptuGrade(siptuGrade);
+            setPrsiGrade(prsiGrade);
+            setUscGrade(uscGrade);
         }
 
         public int getStaffId()
@@ -149,6 +162,26 @@ namespace WindowsFormsApp1
         public string getPayGrade()
         {
             return payGrade;
+        }
+
+        public string getPayeGrade()
+        {
+            return payeGrade;
+        }
+
+        public string getPrsiGrade()
+        {
+            return prsiGrade;
+        }
+
+        public string getUscGrade()
+        {
+            return uscGrade;
+        }
+
+        public string getSiptuGrade()
+        {
+            return uscGrade;
         }
 
         public void setStaffId(int staffId)
@@ -254,6 +287,33 @@ namespace WindowsFormsApp1
         {
             this.payGrade = payGrade;
         }
+
+        public void setPayeGrade(string payeGrade)
+        {
+            if (maritalStatus == "n")
+                if (children == 0)
+                    payeGrade = "a";
+                else
+                    payeGrade = "b";
+            else
+                payeGrade = "c";
+        }
+
+        public void setPrsiGrade(string prsiGrade)
+        {
+            this.prsiGrade = prsiGrade;
+        } 
+
+        public void setSiptuGrade(string siptuGrade)
+        {
+            this.siptuGrade = siptuGrade;
+        }
+
+        public void setUscGrade(string uscGrade)
+        {
+            this.uscGrade = uscGrade;
+        }
+
         public static DataSet getStaff(DataSet ds, string type)
         {
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
@@ -304,7 +364,7 @@ namespace WindowsFormsApp1
             setActive("y");
             string strSqlStaff = "INSERT INTO STAFF VALUES (" + this.staffId +
                 ",'" + this.forename + "','" + this.surname + "',DATE '" + this.dob + "','" + this.gender + "','" +
-                this.maritalStatus + "','" + this.children + "','" + this.active + "', '" + this.payGrade + ")";
+                this.maritalStatus + "','" + this.children + "','" + this.active + "','" + this.payGrade + "')";
 
 
             string strSqlContact = "INSERT INTO CONTACT VALUES (" + this.staffId + ",'" + this.email + "','" +
@@ -323,17 +383,23 @@ namespace WindowsFormsApp1
                     strSqlStaffPaid += ",";
             }
 
-            strSqlStaffPaid += ")"; 
+            strSqlStaffPaid += ")";
+
+            string strSqlTaxation = "INSERT INTO TAXATION VALUES (" + this.staffId + ",'" +
+                this.payeGrade + "','" + this.prsiGrade + "','" + this.siptuGrade + "','" + 
+                this.uscGrade + "','" + this.payGrade + "'"; 
             
             OracleCommand cmdStaff = new OracleCommand(strSqlStaff, conn);
             OracleCommand cmdContact = new OracleCommand(strSqlContact, conn);
             OracleCommand cmdBanking = new OracleCommand(strSqlBanking, conn);
             OracleCommand cmdStaffPaid = new OracleCommand(strSqlStaffPaid, conn);
+            OracleCommand cmdTaxation = new OracleCommand(strSqlTaxation, conn);
 
             cmdStaff.ExecuteNonQuery();
             cmdContact.ExecuteNonQuery();
             cmdBanking.ExecuteNonQuery();
             cmdStaffPaid.ExecuteNonQuery();
+            cmdTaxation.ExecuteNonQuery();
 
             conn.Close();
         }
@@ -355,9 +421,14 @@ namespace WindowsFormsApp1
             string strSqlUpdateBanking = "UPDATE BANKING SET IBAN = '" + this.iban + "' WHERE STAFFID = " +
                    this.staffId;
 
+            string strSqlUpdateTaxation = "UPDATE TAXATION SET PAYEGRADE = '" + this.payeGrade + 
+                "',PRSIGRADE = '" + this.prsiGrade + "', SIPTUGRADE = '" + this.siptuGrade + 
+                "', USCGRADE = '" + this.uscGrade + "', HOURLYRATE = '" + this.payGrade + "'";
+
             OracleCommand cmdStaff = new OracleCommand(strSqlUpdateStaff, conn);
             OracleCommand cmdContact = new OracleCommand(strSqlUpdateContact, conn);
             OracleCommand cmdBanking = new OracleCommand(strSqlUpdateBanking, conn);
+            OracleCommand cmdTaxation = new OracleCommand(strSqlUpdateTaxation, conn);
 
             cmdStaff.ExecuteNonQuery();
             cmdContact.ExecuteNonQuery();

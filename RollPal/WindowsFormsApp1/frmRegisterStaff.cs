@@ -29,7 +29,12 @@ namespace WindowsFormsApp1
         int children = 0;
         string gender = "m";
         string active = "n";
-        string payGrade = "";
+        string payGrade = "a";
+        double hourlyRate = 0;
+        string prsiGrade = "a";
+        string siptuGrade = "a";
+        string uscGrade = "a";
+        string payeGrade = "a";
 
         public frmRegisterStaff()
         {
@@ -46,22 +51,52 @@ namespace WindowsFormsApp1
             OracleConnection conn = new OracleConnection(DBConnect.oradb);
             conn.Open();
 
-            string sqlRate = "SELECT PAYGRADE FROM RATE";
+            string sqlRate = ""; 
+            string singleGrade = "";
+            string rate = "";
+
+            for(int i = 0; i < 3; i ++)
+            {
+                if (i == 0)
+                    rate = "a";
+                else if (i == 1)
+                    rate = "b";
+                else if (i == 2)
+                    rate = "c";
+
+                sqlRate = "SELECT VALUE FROM RATE WHERE HOURLYRATE = '" + rate + "'";
+                
+                OracleCommand cmdRate = new OracleCommand(sqlRate, conn);
+                OracleDataReader data = cmdRate.ExecuteReader();
+                data.Read();
+
+                if (data.HasRows)
+                {
+                    singleGrade = data.GetDouble(0).ToString();
+                    MessageBox.Show(singleGrade);
+                    payGrades[i] = singleGrade;
+                    cboPayGrade.Items.Add(payGrades[i]);
+                    
+                }
+
+                else
+                    MessageBox.Show("NO DATA");
+
+                
+            }
+
+            conn.Close();
 
             for(int i = 0; i < 3; i++)
             {
-                cbPayGrade.Items.Add(payGrades[i]);
+                
             }
+            cboPayGrade.SelectedIndex = cboPayGrade.FindString(payGrades[0].ToString());
         }
 
         private void cboChildren_SelectedIndexChanged(object sender, EventArgs e)
         {
             children = Convert.ToInt32(cboChildren.Text);
-        }
-
-        private void txtDOB_Click(object sender, MouseEventArgs e)
-        {
-            //txtDOB.Text = String.Empty;
         }
 
         private void btnRegisterStaff_Click(object sender, EventArgs e)
@@ -74,8 +109,10 @@ namespace WindowsFormsApp1
             {
 
 
-                Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtTown.Text,
-                                            txtCounty.Text, txtEircode.Text, dob ,gender, txtIban.Text, maritalStatus, children, active, payGrade);
+                Staff newStaff = new Staff(Convert.ToInt32(txtStaffID.Text), txtForename.Text, 
+                    txtSurname.Text, txtPhone.Text, txtEmail.Text, txtStreet.Text, txtTown.Text,
+                    txtCounty.Text, txtEircode.Text, dob ,gender, txtIban.Text, 
+                    maritalStatus, children, active, payeGrade, prsiGrade, siptuGrade, uscGrade, payGrade);
 
                 newStaff.registerStaff();
 
@@ -321,6 +358,12 @@ namespace WindowsFormsApp1
         private void dtpDOB_ValueChanged(object sender, EventArgs e)
         {
             dob = dtpDOB.Value.ToString("yyyy-MM-dd");
+        }
+
+        private void cboPayGrade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hourlyRate = Convert.ToDouble(cboPayGrade.Text);
+
         }
     }
 }
