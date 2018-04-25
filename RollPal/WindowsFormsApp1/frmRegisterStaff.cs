@@ -73,24 +73,16 @@ namespace WindowsFormsApp1
                 if (data.HasRows)
                 {
                     singleGrade = data.GetDouble(0).ToString();
-                    MessageBox.Show(singleGrade);
                     payGrades[i] = singleGrade;
                     cboPayGrade.Items.Add(payGrades[i]);
                     
                 }
-
                 else
-                    MessageBox.Show("NO DATA");
-
-                
+                    MessageBox.Show("NO DATA"); 
             }
 
             conn.Close();
-
-            for(int i = 0; i < 3; i++)
-            {
-                
-            }
+            
             cboPayGrade.SelectedIndex = cboPayGrade.FindString(payGrades[0].ToString());
         }
 
@@ -114,6 +106,17 @@ namespace WindowsFormsApp1
                     txtCounty.Text, txtEircode.Text, dob ,gender, txtIban.Text, 
                     maritalStatus, children, active, payeGrade, prsiGrade, siptuGrade, uscGrade, payGrade);
 
+                if (newStaff.getMaritalStatus() == "n")
+                {
+                    if (newStaff.getChildren() == 0)
+                        newStaff.setPayeGrade("a");
+                    else
+                        newStaff.setPayeGrade("b");
+                }
+                else
+                    newStaff.setPayeGrade("c");
+
+                
                 newStaff.registerStaff();
 
                 MessageBox.Show("Thank you! Returning Home.", "Thank you", MessageBoxButtons.OK);
@@ -363,7 +366,6 @@ namespace WindowsFormsApp1
         private void cboPayGrade_SelectedIndexChanged(object sender, EventArgs e)
         {
             hourlyRate = Convert.ToDouble(cboPayGrade.Text);
-
         }
     }
 }

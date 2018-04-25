@@ -19,6 +19,7 @@ Gender char(1) NOT NULL,
 MaritalStatus char(1) NOT NULL,
 Children numeric(2) NOT NULL,
 Active char(1) NOT NULL,
+PayGrade char(1) NOT NULL,
 CONSTRAINT pk_Staff PRIMARY KEY(StaffId));
 
 CREATE TABLE CONTACT
@@ -110,36 +111,31 @@ CONSTRAINT fk_Taxation_Staff FOREIGN KEY(StaffId) REFERENCES Staff(StaffId)
 CREATE TABLE RATE (
 HourlyRate char (1),
 Value numeric (5,2),
-CONSTRAINT pk_Rate PRIMARY KEY(HourlyRate),
-CONSTRAINT fk_Rate_Taxation FOREIGN KEY(HourlyRate) REFERENCES Taxation(HourlyRate));
+CONSTRAINT pk_Rate PRIMARY KEY(HourlyRate));
 
 CREATE TABLE SIPTU (
 SiptuGrade char(1),
 Value numeric(4,2),
-CONSTRAINT pk_Siptu PRIMARY KEY(SiptuGrade),
-CONSTRAINT fk_Siptu_Taxation FOREIGN KEY(SiptuGrade) REFERENCES Taxation(SiptuGrade));
+CONSTRAINT pk_Siptu PRIMARY KEY(SiptuGrade));
 
 CREATE TABLE USC (
 UscGrade char(1),
-Percentage numeric(1),
+Percentage numeric(2,1),
 LowerLimit numeric(7,2),
-UpperLimit numeric(7,2),
-CONSTRAINT pk_Usc PRIMARY KEY (UscGrade),
-CONSTRAINT fk_Usc_Taxation FOREIGN KEY(UscGrade) REFERENCES Taxation(UscGrade));
+UpperLimit numeric(8,2),
+CONSTRAINT pk_Usc PRIMARY KEY (UscGrade));
 
 CREATE TABLE PAYE (
 PayeGrade char(1),
 CutOff numeric(7,2),
 LowerPercentage numeric(2),
 UpperPercentage numeric(2),
-CONSTRAINT pk_Paye PRIMARY KEY (PayeGrade),
-CONSTRAINT fk_Paye_Taxation FOREIGN KEY (PayeGrade) REFERENCES Taxation(PayeGrade));
+CONSTRAINT pk_Paye PRIMARY KEY (PayeGrade));
 
 CREATE TABLE PRSI (
 PrsiGrade char(1),
 Percentage numeric(2),
-CONSTRAINT pk_Prsi PRIMARY KEY(PrsiGrade),
-CONSTRAINT fk_Prsi_Taxation FOREIGN KEY (PrsiGrade) REFERENCES Taxation(PrsiGrade));
+CONSTRAINT pk_Prsi PRIMARY KEY(PrsiGrade));
 
 CREATE TABLE PAY_MULTIPLIERS (
 OverTime numeric(3,2),

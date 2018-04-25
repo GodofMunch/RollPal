@@ -290,13 +290,7 @@ namespace WindowsFormsApp1
 
         public void setPayeGrade(string payeGrade)
         {
-            if (maritalStatus == "n")
-                if (children == 0)
-                    payeGrade = "a";
-                else
-                    payeGrade = "b";
-            else
-                payeGrade = "c";
+            this.payeGrade = payeGrade;
         }
 
         public void setPrsiGrade(string prsiGrade)
@@ -385,9 +379,10 @@ namespace WindowsFormsApp1
 
             strSqlStaffPaid += ")";
 
+
             string strSqlTaxation = "INSERT INTO TAXATION VALUES (" + this.staffId + ",'" +
                 this.payeGrade + "','" + this.prsiGrade + "','" + this.siptuGrade + "','" + 
-                this.uscGrade + "','" + this.payGrade + "'"; 
+                this.uscGrade + "','" + this.payGrade + "')"; 
             
             OracleCommand cmdStaff = new OracleCommand(strSqlStaff, conn);
             OracleCommand cmdContact = new OracleCommand(strSqlContact, conn);
@@ -433,6 +428,7 @@ namespace WindowsFormsApp1
             cmdStaff.ExecuteNonQuery();
             cmdContact.ExecuteNonQuery();
             cmdBanking.ExecuteNonQuery();
+            cmdTaxation.ExecuteNonQuery();
 
             conn.Close();
         }
