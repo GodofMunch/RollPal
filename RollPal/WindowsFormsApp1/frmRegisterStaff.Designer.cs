@@ -133,11 +133,11 @@
             this.dtpDOB.CustomFormat = "dd-MMM-yy";
             this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDOB.Location = new System.Drawing.Point(141, 281);
-            this.dtpDOB.MaxDate = new System.DateTime(2018, 2, 27, 0, 0, 0, 0);
+            this.dtpDOB.MaxDate = new System.DateTime(2018, 4, 30, 0, 0, 0, 0);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(100, 20);
             this.dtpDOB.TabIndex = 8;
-            this.dtpDOB.Value = new System.DateTime(2018, 2, 27, 0, 0, 0, 0);
+            this.dtpDOB.Value = new System.DateTime(2018, 4, 30, 0, 0, 0, 0);
             this.dtpDOB.ValueChanged += new System.EventHandler(this.dtpDOB_ValueChanged);
             // 
             // grpGender

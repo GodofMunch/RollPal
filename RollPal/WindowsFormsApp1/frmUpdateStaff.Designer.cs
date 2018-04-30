@@ -65,6 +65,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboSelectStaff = new System.Windows.Forms.ComboBox();
             this.lblInactive = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboHourlyRate = new System.Windows.Forms.ComboBox();
             this.grpStaffDetails.SuspendLayout();
             this.grpGender.SuspendLayout();
             this.grpMarStatus.SuspendLayout();
@@ -73,6 +75,8 @@
             // grpStaffDetails
             // 
             this.grpStaffDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.grpStaffDetails.Controls.Add(this.cboHourlyRate);
+            this.grpStaffDetails.Controls.Add(this.label2);
             this.grpStaffDetails.Controls.Add(this.dtDob);
             this.grpStaffDetails.Controls.Add(this.lblIbanUpdate);
             this.grpStaffDetails.Controls.Add(this.txtIbanUpdate);
@@ -128,7 +132,7 @@
             // lblIbanUpdate
             // 
             this.lblIbanUpdate.AutoSize = true;
-            this.lblIbanUpdate.Location = new System.Drawing.Point(362, 235);
+            this.lblIbanUpdate.Location = new System.Drawing.Point(335, 210);
             this.lblIbanUpdate.Name = "lblIbanUpdate";
             this.lblIbanUpdate.Size = new System.Drawing.Size(38, 13);
             this.lblIbanUpdate.TabIndex = 25;
@@ -136,7 +140,7 @@
             // 
             // txtIbanUpdate
             // 
-            this.txtIbanUpdate.Location = new System.Drawing.Point(426, 232);
+            this.txtIbanUpdate.Location = new System.Drawing.Point(398, 207);
             this.txtIbanUpdate.Name = "txtIbanUpdate";
             this.txtIbanUpdate.Size = new System.Drawing.Size(161, 20);
             this.txtIbanUpdate.TabIndex = 24;
@@ -144,7 +148,7 @@
             // lblChildrenUpdate
             // 
             this.lblChildrenUpdate.AutoSize = true;
-            this.lblChildrenUpdate.Location = new System.Drawing.Point(362, 198);
+            this.lblChildrenUpdate.Location = new System.Drawing.Point(374, 183);
             this.lblChildrenUpdate.Name = "lblChildrenUpdate";
             this.lblChildrenUpdate.Size = new System.Drawing.Size(51, 13);
             this.lblChildrenUpdate.TabIndex = 23;
@@ -197,7 +201,7 @@
             "5",
             "6",
             "7"});
-            this.drpChildrenUpdate.Location = new System.Drawing.Point(452, 195);
+            this.drpChildrenUpdate.Location = new System.Drawing.Point(452, 180);
             this.drpChildrenUpdate.Name = "drpChildrenUpdate";
             this.drpChildrenUpdate.Size = new System.Drawing.Size(38, 21);
             this.drpChildrenUpdate.TabIndex = 22;
@@ -470,6 +474,24 @@
             this.lblInactive.Text = "IN-ACTIVE";
             this.lblInactive.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(335, 246);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Houly Rate";
+            // 
+            // cboHourlyRate
+            // 
+            this.cboHourlyRate.FormattingEnabled = true;
+            this.cboHourlyRate.Location = new System.Drawing.Point(438, 243);
+            this.cboHourlyRate.Name = "cboHourlyRate";
+            this.cboHourlyRate.Size = new System.Drawing.Size(121, 21);
+            this.cboHourlyRate.TabIndex = 27;
+            this.cboHourlyRate.SelectedIndexChanged += new System.EventHandler(this.cboHourlyRate_SelectedIndexChanged);
+            // 
             // frmUpdateStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -533,5 +555,7 @@
         private System.Windows.Forms.ComboBox drpChildrenUpdate;
         private System.Windows.Forms.DateTimePicker dtDob;
         private System.Windows.Forms.Label lblInactive;
+        private System.Windows.Forms.ComboBox cboHourlyRate;
+        private System.Windows.Forms.Label label2;
     }
 }

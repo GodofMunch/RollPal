@@ -16,11 +16,12 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmRegisterStaff());
+            //Application.Run(new frmRegisterStaff());
             //Application.Run(new frmUpdateStaff());
             //Application.Run(new frmDeRegisterStaff());
             //Application.Run(new frmSearchStaff());
             //Application.Run(new frmEnterTimeSheet());
+            Application.Run(new frmGeneratePayRoll());
         }
     }
 }

@@ -46,7 +46,6 @@
             this.lblPayStaff.Size = new System.Drawing.Size(127, 13);
             this.lblPayStaff.TabIndex = 0;
             this.lblPayStaff.Text = "Total Wage Bill for Period";
-            this.lblPayStaff.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtPeriod
             // 
@@ -66,7 +65,6 @@
             this.lblIs.Size = new System.Drawing.Size(15, 13);
             this.lblIs.TabIndex = 2;
             this.lblIs.Text = "Is";
-            this.lblIs.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // txtTotalAmount
             // 
@@ -133,6 +131,7 @@
             this.Name = "frmPayStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pay Staff";
+            this.Load += new System.EventHandler(this.frmPayStaff_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

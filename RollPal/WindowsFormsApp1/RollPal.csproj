@@ -157,6 +157,7 @@
       <DependentUpon>frmWelcomeScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Staff.cs" />
+    <Compile Include="Timesheet.cs" />
     <EmbeddedResource Include="frmBankingDetails.resx">
       <DependentUpon>frmBankingDetails.cs</DependentUpon>
     </EmbeddedResource>

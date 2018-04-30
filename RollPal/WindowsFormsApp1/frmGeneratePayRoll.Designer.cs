@@ -30,7 +30,7 @@
         {
             this.rtxtWageDetails = new System.Windows.Forms.RichTextBox();
             this.lblPeriodNo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPeriod = new System.Windows.Forms.TextBox();
             this.btnGenWages = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -43,7 +43,6 @@
             this.rtxtWageDetails.Size = new System.Drawing.Size(442, 312);
             this.rtxtWageDetails.TabIndex = 0;
             this.rtxtWageDetails.Text = "";
-            this.rtxtWageDetails.TextChanged += new System.EventHandler(this.rtxtWageDetails_TextChanged);
             // 
             // lblPeriodNo
             // 
@@ -53,17 +52,16 @@
             this.lblPeriodNo.Size = new System.Drawing.Size(43, 13);
             this.lblPeriodNo.TabIndex = 1;
             this.lblPeriodNo.Text = "Period :";
-            this.lblPeriodNo.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // textBox1
+            // txtPeriod
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "49";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPeriod.Location = new System.Drawing.Point(107, 36);
+            this.txtPeriod.Name = "txtPeriod";
+            this.txtPeriod.ReadOnly = true;
+            this.txtPeriod.Size = new System.Drawing.Size(100, 20);
+            this.txtPeriod.TabIndex = 2;
+            this.txtPeriod.Text = "49";
+            this.txtPeriod.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnGenWages
             // 
@@ -85,18 +83,19 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // generatePayRoll
+            // frmGeneratePayRoll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 460);
             this.Controls.Add(this.btnHome);
             this.Controls.Add(this.btnGenWages);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPeriod);
             this.Controls.Add(this.lblPeriodNo);
             this.Controls.Add(this.rtxtWageDetails);
-            this.Name = "generatePayRoll";
+            this.Name = "frmGeneratePayRoll";
             this.Text = "Generate Pay Roll";
+            this.Load += new System.EventHandler(this.frmGeneratePayRoll_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +105,7 @@
 
         private System.Windows.Forms.RichTextBox rtxtWageDetails;
         private System.Windows.Forms.Label lblPeriodNo;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPeriod;
         private System.Windows.Forms.Button btnGenWages;
         private System.Windows.Forms.Button btnHome;
     }

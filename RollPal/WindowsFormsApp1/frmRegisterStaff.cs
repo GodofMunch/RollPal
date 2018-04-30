@@ -116,7 +116,17 @@ namespace WindowsFormsApp1
                 else
                     newStaff.setPayeGrade("c");
 
-                
+                OracleConnection conn = new OracleConnection(DBConnect.oradb);
+                conn.Open();
+
+                string strSqlRate = "SELECT HOURLYRATE FROM RATE WHERE VALUE = " + hourlyRate;
+                OracleCommand cmdRate = new OracleCommand(strSqlRate, conn);
+                OracleDataReader drRate = cmdRate.ExecuteReader();
+                drRate.Read();
+                payGrade = drRate.GetString(0);
+
+                newStaff.setPayGrade(payGrade);
+
                 newStaff.registerStaff();
 
                 MessageBox.Show("Thank you! Returning Home.", "Thank you", MessageBoxButtons.OK);

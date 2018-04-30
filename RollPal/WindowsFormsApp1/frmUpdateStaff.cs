@@ -15,8 +15,9 @@ namespace WindowsFormsApp1
 
        
     {
-        public int staffId;
+        public int staffId = 1;
         public bool IsSelected = false;
+        public double hourlyRate;
         public Staff staffMember;
         public static string maritalStatus;
         public static string gender;
@@ -68,6 +69,16 @@ namespace WindowsFormsApp1
                     lblInactive.Visible = true;
                 else if (staffMember.getActive() == "y")
                     lblInactive.Visible = false;
+
+                
+                if (staffMember.getPayGrade() == "a")
+                    cboHourlyRate.SelectedIndex = 0;
+
+                else if (staffMember.getPayGrade() == "b")
+                    cboHourlyRate.SelectedIndex = 1;
+                
+                else
+                    cboHourlyRate.SelectedIndex = 2;
             }
         }
 
@@ -80,11 +91,49 @@ namespace WindowsFormsApp1
 
         private void frmUpdateStaff_Load(object sender, EventArgs e)
         {
-            for(int i = 1; i < Staff.nextStaffId(); i++)
+            for (int i = 1; i < Staff.nextStaffId(); i++)
             {
                 string staffId = "00" + (i);
                 cboSelectStaff.Items.Add(staffId);
             }
+
+            staffMember = loadStaff(staffId);
+
+            string[] payGrades = new string[3];
+
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            conn.Open();
+
+            string sqlRate = "";
+            string singleGrade = "";
+            string rate = "";
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (i == 0)
+                    rate = "a";
+                else if (i == 1)
+                    rate = "b";
+                else if (i == 2)
+                    rate = "c";
+
+                sqlRate = "SELECT VALUE FROM RATE WHERE HOURLYRATE = '" + rate + "'";
+
+                OracleCommand cmdRate = new OracleCommand(sqlRate, conn);
+                OracleDataReader data = cmdRate.ExecuteReader();
+                data.Read();
+
+                if (data.HasRows)
+                {
+                    singleGrade = data.GetDouble(0).ToString();
+                    payGrades[i] = singleGrade;
+                    cboHourlyRate.Items.Add(payGrades[i]);
+
+                }
+                else
+                    MessageBox.Show("NO DATA");
+            }
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -144,6 +193,15 @@ namespace WindowsFormsApp1
             dataLoadedBanking.Read();
 
             newStaffMember.setIban(dataLoadedBanking.GetString(1));
+
+            string strSqlSelectPaygrade = "SELECT HOURLYRATE FROM TAXATION WHERE STAFFID = " + staffId;
+
+            OracleCommand cmdTaxation = new OracleCommand(strSqlSelectPaygrade, conn);
+            OracleDataReader drPayGrade = cmdTaxation.ExecuteReader();
+
+            drPayGrade.Read();
+
+            newStaffMember.setPayGrade(drPayGrade.GetString(0));
             
             return newStaffMember;
         }
@@ -168,6 +226,27 @@ namespace WindowsFormsApp1
             staffMember.setCounty(txtCounty.Text);
             staffMember.setEirCode(txtEircode.Text);
             staffMember.setIban(txtIbanUpdate.Text);
+
+            if (staffMember.getMaritalStatus() == "n")
+            {
+                if (staffMember.getChildren() == 0)
+                    staffMember.setPayeGrade("a");
+                else
+                    staffMember.setPayeGrade("b");
+            }
+            else
+                staffMember.setPayeGrade("c");
+
+            OracleConnection conn = new OracleConnection(DBConnect.oradb);
+            conn.Open();
+
+            string strSqlRate = "SELECT HOURLYRATE FROM RATE WHERE VALUE = " + hourlyRate;
+            OracleCommand cmdRate = new OracleCommand(strSqlRate, conn);
+            OracleDataReader drRate = cmdRate.ExecuteReader();
+            drRate.Read();
+            string payGrade = drRate.GetString(0);
+
+            staffMember.setPayGrade(payGrade);
 
             staffMember.updateStaff();
 
@@ -197,6 +276,11 @@ namespace WindowsFormsApp1
         private void grpStaffDetails_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboHourlyRate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            hourlyRate = Convert.ToDouble(cboHourlyRate.Text);
         }
     }
 }
