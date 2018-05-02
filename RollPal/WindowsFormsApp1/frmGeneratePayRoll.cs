@@ -73,10 +73,6 @@ namespace WindowsFormsApp1
                     myEmail.Body = "Hi Dave, The wage bill this week is " + wageTotal + ". Please confirm the processing of this bill";
                     myEmail.IsBodyHtml = false;
                     MailAddress myGmail = new MailAddress("daveosullivan90@gmail.com");
-                    /*MailAddress catherine = new MailAddress("catherine.woods@staff.ittralee.ie");
-                    MailAddress anne = new MailAddress("anne.obrien@staff.ittralee.ie");
-                    myEmail.CC.Add(catherine);
-                    myEmail.CC.Add(anne);*/
                     myEmail.CC.Add(myGmail);
                     smtp.Send(myEmail);
                 }

@@ -13,36 +13,21 @@ namespace WindowsFormsApp1
 {
     public partial class frmQueryPayroll : Form
     {
+        int period;
         public frmQueryPayroll()
         {
             InitializeComponent();
-            
-                
-        }
-
-        private void rtxtWageDetails_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSearchBar_TextChanged(object sender, EventArgs e)
-        {
-            if(!txtSearhBar.Text.Equals("") || !txtSearhBar.Text.Equals("ID Number") 
-                || !txtSearhBar.Text.Equals("Name"))
-            {
-                rtxtWageDetails.Visible = true;
-            }
         }
 
         private void optStaffId_CheckedChanged(object sender, EventArgs e)
         {
             if (optStaffId.Checked == true)
             {
-                txtSearhBar.Text = "ID Number";
+                lblSearch.Text = "ID Number";
             }
             else
             {
-                txtSearhBar.Text = "Name";
+                lblSearch.Text = "Name";
             }
         }
 
@@ -51,52 +36,73 @@ namespace WindowsFormsApp1
             Staff[] members = new Staff[Staff.nextStaffId() - 1];
             Staff member = new Staff();
             string staffInfo = "Staff Id\tName\t\tWages";
-            int i = 0;
+            int i;
 
-
+            
             if (optStaffName.Checked)
-                if (txtSearhBar.Text == "")
-                    MessageBox.Show("Please Enter Text");
-           
-                else
-                {
-                    members = lookForStaff(txtSearhBar.Text);
-                    
-                    if(members[i].getForename() != "")
-                    {
-                        while(members[i].getForename() != "")
-                        {
-                            staffInfo += "\n" + members[i].getStaffId().ToString() + "\t" + members[i].getForename() +
-                                " " + members[i].getSurname() + "\t" + frmGeneratePayRoll.getWeeklyNet(members[i].getStaffId());
-                            i++;
-                        }
-                        rtxtWageDetails.Text = staffInfo;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Sorry! There were no matches!");
-                    }
-                }
-            else if (optStaffId.Checked)
             {
                 if (txtSearhBar.Text == "")
                     MessageBox.Show("Please Enter Text");
 
                 else
                 {
-                    int staffId = Convert.ToInt32(txtSearhBar.Text);
-                    member = lookForStaff(staffId);
+                    members = lookForStaff(txtSearhBar.Text);
 
-                    if (member.getForename() != "")
+                    for (int k = 0; k < members.Length; k++)
                     {
-                        staffInfo += "\n" + member.getStaffId().ToString() + "\t" + member.getForename() +
-                                  " " + member.getSurname() + "\t" + frmGeneratePayRoll.getWeeklyNet(member.getStaffId());
-                        rtxtWageDetails.Text = staffInfo;
+                        if (members[k].getForename() != "")
+                        {
+                            staffInfo += "\n" + members[k].getStaffId().ToString("000") + "\t" + members[k].getForename() +
+                            " " + members[k].getSurname() + "\t\t" + frmGeneratePayRoll.getWeeklyNet(members[k].getStaffId());
+                        }
                     }
+                    
+                    if (staffInfo == "")
+                        staffInfo = "Sorry! There were no matches!";
 
+                    rtxtWageDetails.Text = staffInfo;
+                    rtxtWageDetails.Visible = true;
+                    }
+                }
+            
+
+            
+            else if (optStaffId.Checked)
+            {
+                if (txtSearhBar.Text == "")
+                    MessageBox.Show("Please Enter Text");
+
+
+                else
+                {
+
+                    for (i = 0; i < txtSearhBar.Text.Length; i++)
+                        if (optStaffId.Checked)
+                            if (!Char.IsDigit(txtSearhBar.Text[i]))
+                                break;
+                    if (i == txtSearhBar.Text.Length)
+                    {
+                        int staffId = Convert.ToInt32(txtSearhBar.Text);
+                        member = lookForStaff(staffId);
+
+                        if (member.getForename() != "")
+                        {
+                            staffInfo += "\n" + member.getStaffId().ToString("000") + "\t" + member.getForename() +
+                                      " " + member.getSurname() + "\t" + frmGeneratePayRoll.getWeeklyNet(member.getStaffId());
+
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Sorry! There were no matches!");
+                        }
+                        rtxtWageDetails.Text = staffInfo;
+                        rtxtWageDetails.Visible = true;
+                    }
                     else
                     {
-                        MessageBox.Show("Sorry! There were no matches!");
+                        rtxtWageDetails.Text = "Please enter a valid staff id";
+                        rtxtWageDetails.Visible = true;
                     }
                 }
             }
@@ -105,16 +111,20 @@ namespace WindowsFormsApp1
         private Staff[] lookForStaff(string name)
         {
             Staff member = new Staff();
-            Staff[] members = new Staff[Staff.nextStaffId()-1];
+            Staff[] members = new Staff[Staff.nextStaffId() - 1];
             int noOfStaff = 0;
+
             for (int i = 0; i < Staff.nextStaffId(); i++)
             {
+
                 OracleConnection conn = new OracleConnection(DBConnect.oradb);
                 conn.Open();
-                string strSqlSearchStaff = "SELECT * FROM STAFF WHERE FORENAME LIKE '%" + name + "%' AND STAFFID = " + i;
-
+                string strSqlSearchStaff = "SELECT * FROM STAFF WHERE FORENAME LIKE '%" + name + "' AND STAFFID = " + i;
+                string strSqlSearchStaff2 = "SELECT * FROM STAFF WHERE SURNAME LIKE '%" + name + "' AND STAFFID = " + i;
                 OracleCommand cmdStaff = new OracleCommand(strSqlSearchStaff, conn);
+                OracleCommand cmdStaff2 = new OracleCommand(strSqlSearchStaff2, conn);
                 OracleDataReader drStaff = cmdStaff.ExecuteReader();
+                OracleDataReader drStaff2 = cmdStaff2.ExecuteReader();
                 drStaff.Read();
                 if (drStaff.HasRows)
                 {
@@ -122,11 +132,29 @@ namespace WindowsFormsApp1
                     members[noOfStaff] = member;
                     noOfStaff++;
                 }
+
+                if (drStaff2.HasRows)
+                {
+                    member = frmUpdateStaff.loadStaff(drStaff.GetInt32(0));
+                    members[noOfStaff] = member;
+                    noOfStaff++;
+                }
                 conn.Close();
             }
-            
 
-            return members;
+            if (noOfStaff > 0)
+            { 
+                for (int i = noOfStaff; i < members.Length; i++)
+                    members[noOfStaff] = new Staff();
+
+                return members;
+            }
+           else
+            {
+                for(int i = 0; i < members.Length; i ++)
+                    members[i] = new Staff();
+                return members;
+            }
             
         }
 
@@ -148,11 +176,27 @@ namespace WindowsFormsApp1
             return member;
         }
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmWelcomeScreen home = new frmWelcomeScreen();
+            home.Show();
+        }
 
-            
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            period = comboBox1.SelectedIndex;
+        }
 
+        private void frmQueryPayroll_Load(object sender, EventArgs e)
+        {
+            for (int i = 1; i <= 52; i++)
+                comboBox1.Items.Add(i);
+
+            comboBox1.SelectedIndex = 0;
         }
     }
+}
 
 
 

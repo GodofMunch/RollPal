@@ -37,6 +37,9 @@
             this.rtxtWageDetails = new System.Windows.Forms.RichTextBox();
             this.txtSearhBar = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.grpSearchBy.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +75,7 @@
             this.comboBox1.Size = new System.Drawing.Size(40, 21);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.Text = "49";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblPeriod
             // 
@@ -114,19 +118,17 @@
             this.rtxtWageDetails.TabIndex = 2;
             this.rtxtWageDetails.Text = "";
             this.rtxtWageDetails.Visible = false;
-            this.rtxtWageDetails.TextChanged += new System.EventHandler(this.rtxtWageDetails_TextChanged);
             // 
             // txtSearhBar
             // 
-            this.txtSearhBar.Location = new System.Drawing.Point(136, 146);
+            this.txtSearhBar.Location = new System.Drawing.Point(161, 141);
             this.txtSearhBar.Name = "txtSearhBar";
             this.txtSearhBar.Size = new System.Drawing.Size(132, 20);
             this.txtSearhBar.TabIndex = 3;
-            this.txtSearhBar.TextChanged += new System.EventHandler(this.txtSearchBar_TextChanged);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(308, 142);
+            this.btnSearch.Location = new System.Drawing.Point(350, 139);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 4;
@@ -134,11 +136,42 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.lblSearch.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblSearch.Location = new System.Drawing.Point(50, 144);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(68, 13);
+            this.lblSearch.TabIndex = 5;
+            this.lblSearch.Text = "ID NUMBER";
+            // 
+            // btnHome
+            // 
+            this.btnHome.Location = new System.Drawing.Point(575, 280);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(75, 23);
+            this.btnHome.TabIndex = 6;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Location = new System.Drawing.Point(478, 205);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 98);
+            this.vScrollBar1.TabIndex = 7;
+            // 
             // frmQueryPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 460);
+            this.Controls.Add(this.vScrollBar1);
+            this.Controls.Add(this.btnHome);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearhBar);
             this.Controls.Add(this.rtxtWageDetails);
@@ -146,6 +179,7 @@
             this.Name = "frmQueryPayroll";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Query Payroll";
+            this.Load += new System.EventHandler(this.frmQueryPayroll_Load);
             this.grpSearchBy.ResumeLayout(false);
             this.grpSearchBy.PerformLayout();
             this.ResumeLayout(false);
@@ -164,5 +198,8 @@
         private System.Windows.Forms.RichTextBox rtxtWageDetails;
         private System.Windows.Forms.TextBox txtSearhBar;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }

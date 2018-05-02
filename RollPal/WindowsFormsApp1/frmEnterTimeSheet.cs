@@ -50,8 +50,8 @@ namespace WindowsFormsApp1
                     double[] wages;
                     wages = calculateHours();
 
-                    var confirm = MessageBox.Show("Gross Wage for Staff " + member.getStaffId() + " = " + wages[0] +
-                        "Net wage for Employee =" + wages[1], "Approve Wages", MessageBoxButtons.YesNo);
+                    var confirm = MessageBox.Show("Gross Wage for Staff " + member.getStaffId() + " = " + wages[1] +
+                        "Net wage for Employee =" + wages[0], "Approve Wages", MessageBoxButtons.YesNo);
 
                     if (confirm == DialogResult.Yes)
                     {
@@ -75,8 +75,8 @@ namespace WindowsFormsApp1
                         annualGross = drStaffPaid.GetDouble(0);
                         annualNet = drStaffPaid.GetDouble(1);
 
-                        annualGross += wages[0];
-                        annualNet += wages[1];
+                        annualGross += wages[1];
+                        annualNet += wages[0];
 
                         string strSqlConcurrentTaxation = "SELECT * FROM CONCURRENT_TAXATION WHERE STAFFID = " + member.getStaffId();
 
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1
                         annualPrsi += wages[5];
 
                         strSqlStaffPaid = "UPDATE STAFF_PAID SET CONCURRENT_GROSS = " + annualGross + " , " +
-                            "CONCURRENT_NET = " + annualNet + " , WEEK" + period + " = " + wages[1] +
+                            "CONCURRENT_NET = " + annualNet + " , WEEK" + period + " = " + wages[0] +
                             " WHERE STAFFID = " + member.getStaffId();
 
                         cmdStaffPaid = new OracleCommand(strSqlStaffPaid, conn);
